@@ -1,0 +1,24 @@
+# Ignore WordPress stuff
+/wp-content/uploads/
+/wp-content/cache/
+/wp-content/upgrade/
+*.log
+*.sql
+*.zip
+*.tar.gz
+
+# Ignore OS/macOS cruft
+.DS_Store
+
+# Node/NPM
+node_modules/
+npm-debug.log
+
+# Composer
+vendor/
+
+# WP staging plugin (nếu có)
+wp-staging/
+
+# VSCode settings (optional)
+.vscode/
