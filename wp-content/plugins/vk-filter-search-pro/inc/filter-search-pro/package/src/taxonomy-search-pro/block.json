@@ -1,0 +1,130 @@
+{
+	"apiVersion": "3",
+	"name": "vk-filter-search-pro/taxonomy-search-pro",
+	"title": "VK Taxonomy Search Pro",
+	"category": "vk-filter-search",
+	"parent": [ "vk-filter-search-pro/filter-search-pro" ],
+	"editorScript": "vk-filter-search-pro-block",
+	"editorStyle": "vk-filter-search-pro-editor",
+	"style": "vk-filter-search-pro-style",
+	"attributes": {
+		"TargetPostType": {
+			"type": "string",
+			"default": ""
+		},
+		"isSelectedTaxonomy": {
+			"type": "string",
+			"default": "category"
+		},
+		"BlockLabel": {
+			"type": "string",
+			"default": ""
+		},
+		"isSelectedDesign": {
+			"type": "string",
+			"default": "category"
+		},
+		"nonSelectedLabel": {
+			"type": "string",
+			"default": ""
+		},
+		"isSelectedOperator": {
+			"type": "string",
+			"default": "or"
+		},
+		"accordionType": {
+			"type": "string",
+			"default": "none"
+		},
+		"enableChildDropdwon": {
+			"type": "boolean",
+			"default": false
+		},
+		"outerColumnXs": {
+			"type": "string",
+			"default": "12"
+		},
+		"outerColumnSm": {
+			"type": "string",
+			"default": "12"
+		},
+		"outerColumnMd": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnLg": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnXl": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnXxl": {
+			"type": "string",
+			"default": "6"
+		},
+		"innerColumnXs": {
+			"type": "string",
+			"default": "12"
+		},
+		"innerColumnSm": {
+			"type": "string",
+			"default": "12"
+		},
+		"innerColumnMd": {
+			"type": "string",
+			"default": "6"
+		},
+		"innerColumnLg": {
+			"type": "string",
+			"default": "6"
+		},
+		"innerColumnXl": {
+			"type": "string",
+			"default": "6"
+		},
+		"innerColumnXxl": {
+			"type": "string",
+			"default": "6"
+		},
+		"showCount": {
+			"type": "boolean",
+			"default": false
+		},
+		"autoCount": {
+			"type": "boolean",
+			"default": false
+		},
+		"hideEmpty": {
+			"type": "boolean",
+			"default": true
+		},
+		"className": {
+			"type": "string",
+			"default": ""
+		},
+		"innerColumnWidthMethod": {
+			"type": "string",
+			"default": "column"
+		},
+		"innerColumnWidthMin": {
+			"type": "string",
+			"default": null
+		},
+		"outerColumnWidthMethod": {
+			"type": "string",
+			"default": null
+		},
+		"outerColumnWidthMin": {
+			"type": "string",
+			"default": null
+		},
+		"blockId": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"className": true
+	}
+}

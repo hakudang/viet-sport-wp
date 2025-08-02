@@ -1,0 +1,631 @@
+// editor and front styles
+// filter search pro scss
+
+@import '../../../../filter-search/package/src/filter-search/variable';
+
+@mixin input-text() {
+	//先頭・末尾テキスト
+	font-size: 0.75rem;
+	white-space: nowrap;
+}
+
+// Fall back for theme editor
+html :where(.editor-styles-wrapper) {
+	display: block;
+}
+
+.vkfs ul.vkfs__input-wrap {
+	padding-left: 0;
+}
+/******************************
+ * [ Outerカラム ] 最小幅指定の場合
+ */
+ .vkfs__layout--min {
+	.vkfs__labels {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.vkfs__outer-wrap {
+		flex-grow: 1;
+		flex-shrink: 0;
+		box-sizing: border-box;
+		max-width: 100%; // これがないと幅指定未入力の場合にはみ出る
+	}
+ }
+ /******************************
+  * [ Innerカラム ] 最小幅指定の場合
+  */
+.vkfs__input-wrap--layout-min {
+	> li{
+		flex-grow:999;
+	}
+}
+
+
+/******************************
+ * 
+ */
+.vkfs {
+	&__input-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding-left: 0;
+		&--range,
+		&--higher,
+		&--lower {
+			flex-wrap: nowrap;
+			align-items: center;
+		}
+
+		&>li {
+			box-sizing: border-box;
+		}
+
+		
+
+		&--checkbox,
+		&--radio {
+			padding-inline-start: 0;
+			li {
+				&,
+				.widget & { // テーマなどで .widget li に対してスタイルが指定されていたりするので上書き
+					margin-top:0;
+				}
+			}
+		}
+
+		&::after {
+			clear: both;
+		}
+
+		li {
+			list-style: none;
+			position: relative;
+			margin-bottom: 0.25rem;
+			word-break: break-all;
+			line-height: normal;
+			padding-top: calc(var(--vk-size-text) * 0.3125);
+			padding-bottom: calc(var(--vk-size-text) * 0.3125);
+			padding-right: calc(var(--vk-size-text) * 1.25);
+			padding-left: calc(var(--vk-size-text) * 1.75);
+			display: inline-block;
+			width: auto;
+
+			@media (min-width: $md-min) {
+				margin-bottom: 0;
+				float: left;
+				width: auto;
+				padding-left: calc(var(--vk-size-text) * 1.5);
+			}
+
+			&:last-child {
+				flex-grow: 1;
+			}
+		}
+
+		.vkfs__has-children {
+			//子階層をもつ親は幅いっぱいにする
+			display: block;
+			width: 100%;
+			flex-basis: 100%;
+			padding-bottom: 0;
+
+			& & {
+				padding-inline-start: 0;
+				margin-bottom: 0;
+			}
+
+			.vkfs__children {
+				//子階層
+				margin-top: calc(var(--vk-size-text) * 0.25);
+				margin-bottom: 0;
+				padding-inline-start: calc(var(--vk-size-text) * 0.15);
+			}
+		}
+	}
+
+	//lightningテーマのmarginを打ち消し(G2とG3)
+	input[type='date'],
+	input[type='email'],
+	input[type='number'],
+	input[type='password'],
+	input[type='tel'],
+	input[type='text'],
+	input[type='url'],
+	select,
+	input.form-control {
+		margin-bottom: 0;
+	}
+
+	&__input-text-wrap {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		width: 100%;
+
+		input[type='text'],
+		input[type='number'] {
+			margin-bottom: 0;
+		}
+	}
+
+	&__input-text-addition {
+		&--before {
+			@include input-text();
+			margin-right: 5px;
+		}
+
+		&--after {
+			@include input-text();
+			margin-left: 5px;
+		}
+	}
+
+	//間のテキスト
+	&__input-date-between,
+	&__input-text-between {
+		@include input-text();
+		margin: 0 5px;
+	}
+
+	//ここからは主にチェックボックスとラジオボタンのデザイン
+	input[type='checkbox'],
+	input[type='radio'] {
+		--radio-check-size: calc(var(--vk-size-text) * 1.25);
+		position: absolute;
+		left: 0;
+		margin: 0 0.7rem 0 0;
+		padding: 0;
+		cursor: pointer;
+		width: var(--radio-check-size);
+		height: var(--radio-check-size);
+		min-height: auto;
+		vertical-align: middle;
+		background-color: #fff;
+		appearance: none;
+		outline: none;
+		text-align: center;
+		border: none;
+		box-sizing: border-box;
+		@media (min-width: $md-min) {
+			--radio-check-size: calc(var(--vk-size-text) * 1);
+		}
+
+		@media (min-width: $md-min) {
+			margin: 0 0.4rem 0 0;
+			top: 6px;
+		}
+	}
+	input[type='checkbox'] {
+		@media (min-width: $md-min) {
+			top: 8px;
+		}
+	}
+
+	// チェックボックス /  ラジオボタン の線デザイン
+	input[type='checkbox']::before,
+	input[type='radio']::before  {
+		display: block;
+		position: absolute;
+		content: '';
+		width: var(--radio-check-size);
+		height: var(--radio-check-size);
+		background-color: #fff;
+		border: 1px solid #ced4da;
+		margin: unset;
+		box-sizing: border-box;
+	}
+
+	input[type='checkbox']::after,
+	input[type='radio']::after {
+		display: block;
+		content: '';
+		position: absolute;
+	}
+
+	// チェックボックスの線デザイン
+	input[type='checkbox']::before {
+		border-radius: 0.25rem;
+	}
+
+	// ラジオボタンの線デザイン
+	input[type='radio']::before {
+		border-radius: 50%;
+	}
+
+	// ラジオマークのデザイン
+	input[type='radio']::after {
+		// マークのサイズを半分の大きさに指定
+		--radio-mark-size: calc(var(--radio-check-size) * 0.5);
+		width: var(--radio-mark-size);
+		height:var(--radio-mark-size);
+		// 開始点を中央に指定
+		left: 50%;
+		top: 50%;
+		// マークのサイズの半分をマイナスオフセットする事により中央に配置
+		transform: translateX(calc(var(--radio-mark-size)/2 * -1)) translateY(calc(var(--radio-mark-size)/2 * -1));
+		border-radius: 50%;
+		background-color: $mark-color;
+		// チェックしてないときは隠す
+		opacity: 0;
+	}
+
+	// チェックマークのデザイン
+	input[type='checkbox']::after {
+		left: 30%;
+		top: 9%;
+		width: 7px;
+		height: 12px;
+		border-right: 3px solid $mark-color;
+		border-bottom: 3px solid $mark-color;
+		transform: rotate(45deg);
+		// チェックしてないときは隠す
+		opacity: 0;
+	}
+
+	// チェックするとチェックマークの透明化を解除
+	input[type='checkbox']:checked::after,
+	input[type='radio']:checked::after {
+		opacity: 1;
+	}
+
+	select {
+		// デフォルトの下向き矢印は位置がコントロールできないので一旦削除
+
+		-webkit-appearance: none;
+		/* ベンダープレフィックス(Google Chrome、Safari用) */
+		-moz-appearance: none;
+		/* ベンダープレフィックス(Firefox用) */
+		appearance: none;
+		/* 標準のスタイルを無効にする */
+
+		// 管理画面コアで使われている下向き矢印
+		background: #fff url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E) no-repeat right 5px top 55%;
+		background-size: 16px 16px;
+	}
+
+	button[type='submit'] {
+		padding: 0.5em 1em;
+		margin-top: 0.5em;
+		width: 100%;
+		letter-spacing: 0.5em;
+		font-size: 14px;
+		cursor: pointer;
+	}
+
+	&_submit-change-color-hover:hover {
+		filter: brightness(1.1) saturate(2);
+	}
+	&__child-dropdown {
+		select {
+			margin-bottom:4px;
+		}
+	}
+}
+
+//ブロック幅指定
+.vkfs__labels {
+
+	&>.vkfs__outer-wrap {
+
+		&--col-xs-2 {
+			flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
+		}
+
+		&--col-xs-3 {
+			flex-basis: calc(var(--col-3) - var(--vkfs-outer-margin));
+		}
+
+		&--col-xs-4 {
+			flex-basis: calc(var(--col-4) - var(--vkfs-outer-margin));
+		}
+
+		&-col-xs-6 {
+			flex-basis: calc(var(--col-6) - var(--vkfs-outer-margin));
+		}
+
+		&--col-xs-8 {
+			flex-basis: calc(var(--col-8) - var(--vkfs-outer-margin));
+		}
+
+		&--col-xs-9 {
+			flex-basis: calc(var(--col-9) - var(--vkfs-outer-margin));
+		}
+
+		&--col-xs-12 {
+			flex-basis: calc(var(--col-12) - var(--vkfs-outer-margin));
+		}
+
+		@media (min-width: $sm-min) {
+			&--col-sm-2 {
+				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
+			}
+
+			&--col-sm-3 {
+				flex-basis: calc(var(--col-3) - var(--vkfs-outer-margin));
+			}
+
+			&--col-sm-4 {
+				flex-basis: calc(var(--col-4) - var(--vkfs-outer-margin));
+			}
+
+			&--col-sm-6 {
+				flex-basis: calc(var(--col-6) - var(--vkfs-outer-margin));
+			}
+
+			&--col-sm-8 {
+				flex-basis: calc(var(--col-8) - var(--vkfs-outer-margin));
+			}
+
+			&--col-sm-9 {
+				flex-basis: calc(var(--col-9) - var(--vkfs-outer-margin));
+			}
+
+			&--col-sm-12 {
+				flex-basis: calc(var(--col-12) - var(--vkfs-outer-margin));
+			}
+		}
+
+		@media (min-width: $md-min) {
+			&--col-md-2 {
+				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
+			}
+
+			&--col-md-3 {
+				flex-basis: calc(var(--col-3) - var(--vkfs-outer-margin));
+			}
+
+			&--col-md-4 {
+				flex-basis: calc(var(--col-4) - var(--vkfs-outer-margin));
+			}
+
+			&--col-md-6 {
+				flex-basis: calc(var(--col-6) - var(--vkfs-outer-margin));
+			}
+
+			&--col-md-8 {
+				flex-basis: calc(var(--col-8) - var(--vkfs-outer-margin));
+			}
+
+			&--col-md-9 {
+				flex-basis: calc(var(--col-9) - var(--vkfs-outer-margin));
+			}
+
+			&--col-md-12 {
+				flex-basis: calc(var(--col-12) - var(--vkfs-outer-margin));
+			}
+		}
+
+		@media (min-width: $lg-min) {
+			&--col-lg-2 {
+				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
+			}
+
+			&--col-lg-3 {
+				flex-basis: calc(var(--col-3) - var(--vkfs-outer-margin));
+			}
+
+			&--col-lg-4 {
+				flex-basis: calc(var(--col-4) - var(--vkfs-outer-margin));
+			}
+
+			&--col-lg-6 {
+				flex-basis: calc(var(--col-6) - var(--vkfs-outer-margin));
+			}
+
+			&--col-lg-8 {
+				flex-basis: calc(var(--col-8) - var(--vkfs-outer-margin));
+			}
+
+			&--col-lg-9 {
+				flex-basis: calc(var(--col-9) - var(--vkfs-outer-margin));
+			}
+
+			&--col-lg-12 {
+				flex-basis: calc(var(--col-12) - var(--vkfs-outer-margin));
+			}
+		}
+
+		@media (min-width: $xl-min) {
+			&--col-xl-2 {
+				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xl-3 {
+				flex-basis: calc(var(--col-3) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xl-4 {
+				flex-basis: calc(var(--col-4) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xl-6 {
+				flex-basis: calc(var(--col-6) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xl-8 {
+				flex-basis: calc(var(--col-8) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xl-9 {
+				flex-basis: calc(var(--col-9) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xl-12 {
+				flex-basis: calc(var(--col-12) - var(--vkfs-outer-margin));
+			}
+		}
+
+		@media (min-width: $xxl-min) {
+			&--col-xxl-2 {
+				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xxl-3 {
+				flex-basis: calc(var(--col-3) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xxl-4 {
+				flex-basis: calc(var(--col-4) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xxl-6 {
+				flex-basis: calc(var(--col-6) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xxl-8 {
+				flex-basis: calc(var(--col-8) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xxl-9 {
+				flex-basis: calc(var(--col-9) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xxl-12 {
+				flex-basis: calc(var(--col-12) - var(--vkfs-outer-margin));
+			}
+		}
+	}
+}
+
+ul[class*="vkfs__input-wrap--col"] {
+
+	&>li {
+		padding-right: 15px;
+	}
+}
+
+.vkfs__input-wrap {
+	&--col-xs-2 li {
+		flex-basis: var(--col-2);
+	}
+
+	&--col-xs-3 li {
+		flex-basis: var(--col-3);
+	}
+
+	&--col-xs-4 li {
+		flex-basis: var(--col-4);
+	}
+
+	&--col-xs-6 li {
+		flex-basis: var(--col-6);
+	}
+
+	&--col-xs-12 li {
+		flex-basis: var(--col-12);
+	}
+
+	@media (min-width: $sm-min) {
+		&--col-sm-2 li {
+			flex-basis: var(--col-2);
+		}
+
+		&--col-sm-3 li {
+			flex-basis: var(--col-3);
+		}
+
+		&--col-sm-4 li {
+			flex-basis: var(--col-4);
+		}
+
+		&--col-sm-6 li {
+			flex-basis: var(--col-6);
+		}
+
+		&--col-sm-12 li {
+			flex-basis: var(--col-12);
+		}
+	}
+
+	@media (min-width: $md-min) {
+		&--col-md-2 li {
+			flex-basis: var(--col-2);
+		}
+
+		&--col-md-3 li {
+			flex-basis: var(--col-3);
+		}
+
+		&--col-md-4 li {
+			flex-basis: var(--col-4);
+		}
+
+		&--col-md-6 li {
+			flex-basis: var(--col-6);
+		}
+
+		&--col-md-12 li {
+			flex-basis: var(--col-12);
+		}
+	}
+
+	@media (min-width: $lg-min) {
+		&--col-lg-2 li {
+			flex-basis: var(--col-2);
+		}
+
+		&--col-lg-3 li {
+			flex-basis: var(--col-3);
+		}
+
+		&--col-lg-4 li {
+			flex-basis: var(--col-4);
+		}
+
+		&--col-lg-6 li {
+			flex-basis: var(--col-6);
+		}
+
+		&--col-lg-12 li {
+			flex-basis: var(--col-12);
+		}
+	}
+
+	@media (min-width: $xl-min) {
+		&--col-xl-2 li {
+			flex-basis: var(--col-2);
+		}
+
+		&--col-xl-3 li {
+			flex-basis: var(--col-3);
+		}
+
+		&--col-xl-4 li {
+			flex-basis: var(--col-4);
+		}
+
+		&--col-xl-6 li {
+			flex-basis: var(--col-6);
+		}
+
+		&--col-xl-12 li {
+			flex-basis: var(--col-12);
+		}
+	}
+
+	@media (min-width: $xxl-min) {
+		&--col-xxl-2 li {
+			flex-basis: var(--col-2);
+		}
+
+		&--col-xxl-3 li {
+			flex-basis: var(--col-3);
+		}
+
+		&--col-xxl-4 li {
+			flex-basis: var(--col-4);
+		}
+
+		&--col-xxl-6 li {
+			flex-basis: var(--col-6);
+		}
+
+		&--col-xxl-12 li {
+			flex-basis: var(--col-12);
+		}
+	}
+
+}

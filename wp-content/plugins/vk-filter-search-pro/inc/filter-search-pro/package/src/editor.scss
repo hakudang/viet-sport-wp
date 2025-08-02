@@ -1,0 +1,10 @@
+@import "./filter-search-pro/editor.scss";
+
+.vkfs__input-wrap {
+	li {
+		box-sizing: border-box;
+	}
+}
+
+/* Search Result Single Order ブロックの CSS */
+@import "./search-result-single-order/editor.scss";

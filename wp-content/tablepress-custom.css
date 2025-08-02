@@ -1,0 +1,15 @@
+.tablepress {
+	border: 1px solid #000; /* Đường viền cho bảng */
+	border-collapse: collapse; /* Làm cho các đường viền không bị tách biệt */
+}
+
+.tablepress td,
+.tablepress th {
+	border: 1px solid #000; /* Đường viền cho các ô trong bảng */
+	padding: 8px; /* Khoảng cách giữa nội dung và đường viền */
+}
+
+.tablepress td,
+.tablepress th {
+	font-size: 12px; /* Kích thước chữ nhỏ hơn */
+}

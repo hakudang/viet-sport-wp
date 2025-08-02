@@ -1,0 +1,74 @@
+Log created: 2025-07-05 13:05:48
+Type: backup
+[2025-07-05 13:05:48][notice]Start backing up.
+[2025-07-05 13:05:48][notice]server info fcgi:Off max execution time: 300 wp version:6.8.1 php version:7.4.33 db version:5.5.5 php ini:safe_mode: memory_limit:512M memory_get_usage:12.23 MB memory_get_peak_usage:12.47 MB extensions:PDO enabled curl enabled zlib enabled   is_multisite:0
+[2025-07-05 13:05:48][notice]LiteSpeed Server.
+[2025-07-05 13:05:48][notice]Add LiteSpeed Rule
+[2025-07-05 13:05:48][notice]Prepare to backup backup_db files.
+[2025-07-05 13:05:48][notice]Start exporting database.
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_wpmailsmtp_debug_events
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_wpmailsmtp_tasks_meta
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_actionscheduler_groups
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_links
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_yoast_migrations
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_term_relationships
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_actionscheduler_claims
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_term_taxonomy
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_actionscheduler_logs
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_commentmeta
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_yoast_primary_term
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_termmeta
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_terms
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_usermeta
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_yoast_indexable_hierarchy
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_users
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_yoast_seo_links
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_comments
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_actionscheduler_actions
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_yoast_indexable
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_postmeta
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_options
+[2025-07-05 13:05:48][notice]Preparing to dump table wp_posts
+[2025-07-05 13:05:48][notice]Exporting database finished.
+[2025-07-05 13:05:48][notice]Start compressing database
+[2025-07-05 13:05:48][notice]Prepare to zip file. file: viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_db.sql
+[2025-07-05 13:05:48][notice]Adding zip files completed.viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_db.part001.zip, filesize: 471.65 KB
+[2025-07-05 13:05:48][notice]Compressing database completed
+[2025-07-05 13:05:48][notice]Backing up backup_db completed.
+[2025-07-05 13:05:48][notice]Prepare to backup backup_themes files.
+[2025-07-05 13:05:49][notice]Compressing zip file:viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_themes.part001.zip index:752
+[2025-07-05 13:05:50][notice]Compressing zip file:viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_themes.part001.zip success. index:752 file size:5.79 MB
+[2025-07-05 13:05:50][notice]Backing up backup_themes completed.
+[2025-07-05 13:05:50][notice]Prepare to backup backup_plugin files.
+[2025-07-05 13:05:51][notice]Compressing zip file:viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_plugin.part001.zip index:5545
+[2025-07-05 13:05:57][notice]Compressing zip file:viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_plugin.part001.zip success. index:5545 file size:21.25 MB
+[2025-07-05 13:05:57][notice]Backing up backup_plugin completed.
+[2025-07-05 13:05:57][notice]Prepare to backup backup_uploads files.
+[2025-07-05 13:05:57][notice]Compressing zip file:viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_uploads.part001.zip index:309
+[2025-07-05 13:05:59][notice]Compressing zip file:viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_uploads.part001.zip success. index:309 file size:17.89 MB
+[2025-07-05 13:05:59][notice]Backing up backup_uploads completed.
+[2025-07-05 13:05:59][notice]Prepare to backup backup_content files.
+[2025-07-05 13:05:59][notice]Compressing zip file:viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_content.part001.zip index:313
+[2025-07-05 13:06:00][notice]Compressing zip file:viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_content.part001.zip success. index:313 file size:3.86 MB
+[2025-07-05 13:06:00][notice]Backing up backup_content completed.
+[2025-07-05 13:06:00][notice]Prepare to backup backup_core files.
+[2025-07-05 13:06:00][notice]Compressing zip file:viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_core.part001.zip index:2801
+[2025-07-05 13:06:06][notice]Compressing zip file:viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_core.part001.zip success. index:2801 file size:14.49 MB
+[2025-07-05 13:06:06][notice]Backing up backup_core completed.
+[2025-07-05 13:06:06][notice]Prepare to backup backup_merge files.
+[2025-07-05 13:06:06][notice]Prepare to zip file. file: viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_db.zip
+[2025-07-05 13:06:06][notice]Adding zip files completed.viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_all.part001.zip, filesize: 444.34 KB
+[2025-07-05 13:06:06][notice]Prepare to zip file. file: viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_themes.zip
+[2025-07-05 13:06:06][notice]Adding zip files completed.viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_all.part001.zip, filesize: 6.11 MB
+[2025-07-05 13:06:06][notice]Prepare to zip file. file: viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_plugin.zip
+[2025-07-05 13:06:07][notice]Adding zip files completed.viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_all.part001.zip, filesize: 26.23 MB
+[2025-07-05 13:06:07][notice]Prepare to zip file. file: viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_uploads.zip
+[2025-07-05 13:06:08][notice]Adding zip files completed.viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_all.part001.zip, filesize: 44.11 MB
+[2025-07-05 13:06:08][notice]Prepare to zip file. file: viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_content.zip
+[2025-07-05 13:06:08][notice]Adding zip files completed.viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_all.part001.zip, filesize: 47.94 MB
+[2025-07-05 13:06:08][notice]Prepare to zip file. file: viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_core.zip
+[2025-07-05 13:06:10][notice]Adding zip files completed.viet-sport.net_wpvivid-b70939cace3b7_2025-07-05-13-05_backup_all.part001.zip, filesize: 62.01 MB
+[2025-07-05 13:06:11][notice]Backing up backup_merge completed.
+[2025-07-05 13:06:11][notice]Backup completed.
+[2025-07-05 13:06:11][notice]LiteSpeed Server.
+[2025-07-05 13:06:11][notice]Clear LiteSpeed Rule

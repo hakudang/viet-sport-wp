@@ -1,0 +1,365 @@
+// only editor
+// filter search pro scss
+
+@import "../../../../filter-search/package/src/filter-search/variable";
+
+// Fall back for theme editor
+html :where(.editor-styles-wrapper) {
+	display: block;
+}
+
+.mt-1rem {
+	margin-top: 1rem;
+}
+// 各フォームの幅
+.components-base-control__block-width {
+	.components-unit-control-wrapper {
+		margin-bottom:12px;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+
+// pro版アイコン
+.editor-block-list-item-vk-filter-search-pro-filter-search-pro::after,
+.editor-block-list-item-vk-filter-search-pro-keyword-search-pro::after,
+.editor-block-list-item-vk-filter-search-pro-post-type-search-pro::after,
+.editor-block-list-item-vk-filter-search-pro-taxonomy-search-pro::after,
+.editor-block-list-item-vk-filter-search-pro-post-date-search-pro::after,
+.editor-block-list-item-vk-filter-search-pro-custom-field-search-pro::after,
+.editor-block-list-item-vk-filter-search-pro-search-result-single-order::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	content: "Pro";
+	display: inline-block;
+	font-size: 10px;
+	line-height: 1;
+	color: #fff;
+	background-color: #cd3034;
+	border-radius: 2px;
+	padding: 3px 4px;
+}
+
+:root .editor-styles-wrapper {
+
+	.vkfs {
+
+		&__input-wrap li {
+			margin-top: 0.5em;
+			margin-bottom: 0;
+		}
+	}
+}
+
+/******************************
+ * [ Outerカラム ] 最小幅指定の場合
+ */
+.vkfs__layout--min {
+	.vkfs__labels > .block-editor-inner-blocks > .block-editor-block-list__layout {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.block-editor-block-list__layout > .block-editor-block-list__block {
+		flex-grow: 1;
+		flex-shrink: 0;
+		box-sizing: border-box;
+	 }
+}
+
+/******************************
+ *
+ */
+.vkfs__alert--customField {
+
+	.editor-styles-wrapper .block-editor-block-list__layout .vkfs__labels & {
+		margin-top: 2em;
+	}
+
+}
+
+.vkfs__alert-search-comfirm {
+	text-align: center;
+	line-height: 1;
+
+	span.components-checkbox-control__input-container {
+		height: auto;
+		margin-right: 0.5em;
+
+		.components-checkbox-control__input[type="checkbox"] {
+			top: 50%;
+			position: relative;
+		}
+	}
+}
+
+// 一部 CSS がコアや Lightning の指定に負けてしまうため .editor-styles-wrapper の中に変更
+.editor-styles-wrapper {
+
+	.vkfs {
+		&__labels {
+
+			//インサーターのデザイン
+			.block-list-appender {
+
+				@include editor-inserter-design;
+
+				& > .block-editor-inserter {
+					height: 80px;
+				}
+			}
+
+			.block-editor-button-block-appender {
+
+				@include editor-button-block-appender;
+			}
+		}
+		:is(
+			input[type='text'],
+			input[type='number'],
+			select
+		) {
+			padding: 0.375rem 0.75rem;
+		}
+		.wp-core-ui &__child-dropdown {
+			select {
+				margin-bottom:4px;
+			}
+		}
+
+	}
+
+	//編集画面用ブロック幅指定（編集画面では親のdivが増え、DOM構造が違うため別で書く必要がある）
+	.block-editor-block-list__layout > .vkfs__outer-wrap {
+
+		&--col-xs-2,
+		&--col-xs-2 + .block-list-appender {
+			flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
+		}
+
+		&--col-xs-3,
+		&--col-xs-3 + .block-list-appender {
+			flex-basis: calc(var(--col-3) - var(--vkfs-outer-margin));
+		}
+
+		&--col-xs-4,
+		&--col-xs-4 + .block-list-appender {
+			flex-basis: calc(var(--col-4) - var(--vkfs-outer-margin));
+		}
+
+		&-col-xs-6,
+		&--col-xs-6 + .block-list-appender {
+			flex-basis: calc(var(--col-6) - var(--vkfs-outer-margin));
+		}
+
+		&--col-xs-8,
+		&--col-xs-8 + .block-list-appender {
+			flex-basis: calc(var(--col-8) - var(--vkfs-outer-margin));
+		}
+
+		&--col-xs-9,
+		&--col-xs-9 + .block-list-appender {
+			flex-basis: calc(var(--col-9) - var(--vkfs-outer-margin));
+		}
+
+		&--col-xs-12,
+		&--col-xs-12 + .block-list-appender {
+			flex-basis: calc(var(--col-12) - var(--vkfs-outer-margin));
+		}
+
+		@media (min-width: $sm-min) {
+
+			&--col-sm-2,
+			&--col-sm-2 + .block-list-appender {
+				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
+			}
+
+			&--col-sm-3,
+			&--col-sm-3 + .block-list-appender {
+				flex-basis: calc(var(--col-3) - var(--vkfs-outer-margin));
+			}
+
+			&--col-sm-4,
+			&--col-sm-4 + .block-list-appender {
+				flex-basis: calc(var(--col-4) - var(--vkfs-outer-margin));
+			}
+
+			&--col-sm-6,
+			&--col-sm-6 + .block-list-appender {
+				flex-basis: calc(var(--col-6) - var(--vkfs-outer-margin));
+			}
+
+			&--col-sm-8,
+			&--col-sm-8 + .block-list-appender {
+				flex-basis: calc(var(--col-8) - var(--vkfs-outer-margin));
+			}
+
+			&--col-sm-9,
+			&--col-sm-9 + .block-list-appender {
+				flex-basis: calc(var(--col-9) - var(--vkfs-outer-margin));
+			}
+
+			&--col-sm-12,
+			&--col-sm-12 + .block-list-appender {
+				flex-basis: calc(var(--col-12) - var(--vkfs-outer-margin));
+			}
+		}
+
+		@media (min-width: $md-min) {
+
+			&--col-md-2,
+			&--col-md-2 + .block-list-appender {
+				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
+			}
+
+			&--col-md-3,
+			&--col-md-3 + .block-list-appender {
+				flex-basis: calc(var(--col-3) - var(--vkfs-outer-margin));
+			}
+
+			&--col-md-4,
+			&--col-md-4 + .block-list-appender {
+				flex-basis: calc(var(--col-4) - var(--vkfs-outer-margin));
+			}
+
+			&--col-md-6,
+			&--col-md-6 + .block-list-appender {
+				flex-basis: calc(var(--col-6) - var(--vkfs-outer-margin));
+			}
+
+			&--col-md-8,
+			&--col-md-8 + .block-list-appender {
+				flex-basis: calc(var(--col-8) - var(--vkfs-outer-margin));
+			}
+
+			&--col-md-9,
+			&--col-md-9 + .block-list-appender {
+				flex-basis: calc(var(--col-9) - var(--vkfs-outer-margin));
+			}
+
+			&--col-md-12,
+			&--col-md-12 + .block-list-appender {
+				flex-basis: calc(var(--col-12) - var(--vkfs-outer-margin));
+			}
+		}
+
+		@media (min-width: $lg-min) {
+
+			&--col-lg-2,
+			&--col-lg-2 + .block-list-appender {
+				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
+			}
+
+			&--col-lg-3,
+			&--col-lg-3 + .block-list-appender {
+				flex-basis: calc(var(--col-3) - var(--vkfs-outer-margin));
+			}
+
+			&--col-lg-4,
+			&--col-lg-4 + .block-list-appender {
+				flex-basis: calc(var(--col-4) - var(--vkfs-outer-margin));
+			}
+
+			&--col-lg-6,
+			&--col-lg-6 + .block-list-appender {
+				flex-basis: calc(var(--col-6) - var(--vkfs-outer-margin));
+			}
+
+			&--col-lg-8,
+			&--col-lg-8 + .block-list-appender {
+				flex-basis: calc(var(--col-8) - var(--vkfs-outer-margin));
+			}
+
+			&--col-lg-9,
+			&--col-lg-9 + .block-list-appender {
+				flex-basis: calc(var(--col-9) - var(--vkfs-outer-margin));
+			}
+
+			&--col-lg-12,
+			&--col-lg-12 + .block-list-appender {
+				flex-basis: calc(var(--col-12) - var(--vkfs-outer-margin));
+			}
+		}
+
+		@media (min-width: $xl-min) {
+
+			&--col-xl-2,
+			&--col-xl-2 + .block-list-appender {
+				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xl-3,
+			&--col-xl-3 + .block-list-appender {
+				flex-basis: calc(var(--col-3) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xl-4,
+			&--col-xl-4 + .block-list-appender {
+				flex-basis: calc(var(--col-4) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xl-6,
+			&--col-xl-6 + .block-list-appender {
+				flex-basis: calc(var(--col-6) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xl-8,
+			&--col-xl-8 + .block-list-appender {
+				flex-basis: calc(var(--col-8) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xl-9,
+			&--col-xl-9 + .block-list-appender {
+				flex-basis: calc(var(--col-9) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xl-12,
+			&--col-xl-12 + .block-list-appender {
+				flex-basis: calc(var(--col-12) - var(--vkfs-outer-margin));
+			}
+		}
+
+		@media (min-width: $xxl-min) {
+
+			&--col-xxl-2,
+			&--col-xxl-2 + .block-list-appender {
+				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xxl-3,
+			&--col-xxl-3 + .block-list-appender {
+				flex-basis: calc(var(--col-3) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xxl-4,
+			&--col-xxl-4 + .block-list-appender {
+				flex-basis: calc(var(--col-4) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xxl-6,
+			&--col-xxl-6 + .block-list-appender {
+				flex-basis: calc(var(--col-6) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xxl-8,
+			&--col-xxl-8 + .block-list-appender {
+				flex-basis: calc(var(--col-8) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xxl-9,
+			&--col-xxl-9 + .block-list-appender {
+				flex-basis: calc(var(--col-9) - var(--vkfs-outer-margin));
+			}
+
+			&--col-xxl-12,
+			&--col-xxl-12 + .block-list-appender {
+				flex-basis: calc(var(--col-12) - var(--vkfs-outer-margin));
+			}
+		}
+	}
+}
+
+
+// only editor

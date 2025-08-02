@@ -1,0 +1,57 @@
+# ===============================
+# 💡 General System/Editor Junk
+# ===============================
+.DS_Store               # MacOS finder metadata
+Thumbs.db               # Windows thumbnail cache
+*.log                   # Log files
+*.tmp                   # Temp files
+*.swp                   # Vim swap files
+
+# ===============================
+# 💻 Node/NPM
+# ===============================
+node_modules/           # NPM dependencies (nặng, không cần commit)
+npm-debug.log*          # NPM logs
+yarn.lock               # Nếu bạn không dùng Yarn
+
+# ===============================
+# 🧠 Composer / PHP deps (nếu dùng)
+# ===============================
+vendor/                 # Composer dependencies
+composer.lock
+
+# ===============================
+# 🔒 Sensitive files
+# ===============================
+.env                    # Môi trường (thường chứa DB password, secret key)
+
+# ===============================
+# 📦 Build / Output
+# ===============================
+*.zip                   # Các bản build zip của theme
+*.tar.gz
+*.sql                   # File dump database
+
+# ===============================
+# 🧹 WordPress core (nếu không quản lý toàn site)
+# ===============================
+wp-admin/
+wp-includes/
+license.txt
+readme.html
+
+# ===============================
+# 📁 WordPress Uploads/Cache
+# ===============================
+wp-content/uploads/     # Uploads: hình ảnh, video — không cần commit
+wp-content/cache/       # Cache tạo ra bởi plugin (Autoptimize, WP Rocket)
+wp-content/upgrade/     # WP auto-upgrade files
+wp-content/backups/     # Nếu có plugin backup
+
+# ===============================
+# 📁 IDEs / Tools
+# ===============================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

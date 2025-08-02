@@ -1,0 +1,87 @@
+{
+	"apiVersion": "3",
+	"name": "vk-filter-search-pro/post-date-search-pro",
+	"title": "VK Post Date Search Pro",
+	"category": "vk-filter-search",
+	"parent": [ "vk-filter-search-pro/filter-search-pro" ],
+	"editorScript": "vk-filter-search-pro-block",
+	"editorStyle": "vk-filter-search-pro-editor",
+	"style": "vk-filter-search-pro-style",
+	"attributes": {
+		"dateName": {
+			"type": "string",
+			"default": "post_date"
+		},
+		"dateCompare": {
+			"type": "string",
+			"default": "only"
+		},
+		"dateMin": {
+			"type": "string"
+		},
+		"dateMax": {
+			"type": "string"
+		},
+		"blockLabel": {
+			"type": "string"
+		},
+		"fieldBefore": {
+			"type": "string"
+		},
+		"fieldAfter": {
+			"type": "string"
+		},
+		"fieldBefore2": {
+			"type": "string"
+		},
+		"fieldAfter2": {
+			"type": "string"
+		},
+		"rangeBetween": {
+			"type": "string",
+			"default": "～"
+		},
+		"outerColumnXs": {
+			"type": "string",
+			"default": "12"
+		},
+		"outerColumnSm": {
+			"type": "string",
+			"default": "12"
+		},
+		"outerColumnMd": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnLg": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnXl": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnXxl": {
+			"type": "string",
+			"default": "6"
+		},
+		"disableFuturePostType": {
+			"type": "string",
+			"default": "[]"
+		},
+		"outerColumnWidthMethod": {
+			"type": "string",
+			"default": null
+		},
+		"outerColumnWidthMin": {
+			"type": "string",
+			"default": null
+		},
+		"blockId": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"className": true
+	}
+}

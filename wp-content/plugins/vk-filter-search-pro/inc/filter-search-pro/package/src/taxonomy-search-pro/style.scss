@@ -1,0 +1,94 @@
+.vkfs__taxonomy {
+	
+	// ラベルのスタイル
+	.vkfs__label-name {
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+ 
+		.vkfs__label-name-wrap {
+			display: flex;
+			align-items: center;
+			
+			.vkfs__label-name-item {
+				margin-right: 10px;
+				font-weight: bold;
+			}
+			
+			.vkfs__operator-wrap {
+				display: flex;
+				
+				label {
+					cursor: pointer;
+					display: flex;
+					align-items: center;
+					
+					input {
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+	}
+	// リストアイテムのスタイル
+	
+	label {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+	
+		input {
+			margin-right: 10px;
+		}
+	}
+
+	.vkfs__has-children {
+		&:has(.vkfs__taxonomy-accordion-trigger) {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+	
+		.vkfs__taxonomy-accordion-trigger {
+			cursor: pointer;
+			text-align: center;
+			align-content: center;
+			width: 20px;
+			height: 20px;
+			line-height: 1;
+			background-color: #f7f7f7;
+			border:1px solid #e5e5e5;
+			border-radius: 3px;
+			margin-left: .5em;
+			font-size: 17px;
+			transition: all .3s ease;
+
+			&--open {
+			}
+
+			&--close {
+			}
+		}
+	}
+
+	// 子要素のスタイル
+	.vkfs__taxonomy-accordion-content {
+		max-height: 0;
+		overflow: hidden;
+		width: 100%;
+		padding-top: 0;
+		padding-bottom: 0;
+		transition: all .3s ease;
+
+		&--open {
+			max-height: 1000px; // 十分に大きな値を設定して全体を表示する
+			padding-bottom: 10px;
+		}
+	
+		&--close {
+			max-height: 0;
+			padding-bottom: 0;
+		}
+	}
+
+}

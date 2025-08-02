@@ -1,0 +1,140 @@
+{
+	"apiVersion": "3",
+	"name": "vk-filter-search-pro/filter-search-pro",
+	"title": "VK Filter Search Pro",
+	"category": "vk-filter-search",
+	"allowedBlocks": [],
+	"editorScript": "vk-filter-search-pro-block",
+	"editorStyle": "vk-filter-search-pro-editor",
+	"style": "vk-filter-search-pro-style",
+	"attributes": {
+		"TargetPostType": {
+			"type": "string",
+			"default": ""
+		},
+		"DisplayOnResult": {
+			"type": "boolean",
+			"default": false
+		},
+		"DisplayOnPosttypeArchive": {
+			"type": "string",
+			"default": "[]"
+		},
+		"AutoSubmit": {
+			"type": "boolean",
+			"default": false
+		},
+		"SubmitText": {
+			"type": "string",
+			"default": ""
+		},
+		"SubmitFontSize": {
+			"type": "string",
+			"default": ""
+		},
+		"SubmitLetterSpacing": {
+			"type": "string",
+			"default": ""
+		},
+		"SubmitPadding": {
+			"type": "object",
+			"default": {
+				"top": null,
+				"right": null,
+				"bottom": null,
+				"left": null
+			}
+		},
+		"SubmitBorderRadius": {
+			"type": "object",
+			"default": {
+				"topLeft": null,
+				"topRight": null,
+				"bottomRight": null,
+				"bottomLeft": null
+			}
+		},
+		"submitBackgroundColor": {
+			"type": "string"
+		},
+		"submitTextColor": {
+			"type": "string"
+		},
+		"submitBorderColor": {
+			"type": "string"
+		},
+		"submitChangeColorHover": {
+			"type": "boolean",
+			"default": false
+		},
+		"FormID": {
+			"type": "string",
+			"default": null
+		},
+		"PostID": {
+			"type": "number",
+			"default": null
+		},
+		"layoutMethod": {
+			"type": "string",
+			"default": null
+		},
+		"layoutBaseWidthMin": {
+			"type": "string",
+			"default": null
+		},
+		"layoutGap": {
+			"type": "string",
+			"default": "1rem"
+		},
+		"blockID": {
+			"type": "string"
+		},
+		"style": {
+			"type": "object",
+			"default": {
+				"spacing": {
+					"margin": {
+						"bottom": "3rem"
+					}
+				}
+			}
+		}
+	},
+	"supports": {
+		"className": true,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"background": {
+			"backgroundImage": true,
+			"backgroundSize": true,
+			"__experimentalDefaultControls": {
+				"backgroundImage": true
+			}
+		},
+		"color": {
+			"gradients": true,
+			"heading": false,
+			"button": false,
+			"link": false,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": false
+			}
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
+		}
+	}
+}

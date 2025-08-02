@@ -1,0 +1,100 @@
+@mixin input-text() {//先頭・末尾テキスト
+	font-size: 0.75rem;
+	white-space: nowrap;
+}
+
+:is(
+	.wp-block-vk-filter-search-pro-post-date-search-pro, 
+	.wp-block-vk-filter-search-pro-custom-field-search-pro
+) {
+	.vkfs__input-wrap {
+		position: relative;
+		justify-content: space-between;
+		align-items: center;
+		:where(:is(
+		.vkfs__input-numeric-wrap,
+		.vkfs__input-date-wrap,
+		.vkfs__input-time-wrap,
+		.vkfs__input-datetime-wrap
+		 ) ) {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;//均等に配置
+			align-items: center;
+		}
+	}
+	.vkfs__input-wrap--range { //指定範囲内の場合は2つフォームが並ぶので調整
+		.vkfs__input-date-wrap, .vkfs__input-time-wrap, .vkfs__input-datetime-wrap {
+			flex-basis: 46%;
+			@media (min-width: $md-min) {
+				display: flex;
+			}
+		}
+	}
+}
+
+.vkfs {
+	//フォーム内のカレンダーアイコン
+	:is(.vkfs__input-date,.vkfs__input-datetime){
+		background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NDggNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBkPSJNMTQ4IDI4OGgtNDBjLTYuNiAwLTEyLTUuNC0xMi0xMnYtNDBjMC02LjYgNS40LTEyIDEyLTEyaDQwYzYuNiAwIDEyIDUuNCAxMiAxMnY0MGMwIDYuNi01LjQgMTItMTIgMTJ6bTEwOC0xMnYtNDBjMC02LjYtNS40LTEyLTEyLTEyaC00MGMtNi42IDAtMTIgNS40LTEyIDEydjQwYzAgNi42IDUuNCAxMiAxMiAxMmg0MGM2LjYgMCAxMi01LjQgMTItMTJ6bTk2IDB2LTQwYzAtNi42LTUuNC0xMi0xMi0xMmgtNDBjLTYuNiAwLTEyIDUuNC0xMiAxMnY0MGMwIDYuNiA1LjQgMTIgMTIgMTJoNDBjNi42IDAgMTItNS40IDEyLTEyem0tOTYgOTZ2LTQwYzAtNi42LTUuNC0xMi0xMi0xMmgtNDBjLTYuNiAwLTEyIDUuNC0xMiAxMnY0MGMwIDYuNiA1LjQgMTIgMTIgMTJoNDBjNi42IDAgMTItNS40IDEyLTEyem0tOTYgMHYtNDBjMC02LjYtNS40LTEyLTEyLTEyaC00MGMtNi42IDAtMTIgNS40LTEyIDEydjQwYzAgNi42IDUuNCAxMiAxMiAxMmg0MGM2LjYgMCAxMi01LjQgMTItMTJ6bTE5MiAwdi00MGMwLTYuNi01LjQtMTItMTItMTJoLTQwYy02LjYgMC0xMiA1LjQtMTIgMTJ2NDBjMCA2LjYgNS40IDEyIDEyIDEyaDQwYzYuNiAwIDEyLTUuNCAxMi0xMnptOTYtMjYwdjM1MmMwIDI2LjUtMjEuNSA0OC00OCA0OEg0OGMtMjYuNSAwLTQ4LTIxLjUtNDgtNDhWMTEyYzAtMjYuNSAyMS41LTQ4IDQ4LTQ4aDQ4VjEyYzAtNi42IDUuNC0xMiAxMi0xMmg0MGM2LjYgMCAxMiA1LjQgMTIgMTJ2NTJoMTI4VjEyYzAtNi42IDUuNC0xMiAxMi0xMmg0MGM2LjYgMCAxMiA1LjQgMTIgMTJ2NTJoNDhjMjYuNSAwIDQ4IDIxLjUgNDggNDh6bS00OCAzNDZWMTYwSDQ4djI5OGMwIDMuMyAyLjcgNiA2IDZoMzQwYzMuMyAwIDYtMi43IDYtNnoiIHN0eWxlPSJmaWxsOiNhNmE2YTYiLz48L3N2Zz4=") no-repeat right 10px top 50%;
+		background-size: 16px 16px;
+	}
+	.vkfs__input-time { //フォーム内の時計アイコン
+		background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTYiIHdpZHRoPSIxNiIgdmlld0JveD0iMCAwIDUxMiA1MTIiPjwhLS0hRm9udCBBd2Vzb21lIEZyZWUgNi41LjEgYnkgQGZvbnRhd2Vzb21lIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20gTGljZW5zZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tL2xpY2Vuc2UvZnJlZSBDb3B5cmlnaHQgMjAyMyBGb250aWNvbnMsIEluYy4tLT48cGF0aCBkPSJNNDY0IDI1NkEyMDggMjA4IDAgMSAxIDQ4IDI1NmEyMDggMjA4IDAgMSAxIDQxNiAwek0wIDI1NmEyNTYgMjU2IDAgMSAwIDUxMiAwQTI1NiAyNTYgMCAxIDAgMCAyNTZ6TTIzMiAxMjBWMjU2YzAgOCA0IDE1LjUgMTAuNyAyMGw5NiA2NGMxMSA3LjQgMjUuOSA0LjQgMzMuMy02LjdzNC40LTI1LjktNi43LTMzLjNMMjgwIDI0My4yVjEyMGMwLTEzLjMtMTAuNy0yNC0yNC0yNHMtMjQgMTAuNy0yNCAyNHoiIHN0eWxlPSJmaWxsOiNhNmE2YTYiLz48L3N2Zz4=") no-repeat right 10px top 50%;
+		background-size: 16px 16px;
+	}
+	:where(:is(
+	.vkfs__input-date,
+	.vkfs__input-datetime,
+	.vkfs__input-time
+	 ) ) {
+		//モバイルサイズではinput[type="date"]に変わるのでcssが当たらないのでpaddingが変わってしまうため追加
+		&.flatpickr-mobile{
+			display: block;
+			width: 100%;
+			max-width: 100%;
+			padding: 0.375rem 0.75rem;
+			font-size: 1em;
+			font-weight: 400;
+			line-height: 1.5;
+			color: #495057;
+			background-color: #fff;
+			background-clip: padding-box;
+			border: 1px solid #ced4da;
+			border-radius: 0.25rem;
+			//borderがあるので親要素からはみ出るので追加
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+	}
+
+}//.vkfs
+
+/* 親コンテナに container-type を設定 */
+.vkfs__date .vkfs__input-date-wrap{
+	container-type: inline-size;
+	container-name: vkfs__input-date-wrap;
+}
+/* コンテナクエリ */
+@container vkfs__input-date-wrap (max-width: 120px){
+	.vkfs .vkfs__input-date {
+		// 日付の入力欄が狭い場合は、カレンダーアイコンを非表示
+		background: none;
+	}
+}
+
+//ここからはカレンダーの調整
+.flatpickr-month {
+	margin-bottom: 5px;
+
+	.flatpickr-current-month {
+		padding: 8px 0 0 0;
+
+		.flatpickr-monthDropdown-months {
+			//display blockを上書き
+			display: inline;
+		}
+
+	}
+}

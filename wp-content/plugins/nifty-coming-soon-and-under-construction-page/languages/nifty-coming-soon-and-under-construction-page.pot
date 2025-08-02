@@ -1,0 +1,605 @@
+# Copyright (C) 2023 WP Hait
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Nifty Coming Soon & Maintenance Page 3.0.6\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/nifty-coming-soon-and-under-"
+"construction-page\n"
+"POT-Creation-Date: 2023-07-28 10:52:56+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2023-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: node-wp-i18n 1.2.7\n"
+
+#: inc/admin-page/admin-page.php:18 inc/customizer/options.php:16
+msgid "Nifty Options"
+msgstr ""
+
+#: inc/admin-page/admin-page.php:20
+msgid "Nifty Coming Soon"
+msgstr ""
+
+#: inc/admin-page/admin-page.php:22
+#. translators: %s: version.
+msgid "Version: %s"
+msgstr ""
+
+#: inc/customizer/options.php:33 inc/customizer/sections/layout.php:39
+msgid "Blocks"
+msgstr ""
+
+#: inc/customizer/sections/animated-text.php:18 inc/helpers/helpers.php:184
+msgid "Animated Text"
+msgstr ""
+
+#: inc/customizer/sections/animated-text.php:41
+msgid "Coming Soon Message"
+msgstr ""
+
+#: inc/customizer/sections/animated-text.php:64
+msgid "Text Animation"
+msgstr ""
+
+#: inc/customizer/sections/animated-text.php:88
+msgid "Second Coming Soon Message"
+msgstr ""
+
+#: inc/customizer/sections/animated-text.php:89
+msgid "This message will be animated over the first message."
+msgstr ""
+
+#: inc/customizer/sections/background.php:24
+msgid "Background"
+msgstr ""
+
+#: inc/customizer/sections/background.php:46
+msgid "Background Image Slider"
+msgstr ""
+
+#: inc/customizer/sections/background.php:67
+#: inc/customizer/sections/social.php:63
+msgid "Note"
+msgstr ""
+
+#: inc/customizer/sections/background.php:68
+msgid "Recommended image dimension: 1920x1080"
+msgstr ""
+
+#: inc/customizer/sections/background.php:101
+msgid "First Background Slider Image"
+msgstr ""
+
+#: inc/customizer/sections/background.php:134
+msgid "Second Background Slider Image"
+msgstr ""
+
+#: inc/customizer/sections/background.php:167
+msgid "Third Background Slider Image"
+msgstr ""
+
+#: inc/customizer/sections/background.php:200
+msgid "Fourth Background Slider Image"
+msgstr ""
+
+#: inc/customizer/sections/background.php:233
+msgid "Select Animation"
+msgstr ""
+
+#: inc/customizer/sections/background.php:267
+msgid "Slider Rotation Time"
+msgstr ""
+
+#: inc/customizer/sections/background.php:268
+#: inc/customizer/sections/background.php:302
+msgid "In miliseconds. Eg, 3000 equals to 3 seconds."
+msgstr ""
+
+#: inc/customizer/sections/background.php:301
+msgid "Transition Duration Time"
+msgstr ""
+
+#: inc/customizer/sections/background.php:336
+msgid "Select Pattern Overlay"
+msgstr ""
+
+#: inc/customizer/sections/background.php:371
+msgid "Pattern Overlay Opacity"
+msgstr ""
+
+#: inc/customizer/sections/background.php:410
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer/sections/contact.php:17 inc/helpers/helpers.php:196
+msgid "Contact"
+msgstr ""
+
+#: inc/customizer/sections/contact.php:40
+msgid "Company Name"
+msgstr ""
+
+#: inc/customizer/sections/contact.php:64
+msgid "Company Address"
+msgstr ""
+
+#: inc/customizer/sections/contact.php:88
+msgid "Phone Number"
+msgstr ""
+
+#: inc/customizer/sections/contact.php:112
+msgid "Contact Email"
+msgstr ""
+
+#: inc/customizer/sections/contact.php:113
+msgid ""
+"This email address is also used for sending subscription request email. If "
+"empty, subscription request email will be sent to WordPress admin email."
+msgstr ""
+
+#: inc/customizer/sections/countdown.php:21 inc/helpers/helpers.php:188
+msgid "Countdown"
+msgstr ""
+
+#: inc/customizer/sections/countdown.php:43
+msgid "Countdown Target Date"
+msgstr ""
+
+#: inc/customizer/sections/countdown.php:67
+msgid "Text for \"days\""
+msgstr ""
+
+#: inc/customizer/sections/countdown.php:91
+msgid "Text for \"hours\""
+msgstr ""
+
+#: inc/customizer/sections/countdown.php:115
+msgid "Text for \"minutes\""
+msgstr ""
+
+#: inc/customizer/sections/countdown.php:139
+msgid "Text for \"seconds\""
+msgstr ""
+
+#: inc/customizer/sections/countdown.php:160
+#: inc/customizer/sections/subscription.php:336
+msgid "Design Options"
+msgstr ""
+
+#: inc/customizer/sections/countdown.php:183
+msgid "Font Family"
+msgstr ""
+
+#: inc/customizer/sections/countdown.php:207
+msgid "Number Color"
+msgstr ""
+
+#: inc/customizer/sections/countdown.php:231
+msgid "Label Color"
+msgstr ""
+
+#: inc/customizer/sections/general.php:20
+msgid "General Settings"
+msgstr ""
+
+#: inc/customizer/sections/general.php:42
+msgid "Enable Coming Soon Mode"
+msgstr ""
+
+#: inc/customizer/sections/general.php:65
+msgid "Enable Preloader"
+msgstr ""
+
+#: inc/customizer/sections/general.php:89
+msgid "Page Title"
+msgstr ""
+
+#: inc/customizer/sections/general.php:90
+msgid "Page title for SEO. Keep it short."
+msgstr ""
+
+#: inc/customizer/sections/general.php:114
+msgid "Page Description"
+msgstr ""
+
+#: inc/customizer/sections/general.php:115
+msgid "Page description for SEO. Keep it between 50 and 300 characters."
+msgstr ""
+
+#: inc/customizer/sections/general.php:138
+msgid "OpenGraph Thumbnail"
+msgstr ""
+
+#: inc/customizer/sections/general.php:139
+msgid "Upload at least 600x315px image. Recommended size is 1200x630px."
+msgstr ""
+
+#: inc/customizer/sections/general.php:162
+msgid "Google Analytics code"
+msgstr ""
+
+#: inc/customizer/sections/general.php:184
+msgid "Additional CSS"
+msgstr ""
+
+#: inc/customizer/sections/layout.php:17
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer/sections/layout.php:40
+msgid "You can reorder and enable/disable blocks here."
+msgstr ""
+
+#: inc/customizer/sections/logo.php:19 inc/helpers/helpers.php:180
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer/sections/logo.php:41
+msgid "Use Image"
+msgstr ""
+
+#: inc/customizer/sections/logo.php:64
+msgid "Upload Logo"
+msgstr ""
+
+#: inc/customizer/sections/logo.php:65
+msgid "Note: Please use some png image with 200x90px in size."
+msgstr ""
+
+#: inc/customizer/sections/logo.php:98
+msgid "Display Site Title"
+msgstr ""
+
+#: inc/customizer/sections/logo.php:132
+msgid "Site Title Font"
+msgstr ""
+
+#: inc/customizer/sections/slider.php:17 inc/helpers/helpers.php:192
+msgid "Slider"
+msgstr ""
+
+#: inc/customizer/sections/slider.php:40
+msgid "Slider Blocks"
+msgstr ""
+
+#: inc/customizer/sections/slider.php:41
+msgid "You can reorder and enable/disable slider blocks here."
+msgstr ""
+
+#: inc/customizer/sections/slider.php:65
+msgid "Navigation"
+msgstr ""
+
+#: inc/customizer/sections/social.php:19
+msgid "Social Links"
+msgstr ""
+
+#: inc/customizer/sections/social.php:42
+msgid "Social Intro Text"
+msgstr ""
+
+#: inc/customizer/sections/social.php:64
+msgid "Please enter full URL including https://"
+msgstr ""
+
+#: inc/customizer/sections/social.php:74
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/customizer/sections/social.php:77
+msgid "Twitter URL"
+msgstr ""
+
+#: inc/customizer/sections/social.php:80
+msgid "Youtube URL"
+msgstr ""
+
+#: inc/customizer/sections/social.php:83
+msgid "LinkedIn URL"
+msgstr ""
+
+#: inc/customizer/sections/social.php:86
+msgid "Pinterest URL"
+msgstr ""
+
+#: inc/customizer/sections/social.php:89
+msgid "Instagram URL"
+msgstr ""
+
+#: inc/customizer/sections/social.php:92
+msgid "Vimeo URL"
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:23 inc/helpers/helpers.php:206
+msgid "Subscription"
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:45
+msgid "Enable Built-in Form"
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:67
+msgid "Custom Subscription Form"
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:68
+msgid "Enter third party form embed code."
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:99
+msgid "Important"
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:100
+msgid ""
+"Emails are not stored in WordPress nor sent to any 3rd party services like "
+"MailChimp. You will only receive them in the email address."
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:134
+msgid "Send Subscription Email To"
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:135
+msgid ""
+"If empty, subscription request email will be sent to the email address "
+"entered in Contact block."
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:169
+msgid "Subscription Form Intro Text"
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:203
+msgid "Subscription Form Button Text"
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:237
+msgid "Subscription Form Placeholder Text"
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:271
+msgid "Email Confirmation - Error"
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:305
+msgid "Email Confirmation - Success"
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:370
+msgid "Button Background Color"
+msgstr ""
+
+#: inc/customizer/sections/subscription.php:404
+msgid "Button Background Hover Color"
+msgstr ""
+
+#: inc/customizer/sections/typography.php:16
+msgid "Typography"
+msgstr ""
+
+#: inc/customizer/sections/typography.php:38
+msgid "Body Font"
+msgstr ""
+
+#: inc/customizer/sections/typography.php:61
+msgid "Heading Font"
+msgstr ""
+
+#: inc/helpers/helpers.php:201
+msgid "Social"
+msgstr ""
+
+#: inc/helpers/options.php:17
+msgid "Random"
+msgstr ""
+
+#: inc/helpers/options.php:18
+msgid "Fade"
+msgstr ""
+
+#: inc/helpers/options.php:19
+msgid "Fade 2"
+msgstr ""
+
+#: inc/helpers/options.php:20
+msgid "Slide Left"
+msgstr ""
+
+#: inc/helpers/options.php:21
+msgid "Slide Left 2"
+msgstr ""
+
+#: inc/helpers/options.php:22
+msgid "Slide Right"
+msgstr ""
+
+#: inc/helpers/options.php:23
+msgid "Slide Right 2"
+msgstr ""
+
+#: inc/helpers/options.php:24
+msgid "Slide Up"
+msgstr ""
+
+#: inc/helpers/options.php:25
+msgid "Slide Up 2"
+msgstr ""
+
+#: inc/helpers/options.php:26
+msgid "Slide Down"
+msgstr ""
+
+#: inc/helpers/options.php:27
+msgid "Slide Down 2"
+msgstr ""
+
+#: inc/helpers/options.php:28
+msgid "Zoom In"
+msgstr ""
+
+#: inc/helpers/options.php:29
+msgid "Zoom In 2"
+msgstr ""
+
+#: inc/helpers/options.php:30
+msgid "Zoom Out"
+msgstr ""
+
+#: inc/helpers/options.php:31
+msgid "Zoom Out 2"
+msgstr ""
+
+#: inc/helpers/options.php:32
+msgid "Swirl Left"
+msgstr ""
+
+#: inc/helpers/options.php:33
+msgid "Swirl Left 2"
+msgstr ""
+
+#: inc/helpers/options.php:34
+msgid "Swirl Right"
+msgstr ""
+
+#: inc/helpers/options.php:35
+msgid "Swirl Right 2"
+msgstr ""
+
+#: inc/helpers/options.php:36
+msgid "Swirl Up"
+msgstr ""
+
+#: inc/helpers/options.php:37
+msgid "Swirl Up 2"
+msgstr ""
+
+#: inc/helpers/options.php:38
+msgid "Swirl Down"
+msgstr ""
+
+#: inc/helpers/options.php:39
+msgid "Swirl Down 2"
+msgstr ""
+
+#: inc/helpers/options.php:40
+msgid "Burn"
+msgstr ""
+
+#: inc/helpers/options.php:41
+msgid "Burn 2"
+msgstr ""
+
+#: inc/helpers/options.php:42
+msgid "Blur"
+msgstr ""
+
+#: inc/helpers/options.php:43
+msgid "Blur 2"
+msgstr ""
+
+#: inc/helpers/options.php:44
+msgid "Flash"
+msgstr ""
+
+#: inc/helpers/options.php:45
+msgid "Flash 2"
+msgstr ""
+
+#: inc/helpers/themes.php:18
+msgid "Charity"
+msgstr ""
+
+#: inc/helpers/themes.php:23
+msgid "Furniture"
+msgstr ""
+
+#: inc/helpers/themes.php:28
+msgid "Skin Care"
+msgstr ""
+
+#: inc/helpers/themes.php:33
+msgid "Minimal"
+msgstr ""
+
+#: inc/helpers/themes.php:37
+msgid "Digital Agency"
+msgstr ""
+
+#: inc/helpers/themes.php:41
+msgid "App"
+msgstr ""
+
+#: inc/helpers/themes.php:45
+msgid "Cake Shop"
+msgstr ""
+
+#: inc/helpers/themes.php:49
+msgid "Coffee Shop"
+msgstr ""
+
+#: inc/helpers/themes.php:53
+msgid "Construction"
+msgstr ""
+
+#: inc/helpers/themes.php:57
+msgid "Dental"
+msgstr ""
+
+#: inc/helpers/themes.php:61
+msgid "Fitness"
+msgstr ""
+
+#: inc/helpers/themes.php:65
+msgid "Fruits"
+msgstr ""
+
+#: inc/helpers/themes.php:69
+msgid "Kennel Club"
+msgstr ""
+
+#: inc/helpers/themes.php:73
+msgid "Yoga"
+msgstr ""
+
+#: inc/hooks/admin.php:21
+msgid "Nifty Coming Soon is Enabled"
+msgstr ""
+
+#: inc/hooks/admin.php:70
+msgid "Coming Soon & Maintenance Mode Page"
+msgstr ""
+
+#: inc/hooks/admin.php:87
+msgid "Settings"
+msgstr ""
+
+#: inc/hooks/admin.php:88
+msgid "Customize"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Nifty Coming Soon & Maintenance Page"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wphait.com/plugins/nifty-coming-soon-and-under-construction-page/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Easy to set up Coming Soon, Maintenance and Under Construction page. It "
+"features Responsive design, Countdown timer, Animations, Live Preview, "
+"Background Slider, Subscription form and more."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WP Hait"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wphait.com/"
+msgstr ""

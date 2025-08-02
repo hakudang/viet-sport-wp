@@ -1,0 +1,64 @@
+{
+	"apiVersion": "3",
+	"name": "vk-filter-search-pro/search-result-single-order",
+	"title": "VK Search Result Single Order",
+	"description": "This block can specify the display order of the search results page.",
+	"category": "vk-filter-search",
+	"textdomain": "vk-filter-search-pro",
+	"parent": [ "vk-filter-search-pro/filter-search-pro" ],
+	"editorScript": "vk-filter-search-pro-block",
+	"editorStyle": "vk-filter-search-pro-editor",
+	"style": "vk-filter-search-pro-style",
+	"attributes": {
+		"blockLabel": {
+			"type": "string",
+			"default": ""
+		},
+		"selectOption": {
+			"type": "string",
+			"default": "[]"
+		},
+		"outerColumnXs": {
+			"type": "string",
+			"default": "12"
+		},
+		"outerColumnSm": {
+			"type": "string",
+			"default": "12"
+		},
+		"outerColumnMd": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnLg": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnXl": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnXxl": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnWidthMethod": {
+			"type": "string",
+			"default": null
+		},
+		"outerColumnWidthMin": {
+			"type": "string",
+			"default": null
+		},
+		"blockDisplay": {
+			"type": "boolean",
+			"default": true
+		},
+		"blockId": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"className": true
+	}
+}

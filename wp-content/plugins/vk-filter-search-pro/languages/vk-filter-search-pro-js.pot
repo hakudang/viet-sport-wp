@@ -1,0 +1,480 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:101
+msgid "Radio / Checkbox ( Screen size : XX Large )"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:18
+msgid "Unspecified"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:22
+msgid "1 column"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:26
+msgid "2 column"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:30
+msgid "3 column"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:34
+msgid "4 column"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:38
+msgid "6 column"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:46
+msgid "Radio / Checkbox ( Screen size : Extra small )"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:57
+msgid "Radio / Checkbox ( Screen size : Small )"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:68
+msgid "Radio / Checkbox ( Screen size : Medium )"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:79
+msgid "Radio / Checkbox ( Screen size : Large )"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:90
+msgid "Radio / Checkbox ( Screen size : Extra large )"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:101
+msgid "Block width ( Screen size : XX Large )"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:18
+msgid "1/4"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:22
+msgid "1/3"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:26
+msgid "1/2"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:30
+msgid "2/3"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:34
+msgid "3/4"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:38
+msgid "1/1"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:46
+msgid "Block width ( Screen size : Extra small )"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:57
+msgid "Block width ( Screen size : Small )"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:68
+msgid "Block width ( Screen size : Medium )"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:79
+msgid "Block width ( Screen size : Large )"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:90
+msgid "Block width ( Screen size : Extra large )"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:160
+msgid ""
+"This block will active when Name of Custom Field, Compare Operator, Label "
+"of This Block is set."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:174
+msgid "Caution"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:178
+msgid ""
+"Searching with custom fields is very server-intensive, so using this block "
+"is inherently deprecated."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:182
+msgid ""
+"For example, if you have a custom field called \"Price\", use this block to "
+"filter by the value of that field is deprecated."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:187
+msgid ""
+"Instead, create a \"price range\" by custom taxonomy, register terms such "
+"as \"$0 to $99\", \"$100 to $499\", and \"$500 to $999\", and search for "
+"them. Since the server load is lighter, please consider that method as much "
+"as possible."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:193
+msgid "This block is intended for use on small sites only."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:197
+msgid ""
+"Although it depends on the server specifications and the number of custom "
+"fields, the expected number of posts for the entire site is about 3000 or "
+"less."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:203
+msgid ""
+"The response will vary greatly depending on the server specifications and "
+"the number of custom fields."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:207
+msgid ""
+"Therefore, we cannot answer questions such as \"How many posts is the "
+"guaranteed?\""
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:220
+msgid "Use this block after understanding the above contents."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:240
+msgid "Custom Field Block Options"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:248
+msgid "Name of Custom Field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:260
+msgid "Compare Operator"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:267
+msgid "Equal"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:274
+msgid "Higher"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:281
+msgid "Lower"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:288
+msgid "Range"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:302
+#: inc/filter-search-pro/package/src/keyword-search-pro/edit.js:31
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:323
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:101
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:163
+msgid "Label of This Block"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:314
+msgid "Around Text of This Field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:320
+msgid "Before Text of This Field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:324
+msgid "It will be displayed at the beginning of the input field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:334
+msgid "After Text of This Field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:338
+msgid "It will be displayed at the ending of the input field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:351
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:411
+msgid "Text of Between Minimum Field and Maximum Field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:355
+msgid "It will be displayed between input fields"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:368
+#: inc/filter-search-pro/package/src/keyword-search-pro/edit.js:55
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:428
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:178
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:175
+msgid "Choose this block width"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/index.js:13
+msgid "VK Custom Field Search Pro (Beta)"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:114
+msgid "Display this form on search result page"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:126
+msgid "Display on post type archive."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:145
+msgid "Submit Text"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:73
+#: inc/filter-search-pro/package/src/filter-search-pro/save.js:32
+msgid "Search"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:98
+msgid "Target of Post Type"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/filter-search-pro/index.js:14
+msgid "VK Filter Search Pro"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/keyword-search-pro/edit.js:23
+msgid "Keyword Block Options"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/keyword-search-pro/edit.js:43
+msgid "Placeholder"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/keyword-search-pro/index.js:12
+msgid "VK Keyword Search Pro"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/deprecated/index.js:18
+#: inc/filter-search-pro/package/src/post-date-search-pro/index.js:23
+msgid "Post Date"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:202
+msgid ""
+"This block will active when Date Type, Compare Operator, Label of This "
+"Block is set."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:215
+msgid "Date Block Description"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:223
+msgid ""
+"This block is intended for use in searches such as events and facility "
+"usage. Search is performed based on the release date, but WordPress is "
+"supposed to be used after making it public even on a future date because "
+"future posts will be reserved posts by default."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:230
+msgid "Post Type of Disable Future Post"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:234
+msgid "This setting item is common to all post date search blocks."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:251
+msgid "Date Block Options"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:256
+msgid "Date Type"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:260
+msgid "Publish date"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:267
+msgid "Modified Date"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:281
+msgid "Comparison conditions"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:288
+msgid "Only Specified Date"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:295
+msgid "Before Specified Date"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:302
+msgid "After Specified Date"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:309
+msgid "In Specified Range"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:335
+msgid "Around Text of First Field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:341
+msgid "Before Text of First Field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:345
+msgid "It will be displayed at the beginning of the first input field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:355
+msgid "After Text of First Field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:359
+msgid "It will be displayed at the ending of the first input field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:372
+msgid "Around Text of Second Field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:379
+msgid "Before Text of Second Field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:383
+msgid "It will be displayed at the beginning of the second input field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:393
+msgid "After Text of Second Field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:397
+msgid "It will be displayed at the ending of the second input field"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:415
+msgid "It will be displayed between input dates."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/index.js:17
+msgid "VK Post Date Search Pro"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:115
+msgid "Label of Post"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:126
+msgid "Label of Page"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:137
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:184
+msgid "Selection format"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:143
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:190
+msgid "Choose selection format"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:153
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:200
+msgid "Pulldown"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:160
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:207
+msgid "Checkbox"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:167
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:214
+msgid "Radio Button"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:36
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:34
+msgid "Checkbox / radio button columns"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:59
+msgid "Post Type"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:62
+msgid "This block will not be displayed because the post type is not selected."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:79
+msgid "Post Type Block Options"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:87
+msgid "Post Types"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/index.js:12
+msgid "VK Post Type Search Pro"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:106
+msgid "Filter setting"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:109
+msgid "Choose filter setting"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:119
+msgid "OR"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:123
+msgid "AND"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:140
+msgid "Taxonomy Block Option"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:148
+msgid "Taxonomy"
+msgstr ""
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:77
+msgid "This block will not be displayed because no taxonomy is selected."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:92
+msgid "This block will not be displayed because this taxonomy has no term."
+msgstr ""
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/index.js:12
+msgid "VK Taxonomy Search Pro"
+msgstr ""

@@ -1,0 +1,1754 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VK Filter Search Pro\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vk-filter-search-"
+"pro\n"
+"POT-Creation-Date: 2024-10-15T06:52:04+00:00\n"
+"PO-Revision-Date: 2024-10-15 16:31+0900\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: vk-filter-search-pro.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:100
+#: inc/filter-search-pro/package/src/common/outer-columns.js:295
+msgid "Screen size : Small"
+msgstr "画面サイズ : Small"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:111
+#: inc/filter-search-pro/package/src/common/outer-columns.js:284
+msgid "Screen size : Medium"
+msgstr "画面サイズ : Medium"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:122
+#: inc/filter-search-pro/package/src/common/outer-columns.js:273
+msgid "Screen size : Large"
+msgstr "画面サイズ : Large"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:133
+#: inc/filter-search-pro/package/src/common/outer-columns.js:262
+msgid "Screen size : Extra large"
+msgstr "画面サイズ : Extra large"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:144
+#: inc/filter-search-pro/package/src/common/outer-columns.js:251
+msgid "Screen size : XX Large"
+msgstr "画面サイズ : XX Large"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:24
+msgid "Unspecified"
+msgstr "指定なし"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:28
+msgid "1 column"
+msgstr "1カラム"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:32
+msgid "2 column"
+msgstr "2カラム"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:36
+msgid "3 column"
+msgstr "3カラム"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:40
+msgid "4 column"
+msgstr "4カラム"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:44
+msgid "6 column"
+msgstr "6カラム"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:52
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:505
+msgid "Method of specifying width"
+msgstr "幅の指定方法"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:59
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:512
+msgid "Set Min Width"
+msgstr "最小維持幅を指定"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:63
+msgid "Set Number of Columns"
+msgstr "カラム数を指定"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:76
+#: inc/filter-search-pro/package/src/common/outer-columns.js:224
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:534
+msgid "Column min width"
+msgstr "カラムの最小維持幅"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:78
+#: inc/filter-search-pro/package/src/common/outer-columns.js:236
+msgid "Please enter the minimum column width."
+msgstr "カラムの最小維持サイズを入力してください。"
+
+#: inc/filter-search-pro/package/src/common/inner-columns.js:89
+#: inc/filter-search-pro/package/src/common/outer-columns.js:306
+msgid "Screen size : Extra small"
+msgstr "画面サイズ : Extra small"
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:185
+msgid "1/4"
+msgstr "1/4"
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:189
+msgid "1/3"
+msgstr "1/3"
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:193
+msgid "1/2"
+msgstr "1/2"
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:197
+msgid "2/3"
+msgstr "2/3"
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:201
+msgid "3/4"
+msgstr "3/4"
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:205
+msgid "1/1"
+msgstr "1/1"
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:213
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:501
+msgid "Layout setting"
+msgstr "レイアウト設定"
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:219
+msgid "Block Width"
+msgstr "ブロックの幅"
+
+#: inc/filter-search-pro/package/src/common/outer-columns.js:242
+msgid ""
+"If not filled in, the minimum keep width specified by the parent VK Filter "
+"Search Pro block will be applied."
+msgstr ""
+"未入力の場合、親のVK Filter Search Proブロックで指定された最小維持幅が適用さ"
+"れます。"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1007
+msgid "Step"
+msgstr "ステップ"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1012
+msgid "Please enter \"any\" or a number."
+msgstr "数字を入力してください。"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1026
+msgid "Custom Field Block Options"
+msgstr "カスタムフィールド検索ブロックの設定"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1034
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/1.12.1/save.js:38
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/2.11.2/save.js:50
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/2.2.3/save.js:43
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:188
+#: inc/filter-search-pro/package/src/search-result-single-order/save.js:50
+msgid "Custom Field"
+msgstr "カスタムフィールド"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1047
+msgid "Field Type"
+msgstr "フィールドタイプ"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1051
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:557
+msgid "Numeric"
+msgstr "数値"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1058
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:564
+msgid "Date"
+msgstr "日付"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1062
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:571
+msgid "Date Time"
+msgstr "日時"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1069
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:578
+msgid "Time"
+msgstr "時間"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1081
+msgid "Compare Operator"
+msgstr "比較演算子"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1088
+msgid "Equal"
+msgstr "等しい"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1095
+msgid "Higher / After"
+msgstr "高い / 後"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1102
+msgid "Lower / Before"
+msgstr "低い / 前"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1109
+msgid "Range"
+msgstr "範囲"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1123
+#: inc/filter-search-pro/package/src/keyword-search-pro/edit.js:55
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:435
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:128
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:467
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:351
+msgid "Label of This Block"
+msgstr "このブロックのラベル"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1135
+msgid "Around Text of First Field"
+msgstr "第１フィールドのテキスト周辺"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1141
+msgid "Before Text of First Field"
+msgstr "第１フィールドの先頭テキスト"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1145
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:457
+msgid "It will be displayed at the beginning of the first input field"
+msgstr "最初の入力フィールドの先頭に表示されます"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1155
+msgid "After Text of First Field"
+msgstr "第１フィールドの末尾テキスト"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1159
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:471
+msgid "It will be displayed at the ending of the first input field"
+msgstr "最初の入力フィールドの末尾に表示されます"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1172
+msgid "Around Text of Second Field"
+msgstr "第２フィールドのテキスト周辺"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1179
+msgid "Before Text of Second Field"
+msgstr "第２フィールドの先頭テキスト"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1183
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:495
+msgid "It will be displayed at the beginning of the second input field"
+msgstr "2つ目の入力フィールドの先頭に表示されます"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1193
+msgid "After Text of Second Field"
+msgstr "第２フィールドの末尾テキスト"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1197
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:509
+msgid "It will be displayed at the ending of the second input field"
+msgstr "2つ目の入力フィールドの末尾に表示されます"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1211
+msgid "Text of Between Minimum Field and Maximum Field"
+msgstr "最小フィールドと最大フィールドの間のテキスト"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1215
+msgid "It will be displayed between input fields"
+msgstr "入力フィールドの間に表示されます"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1228
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:407
+msgid "Minimum"
+msgstr "最小"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:1239
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:421
+msgid "Maximum"
+msgstr "最大"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:151
+msgid "Please save the date in the format \"YYYY-MM-DD\". (e.g. 2020-01-01)"
+msgstr "“YYYY-MM-DD”. の形式で日付を保存してください。（例:2020-01-01）"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:160
+msgid ""
+"Please save the date and time in the format \"YYYY-MM-DD hh:mm:ss\". (e.g. "
+"2020-01-01 00:00:00)"
+msgstr ""
+"“YYYY-MM-DD hh:mm:ss”. の形式で日時を保存してください。（例:2020-01-01 "
+"00:00:00）"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:169
+msgid "Please save the time in the format \"hh:mm:ss\". (e.g. 00:00:00)"
+msgstr "“hh:mm:ss”. の形式で時間を保存してください。（例: 00:00:00）"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:82
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:172
+msgid "Please select"
+msgstr "選択してください"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:875
+msgid ""
+"This block will active when Name of Custom Field, Compare Operator, Label of "
+"This Block is set."
+msgstr ""
+"このブロックは、「カスタムフィールドの名前」「比較演算子」「このブロックのラ"
+"ベル」が設定されていると、アクティブになります。"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:891
+msgid "Caution"
+msgstr "注意事項"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:895
+msgid ""
+"Searching with custom fields is very server-intensive, so using this block "
+"is inherently deprecated."
+msgstr ""
+"カスタムフィールドを使った検索は非常にサーバーに負荷がかかるため、本来このブ"
+"ロックの使用は非推奨です。"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:899
+msgid ""
+"For example, if you have a custom field called \"Price\", use this block to "
+"filter by the value of that field is deprecated."
+msgstr ""
+"例えば、「価格」というカスタムフィールドがある場合、このブロックを使って、そ"
+"のフィールドの値でフィルタリングする事は非推奨です。"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:904
+msgid ""
+"Instead, create a \"price range\" by custom taxonomy, register terms such as "
+"\"$0 to $99\", \"$100 to $499\", and \"$500 to $999\", and search for them. "
+"Since the server load is lighter, please consider that method as much as "
+"possible."
+msgstr ""
+"その代わり、カスタムタクソノミーで「価格帯」を作り、「0ドルから99ドル」「100"
+"ドルから499ドル」「500ドルから999ドル」などの用語を登録し、検索してください。"
+"サーバーの負荷が軽くなりますので、なるべくそちらの方法をご検討ください。"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:910
+msgid "This block is intended for use on small sites only."
+msgstr "このブロックは小規模なサイトでのみ使用することを想定しています。"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:914
+msgid ""
+"Although it depends on the server specifications and the number of custom "
+"fields, the expected number of posts for the entire site is about 3000 or "
+"less."
+msgstr ""
+"サーバーのスペックやカスタムフィールドの数にもよりますが、サイト全体の想定投"
+"稿数は約3000件以下です。"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:920
+msgid ""
+"The response will vary greatly depending on the server specifications and "
+"the number of custom fields."
+msgstr ""
+"サーバーの仕様やカスタムフィールドの数によって、レスポンスは大きく異なりま"
+"す。"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:924
+msgid ""
+"Therefore, we cannot answer questions such as \"How many posts is the "
+"guaranteed?\""
+msgstr ""
+"そのため、”動作保証の投稿数はいくつですか？\"といった質問にはお答えできませ"
+"ん。"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:930
+msgid ""
+"Only single-byte alphanumerical characters, single-byte hyphens ( - ), and "
+"single-byte underscores ( _ ) can be used in custom field names. If it "
+"contains any other characters, it will be excluded from the dropdown list."
+msgstr ""
+"カスタムフィールドの名前に使用できる文字は、半角英数字、半角ハイフン（ - ）、"
+"半角アンダースコア（ _ ）のみです。それ以外の文字が含まれる場合は、ドロップダ"
+"ウンのリストから除外されます。"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:943
+msgid "Use this block after understanding the above contents."
+msgstr "上記の内容をご理解の上、本ブロックをご利用ください。"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:96
+msgid "Not selected"
+msgstr "選択されていません"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:966
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:286
+msgid "Please set the minimum value to a value less than the maximum value."
+msgstr "最小値は最大値より小さい値を設定してください。"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:980
+msgid "Please enter a number."
+msgstr "数値を入力してください。"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:985
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:426
+msgid "Please enter a date in the format \"YYYY-MM-DD\". (e.g. 2020-01-01)"
+msgstr "“YYYY-MM-DD”. の形式で入力してください。（例:2020-01-01）"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:990
+msgid ""
+"Please enter a date and time in the format \"YYYY-MM-DD hh:mm:ss\". (e.g. "
+"2020-01-01 00:00:00)"
+msgstr ""
+"“YYYY-MM-DD hh:mm:ss”. の形式で入力してください。（例:2020-01-01 00:00:00）"
+
+#: inc/filter-search-pro/package/src/custom-field-search-pro/edit.js:995
+msgid "Please enter a time in the format \"hh:mm:ss\". (e.g. 00:00:00)"
+msgstr "“hh:mm:ss”. の形式で入力してください。（例:00:00:00）"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/deprecated/1.13.1/save.js:33
+#: inc/filter-search-pro/package/src/filter-search-pro/deprecated/1.14.3/save.js:47
+#: inc/filter-search-pro/package/src/filter-search-pro/deprecated/1.6.1/save.js:32
+#: inc/filter-search-pro/package/src/filter-search-pro/deprecated/2.0.6/save.js:36
+#: inc/filter-search-pro/package/src/filter-search-pro/deprecated/2.2.3/save.js:37
+#: inc/filter-search-pro/package/src/filter-search-pro/deprecated/2.4.1/save.js:41
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:287
+#: inc/filter-search-pro/package/src/filter-search-pro/save.js:41
+#: inc/filter-search/package/src/filter-search/deprecated/0.3.1/save.js:51
+#: inc/filter-search/package/src/filter-search/deprecated/0.3.2/save.js:49
+#: inc/filter-search/package/src/filter-search/deprecated/0.4.6/save.js:49
+#: inc/filter-search/package/src/filter-search/deprecated/0.6.5/save.js:49
+#: inc/filter-search/package/src/filter-search/deprecated/1.11.0/save.js:51
+#: inc/filter-search/package/src/filter-search/deprecated/1.6.1/save.js:53
+#: inc/filter-search/package/src/filter-search/edit.js:306
+#: inc/filter-search/package/src/filter-search/save.js:42
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/class-vk-filter-search-pro-shortcode.php:40
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search-shortcode.php:54
+#: inc/filter-search-pro/package/class-vk-filter-search-pro-shortcode.php:40
+#: inc/filter-search/package/class-vk-filter-search-shortcode.php:54
+msgid "Search"
+msgstr "検索"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit-submitbutton.js:137
+msgid "Botton Color"
+msgstr "ボタンの色"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit-submitbutton.js:161
+#: inc/filter-search/package/src/search-result-count/edit.js:232
+msgid "Text Color"
+msgstr "文字の色"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit-submitbutton.js:169
+msgid "Background Color"
+msgstr "背景色"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit-submitbutton.js:177
+msgid "Border Color"
+msgstr "線の色"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit-submitbutton.js:185
+msgid "Automatically change button color on hover"
+msgstr "ホバー時にボタンの色を自動で変更する"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit-submitbutton.js:50
+msgid "Submit Button Setting"
+msgstr "送信ボタン設定"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit-submitbutton.js:55
+msgid "Submit Button Text"
+msgstr "送信ボタンテキスト"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit-submitbutton.js:65
+#: inc/filter-search/package/src/search-result-count/edit.js:193
+msgid "Font Size"
+msgstr "文字サイズ"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit-submitbutton.js:78
+msgid "Letter spacing"
+msgstr "字間"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit-submitbutton.js:90
+msgid "Padding"
+msgstr "余白（Padding）"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:171
+msgid ""
+"Please do not place the VK Filter Search Pro Block directly into the normal "
+"post content or the site editor. First, create a form using the Post Type "
+"\"VK Filter Search\"."
+msgstr ""
+"VK Filter Search Pro ブロックは普通の記事やサイトエディタに直接配置しないで、"
+"まず投稿タイプ「VK Filter Search」でフォームを作成してください。"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:177
+#: inc/filter-search/package/src/filter-search/edit.js:79
+msgid ""
+"After that, please place the \"Call Filter Search\" Block where you want the "
+"form displayed and select the form you created."
+msgstr ""
+"その上で表示したい位置に「Call Filter Search」ブロックを配置して作成した"
+"フォームを選択してください。"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:192
+#: inc/filter-search/package/src/filter-search/edit.js:94
+msgid ""
+"If you want to display the Search Form on the results screen, you need to "
+"put a \"Search Result Form\" block in the \"Search\" template on theme "
+"editor."
+msgstr ""
+"検索結果画面に検索フォームを表示したい場合は、テーマエディタ上の「検索」テン"
+"プレートに「Search Result Form」ブロックを設置する必要があります。"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:207
+#: inc/filter-search/package/src/filter-search/edit.js:109
+msgid ""
+"If you want to display the Search Form on the Post Type Archive screen, you "
+"need to put a \"Search Result Form\" block in the \"Archive\" template on "
+"theme editor."
+msgstr ""
+"投稿タイプのアーカイブ画面に検索フォームを表示したい場合は、テーマエディタ上"
+"の「アーカイブ」テンプレートに「Search Result Form」ブロックを設置する必要が"
+"あります。"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:211
+#: inc/filter-search/package/src/filter-search/edit.js:113
+msgid ""
+"Alternatively, uncheck it and place the search form directly in the archive "
+"page template."
+msgstr ""
+"また、チェックを外して、アーカイブページのテンプレートに直接検索フォームを配"
+"置することも可能です。"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:228
+msgid "Displaying Forms on Search Results Page"
+msgstr "検索結果ページにフォームを表示する"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:234
+#: inc/filter-search/package/src/search-result-title/edit.js:254
+msgid "Display"
+msgstr "表示"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:248
+#: inc/filter-search/package/src/filter-search/edit.js:145
+msgid "Display on post type archive."
+msgstr "投稿タイプアーカイブに表示します。"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:519
+msgid "Specify division count for each screen size"
+msgstr "画面サイズ毎での分割数指定"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:539
+msgid "Please enter the minimum width of the inner block."
+msgstr "インナーブロックの最小維持サイズを入力してください。"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:550
+msgid "Column Gap"
+msgstr "カラムの間隔"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:563
+msgid "Please specify column width from each inner block."
+msgstr "カラム指定は各インナーブロックから行ってください。"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:572
+#: inc/filter-search/package/src/filter-search/edit.js:192
+msgid "Search Form Setting"
+msgstr "検索フォームの設定"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:581
+#: inc/filter-search/package/src/filter-search/edit.js:201
+msgid "Target of Post Type"
+msgstr "対象の投稿タイプ"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:598
+msgid "Direct search setting"
+msgstr "ダイレクト検索設定"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:604
+msgid "Enable"
+msgstr "有効にする"
+
+#: inc/filter-search-pro/package/src/filter-search-pro/edit.js:611
+msgid ""
+"If you activate this setting, then, when the user changes the pulldown, "
+"checkbox, or radio button, the search result page will be displayed without "
+"the need to press the submit button."
+msgstr ""
+"この設定を有効にした場合、ユーザーがプルダウン、チェックボックス、またはラジ"
+"オボタンを変更すると、送信ボタンを押すことなく検索結果ページを表示します。"
+
+#: inc/filter-search-pro/package/src/keyword-search-pro/edit.js:47
+msgid "Keyword Block Options"
+msgstr "キーワードブロックの設定"
+
+#: inc/filter-search-pro/package/src/keyword-search-pro/edit.js:67
+msgid "Placeholder"
+msgstr "プレースホルダ"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/deprecated/index.js:21
+#: inc/filter-search-pro/package/src/post-date-search-pro/index.js:22
+#: inc/filter-search/package/src/search-result-title/edit.js:87
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/class-vk-filter-search-pro-title.php:73
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/src/post-date-search-pro/index.php:45
+#: inc/filter-search-pro/package/class-vk-filter-search-pro-title.php:73
+#: inc/filter-search-pro/package/src/post-date-search-pro/index.php:45
+msgid "Post Date"
+msgstr "投稿日"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:273
+msgid ""
+"This block will active when Date Type, Compare Operator, Label of This Block "
+"is set."
+msgstr ""
+"このブロックは、「日付タイプ」「比較演算子」「このブロックのラベル」が設定さ"
+"れている場合に有効になります。"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:299
+msgid "Date Block Description"
+msgstr "日付検索ブロックの説明"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:307
+msgid ""
+"This block is intended for use in searches such as events and facility "
+"usage. Search is performed based on the release date, but WordPress is "
+"supposed to be used after making it public even on a future date because "
+"future posts will be reserved posts by default."
+msgstr ""
+"このブロックは、イベントや施設の利用状況などの検索に使用することを想定してい"
+"ます。公開日を基準に検索を行いますが、WordPressはデフォルトで未来の投稿が予約"
+"投稿となるため、未来の日でも公開してから使用することを想定しています。"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:314
+msgid "Post Type of Disable Future Post"
+msgstr "予約投稿を無効化する投稿タイプ"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:318
+msgid "This setting item is common to all post date search blocks."
+msgstr "この設定項目は、すべての投稿日付検索ブロックに共通です。"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:335
+msgid "Date Block Options"
+msgstr "日付検索ブロックの設定"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:340
+msgid "Date Type"
+msgstr "日付タイプ"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:344
+msgid "Publish date"
+msgstr "公開日"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:351
+msgid "Modified Date"
+msgstr "変更日"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:365
+msgid "Comparison conditions"
+msgstr "比較条件"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:372
+msgid "Only Specified Date"
+msgstr "指定日のみ"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:379
+msgid "Before Specified Date"
+msgstr "指定日以前"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:386
+msgid "After Specified Date"
+msgstr "指定日以降"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:393
+msgid "In Specified Range"
+msgstr "指定範囲内"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:447
+msgid "Text Around The First Field"
+msgstr "第１フィールド周辺テキスト"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:484
+msgid "Text Around The Second Field"
+msgstr "第２フィールド周辺テキスト"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:491
+msgid "Before The Field"
+msgstr "フィールドの前"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:505
+msgid "After The Field"
+msgstr "フィールドの後"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:523
+msgid "Text Between First and Second Field"
+msgstr "第1と第2フィールドの間のテキスト"
+
+#: inc/filter-search-pro/package/src/post-date-search-pro/edit.js:527
+msgid "It will be displayed between input dates."
+msgstr "入力された日付の間に表示されます。"
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:106
+msgid "Post Type Block Options"
+msgstr "投稿タイプブロックの設定"
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:114
+#: inc/filter-search/package/src/post-type-search/edit.js:50
+msgid "Post Types"
+msgstr "投稿タイプ"
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:142
+msgid "Label of Post"
+msgstr "投稿のラベル"
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:153
+msgid "Label of Page"
+msgstr "固定ページのラベル"
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:164
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:364
+msgid "Selection format"
+msgstr "選択形式"
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:170
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:370
+msgid "Choose selection format"
+msgstr "選択形式を選択"
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:180
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:380
+msgid "Pulldown"
+msgstr "プルダウン"
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:187
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:387
+msgid "Checkbox"
+msgstr "チェックボックス"
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:194
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:394
+msgid "Radio Button"
+msgstr "ラジオボタン"
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:57
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:161
+msgid "Checkbox / radio button columns"
+msgstr "チェックボックス / ラジオボタンのカラム"
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:80
+#: inc/filter-search/package/src/post-type-search/edit.js:25
+#: inc/filter-search/package/src/search-result-title/edit.js:69
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/class-vk-filter-search-pro-shortcode.php:100
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/class-vk-filter-search-pro-shortcode.php:112
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/class-vk-filter-search-pro.php:126
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/src/post-type-search-pro/index.php:75
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search-title.php:87
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search.php:385
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search.php:435
+#: inc/filter-search-pro/package/class-vk-filter-search-pro-shortcode.php:100
+#: inc/filter-search-pro/package/class-vk-filter-search-pro-shortcode.php:112
+#: inc/filter-search-pro/package/class-vk-filter-search-pro.php:126
+#: inc/filter-search-pro/package/src/post-type-search-pro/index.php:75
+#: inc/filter-search/package/class-vk-filter-search-title.php:87
+#: inc/filter-search/package/class-vk-filter-search.php:385
+#: inc/filter-search/package/class-vk-filter-search.php:435
+msgid "Post Type"
+msgstr "投稿タイプ"
+
+#: inc/filter-search-pro/package/src/post-type-search-pro/edit.js:83
+#: inc/filter-search/package/src/post-type-search/edit.js:28
+msgid "This block will not be displayed because the post type is not selected."
+msgstr "投稿タイプが選択されていないためこのブロックは表示されません。"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/1.12.1/save.js:144
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/2.11.2/save.js:156
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/2.2.3/save.js:149
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:422
+#: inc/filter-search-pro/package/src/search-result-single-order/save.js:156
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/class-vk-filter-search-pro.php:150
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/class-vk-filter-search-pro.php:270
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search-block.php:54
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search-block.php:61
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search.php:457
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search.php:656
+#: inc/filter-search-pro/package/class-vk-filter-search-pro.php:150
+#: inc/filter-search-pro/package/class-vk-filter-search-pro.php:270
+#: inc/filter-search/package/class-vk-filter-search-block.php:54
+#: inc/filter-search/package/class-vk-filter-search-block.php:61
+#: inc/filter-search/package/class-vk-filter-search.php:457
+#: inc/filter-search/package/class-vk-filter-search.php:656
+msgid "Any"
+msgstr "指定なし"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/1.12.1/save.js:22
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/2.11.2/save.js:34
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/2.2.3/save.js:27
+#: inc/filter-search-pro/package/src/search-result-single-order/save.js:34
+msgid "Plese Select"
+msgstr "選択してください"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/1.12.1/save.js:26
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/2.11.2/save.js:38
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/2.2.3/save.js:31
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:176
+#: inc/filter-search-pro/package/src/search-result-single-order/save.js:38
+msgid "Published Date"
+msgstr "公開日"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/1.12.1/save.js:30
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/2.11.2/save.js:42
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/2.2.3/save.js:35
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:180
+#: inc/filter-search-pro/package/src/search-result-single-order/save.js:42
+msgid "Modefied Date"
+msgstr "更新日"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/1.12.1/save.js:34
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/2.11.2/save.js:46
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/2.2.3/save.js:39
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:184
+#: inc/filter-search-pro/package/src/search-result-single-order/save.js:46
+msgid "Title"
+msgstr "タイトル"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/1.12.1/save.js:86
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/2.11.2/save.js:98
+#: inc/filter-search-pro/package/src/search-result-single-order/deprecated/2.2.3/save.js:91
+#: inc/filter-search-pro/package/src/search-result-single-order/save.js:98
+msgid "Order"
+msgstr "並び順"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:160
+msgid "Add new option item"
+msgstr "オプション項目を追加"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:161
+msgid "Edit selected option item"
+msgstr "選択した項目を編集"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:166
+msgid "Add new option"
+msgstr "新規項目追加"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:167
+msgid "Reflect edits"
+msgstr "編集を反映"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:280
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search.php:1036
+#: inc/filter-search/package/class-vk-filter-search.php:1048
+msgid "Edit"
+msgstr "編集"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:297
+msgid "Delete"
+msgstr "削除"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:359
+msgid "Sort order"
+msgstr "並び順"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:365
+msgid "Descending"
+msgstr "降順"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:368
+msgid "Ascending"
+msgstr "昇順"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:434
+#: inc/filter-search/package/src/filter-search/edit.js:237
+msgid "Search Result Single Order"
+msgstr "検索結果の並び替え"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:440
+msgid ""
+"Only one ‘Search Result Single Order’ block can be placed within the same "
+"form. Please delete it immediately."
+msgstr ""
+"「VK Search Result Single Order」は同一フォーム内に1つのみ設置可能です。すぐ"
+"に削除してください。"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:456
+msgid "Display Order Setting"
+msgstr "表示順設定"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:480
+msgid "Select(Drop down) option setting"
+msgstr "ドロップダウン項目設定"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:499
+msgid "Add new select option item"
+msgstr "新規オプション項目追加"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:515
+msgid "Sort target"
+msgstr "並び替え対象"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:528
+msgid "Custom Field Name"
+msgstr "カスタムフィールド名"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:543
+msgid "Custom Field Type"
+msgstr "カスタムフィールドタイプ"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:550
+msgid "String"
+msgstr "文字列"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:594
+msgid "Select option item name (Option)"
+msgstr "セレクトオプション項目名（任意）"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:598
+msgid ""
+"If you are operating in another sense, such as using the publish date as the "
+"\"event date\", change it as necessary."
+msgstr ""
+"公開日を「イベント日」として使用するなど、別の意味で運用している場合は必要に"
+"応じて変更してください。"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:608
+msgid "Descending text (Option)"
+msgstr "降順テキスト（任意）"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:619
+msgid "Ex : Descending / Z to A / 9 to 0 "
+msgstr "例 : 降順 / Z → A / 9 → 0 "
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:625
+msgid "Ascending text (Option)"
+msgstr "昇順テキスト（任意）"
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:636
+msgid "Ex : Ascending / A to Z / 0 to 9 "
+msgstr "例 : 昇順 / A → Z / 9 → 0 "
+
+#: inc/filter-search-pro/package/src/search-result-single-order/edit.js:741
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:100
+msgid "Option Label for Non-Selected"
+msgstr "指定なしの場合の選択肢の表示名"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:108
+msgid "Default is \"Any\""
+msgstr "デフォルトは「指定なし」"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:121
+msgid "Filter setting"
+msgstr "絞り込み設定"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:124
+msgid "Choose filter setting"
+msgstr "絞り込み設定を選択"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:134
+msgid "OR"
+msgstr "または"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:138
+msgid "AND"
+msgstr "かつ"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:142
+msgid "Let the user choose"
+msgstr "ユーザーが選択可能にする"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:172
+msgid "Accordion Setting"
+msgstr "アコーディオン設定"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:175
+msgid "Accordion Type"
+msgstr "アコーディオンタイプ"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:179
+msgid "None"
+msgstr "なし"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:183
+msgid "Accordion"
+msgstr "アコーディオン"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:187
+msgid "Collapse"
+msgstr "折りたたむ"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:194
+msgid ""
+"Please check the operation after saving and reloading this post, or on the "
+"public screen."
+msgstr "動作については保存して再読み込みするか公開画面で確認してください。"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:201
+msgid "None: Nothing to do"
+msgstr "なし: 何もしない"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:207
+msgid "Accordion: Open or close the clicked element"
+msgstr "アコーディオン: クリックで要素を開閉する"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:213
+msgid "Collapse: Open or close the clicked element and close the others"
+msgstr "折りたたむ: クリックで要素を開閉しその他の要素を閉じます"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:262
+#: inc/filter-search/package/src/taxonomy-search/edit.js:44
+msgid "This block will not be displayed because no taxonomy is selected."
+msgstr "タクソノミーが選択されていないため、このブロックは表示されません。"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:280
+#: inc/filter-search/package/src/taxonomy-search/edit.js:62
+msgid "This block will not be displayed because this taxonomy has no term."
+msgstr ""
+"このタクソノミーにはタームが存在しないためこのブロックは表示されません。"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:291
+#: inc/filter-search/package/src/taxonomy-search/edit.js:73
+msgid "Specified taxonomy does not exist"
+msgstr "指定されたタクソノミーは存在しません"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:297
+#: inc/filter-search/package/src/taxonomy-search/edit.js:79
+msgid ""
+"This block will not be displayed because the specified taxonomy does not "
+"exist."
+msgstr "指定されたタクソノミーが存在しないためこのブロックは表示されません。"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:301
+#: inc/filter-search/package/src/taxonomy-search/edit.js:83
+msgid "Please reselect the taxonomy or remove this block.."
+msgstr "タクソノミーを選択し直すか、このブロックを削除してください。"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:323
+msgid "Taxonomy Block Option"
+msgstr "タクソノミーブロック設定"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:331
+#: inc/filter-search/package/src/taxonomy-search/edit.js:105
+msgid "Taxonomy"
+msgstr "タクソノミー"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:343
+msgid ""
+"Taxonomies that do not have any terms associated with posts are excluded "
+"from selection."
+msgstr "投稿に関連付けられたタームがないタクソノミーは除外されます。"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:410
+msgid "Display Setting"
+msgstr "表示順設定"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:416
+#: inc/filter-search/package/src/taxonomy-search/edit.js:142
+msgid "Display Post Counts"
+msgstr "投稿件数を表示"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:427
+msgid ""
+"Display the post count for the current submitted conditions, not for all "
+"posts associated with the terms"
+msgstr ""
+"タームに紐づいている全ての投稿数ではなく、現在の送信されている条件での該当投"
+"稿数を表示"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:438
+#: inc/filter-search/package/src/taxonomy-search/edit.js:148
+msgid "Hide Empty Terms"
+msgstr "空のタームを非表示"
+
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/edit.js:84
+msgid "Step drop down"
+msgstr "段階ドロップダウン"
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:103
+msgid "Select Filter Search Form"
+msgstr "絞り混み検索フォームを選択"
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:24
+msgid "Search Form not registered"
+msgstr "検索フォームが登録されていません"
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:31
+msgid ""
+"Place the VK Filter Search block in the dedicated post type and register the "
+"search form."
+msgstr ""
+"専用の投稿タイプに VK Filter Search のブロックを配置して絞り込み検索フォーム"
+"を登録してください。"
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:37
+msgid "Please reload this page."
+msgstr "このページを再読み込みしてください。"
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:55
+msgid "Register Filter Search Form"
+msgstr "絞り込み検索フォームを登録"
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:65
+msgid ""
+"Select this block and specify from the settings sidebar which search form to "
+"display."
+msgstr ""
+"このブロックを選択して、表示する検索フォームを設定サイドバーから指定してくだ"
+"さい。"
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:74
+msgid "The selected form is deleted. Please select another form."
+msgstr "選択したフォームは削除されました。他のフォームを選択してください。"
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:95
+msgid "Call Filter Search Form Setting"
+msgstr "Call Filter Search Form 設定"
+
+#: inc/filter-search/package/src/filter-search/deprecated/0.1.0/save.js:34
+#: inc/filter-search/package/src/filter-search/deprecated/0.1.1/save.js:39
+#: inc/filter-search/package/src/filter-search/deprecated/0.2.3/save.js:51
+msgid "Refine search"
+msgstr "絞り込み検索"
+
+#: inc/filter-search/package/src/filter-search/edit.js:130
+msgid "Display this form on search result page"
+msgstr "検索結果ページにこのフォームを表示"
+
+#: inc/filter-search/package/src/filter-search/edit.js:216
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search-block.php:200
+#: inc/filter-search/package/class-vk-filter-search-block.php:200
+msgid "VK Filter Search"
+msgstr "VK Filter Search"
+
+#: inc/filter-search/package/src/filter-search/edit.js:223
+#: inc/filter-search/package/src/keyword-search/edit.js:22
+#: inc/filter-search/package/src/post-type-search/edit.js:74
+#: inc/filter-search/package/src/taxonomy-search/edit.js:122
+msgid "Get more features"
+msgstr "プロ版で使える機能"
+
+#: inc/filter-search/package/src/filter-search/edit.js:231
+msgid "Post date search"
+msgstr "投稿日付検索"
+
+#: inc/filter-search/package/src/filter-search/edit.js:243
+msgid "Custom Field Search (beta)"
+msgstr "カスタムフィールド検索 (β版)"
+
+#: inc/filter-search/package/src/filter-search/edit.js:249
+msgid "Editable text for search buttons, labels and placeholder"
+msgstr "検索ボタンラベルの変更 / ラベルとプレースホルダー"
+
+#: inc/filter-search/package/src/filter-search/edit.js:255
+msgid "and more…"
+msgstr "など…"
+
+#: inc/filter-search/package/src/filter-search/edit.js:259
+#: inc/filter-search/package/src/keyword-search/edit.js:45
+#: inc/filter-search/package/src/post-type-search/edit.js:103
+#: inc/filter-search/package/src/taxonomy-search/edit.js:163
+msgid "https://vk-filter-search.com/"
+msgstr ""
+"https://www.vektor-inc.co.jp/service/wordpress-plugins/vk-filter-search/"
+
+#: inc/filter-search/package/src/filter-search/edit.js:266
+#: inc/filter-search/package/src/keyword-search/edit.js:52
+#: inc/filter-search/package/src/post-type-search/edit.js:110
+#: inc/filter-search/package/src/taxonomy-search/edit.js:170
+msgid "Check the Pro Features"
+msgstr "プロ版をみる"
+
+#: inc/filter-search/package/src/filter-search/edit.js:73
+msgid ""
+"Please do not place the VK Filter Search Block directly into the normal post "
+"content or the site editor. First, create a form using the Post Type \"VK "
+"Filter Search\"."
+msgstr ""
+"VK Filter Search ブロックは普通の記事やサイトエディタに直接配置しないで、まず"
+"投稿タイプ「VK Filter Search」でフォームを作成してください。"
+
+#: inc/filter-search/package/src/keyword-search/edit.js:15
+msgid "VK Keyword Search"
+msgstr "VK Keyword Search"
+
+#: inc/filter-search/package/src/keyword-search/edit.js:30
+msgid "Editable text for labels (item names)/ Placeholder"
+msgstr "ラベル (項目名) の変更 / プレースホルダー"
+
+#: inc/filter-search/package/src/keyword-search/edit.js:36
+#: inc/filter-search/package/src/post-type-search/edit.js:94
+#: inc/filter-search/package/src/taxonomy-search/edit.js:154
+msgid "Block width settings for each screen size"
+msgstr "画面サイズ毎にブロック幅を設定"
+
+#: inc/filter-search/package/src/post-type-search/edit.js:45
+msgid "Post Type Option"
+msgstr "投稿タイプの設定"
+
+#: inc/filter-search/package/src/post-type-search/edit.js:64
+msgid "VK Post Type Search"
+msgstr "VK Post Type Search"
+
+#: inc/filter-search/package/src/post-type-search/edit.js:82
+#: inc/filter-search/package/src/taxonomy-search/edit.js:130
+msgid "Checkbox / Radio button"
+msgstr "チェックボックス / ラジオボタン"
+
+#: inc/filter-search/package/src/post-type-search/edit.js:88
+#: inc/filter-search/package/src/taxonomy-search/edit.js:136
+msgid "Editable text for labels"
+msgstr "ラベルの変更"
+
+#: inc/filter-search/package/src/search-result-count/edit.js:151
+msgid "Search Result Count Setting"
+msgstr "検索結果件数設定"
+
+#: inc/filter-search/package/src/search-result-count/edit.js:160
+msgid "Before text of count number"
+msgstr "件数の前の文字"
+
+#: inc/filter-search/package/src/search-result-count/edit.js:172
+msgid "After text of count number"
+msgstr "件数の後の文字"
+
+#: inc/filter-search/package/src/search-result-count/edit.js:184
+msgid "Search Result Count Number Setting"
+msgstr "検索結果件数設定"
+
+#: inc/filter-search/package/src/search-result-count/edit.js:205
+msgid "Font Style"
+msgstr "フォントスタイル"
+
+#: inc/filter-search/package/src/search-result-count/edit.js:217
+msgid "Font Weight"
+msgstr "フォントウェイト"
+
+#: inc/filter-search/package/src/search-result-count/edit.js:45
+msgid "Italic"
+msgstr "イタリック"
+
+#: inc/filter-search/package/src/search-result-count/edit.js:49
+msgid "Oblique"
+msgstr "斜め"
+
+#: inc/filter-search/package/src/search-result-count/edit.js:60
+msgid "Thin"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:64
+#, fuzzy
+#| msgid "Extra Large"
+msgid "Extra Light"
+msgstr "特大"
+
+#: inc/filter-search/package/src/search-result-count/edit.js:68
+msgid "Light"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:72
+msgid "Regular"
+msgstr "標準"
+
+#: inc/filter-search/package/src/search-result-count/edit.js:76
+msgid "Medium"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:80
+msgid "Semi Bold"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:84
+msgid "Bold"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:88
+msgid "Extra Bold"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:92
+msgid "Black"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:96
+#, fuzzy
+#| msgid "Extra Large"
+msgid "Extra Black"
+msgstr "特大"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:104
+msgid ""
+"If you specify \"Display form on search results page\" in the search source "
+"VK Filter Search block, it will be automatically displayed at a specific "
+"hook position (generally above the list of posts in search results). There "
+"is no need to place this block."
+msgstr ""
+"検索元の VK Filter Search ブロック で「検索結果ページにフォームを表示する」に"
+"指定すると、特定のフックの位置（一般的には検索結果の投稿一覧の上）に自動的に"
+"表示されます。このブロックを配置する必要はありません。"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:110
+msgid ""
+"However, place this block if you want to display the search source form in "
+"any widget area, such as the sidebar, instead of where it appears "
+"automatically."
+msgstr ""
+"しかし、自動的に表示される場所ではなく、サイドバーなどの任意のウィジェットエ"
+"リアに検索元のフォームを表示したい場合にこのブロックを配置します。"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:116
+msgid ""
+"In that case, disable \"Display form on search results page\" for the search "
+"source form, and enable \"Always display search source form\" in this block."
+msgstr ""
+"その場合は、検索元のフォームでは「検索結果ページにフォームを表示する」を無効"
+"にして、このブロックで「検索元のフォームを常に表示」を有効にしてください。"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:123
+msgid "For block theme"
+msgstr "ブロックテーマの場合"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:130
+msgid ""
+"If you specify \"Display form on search results page\" in the search source "
+"VK Filter Search block, the form will be displayed where this block is "
+"placed. "
+msgstr ""
+"検索元の VK Filter Search ブロック で「検索結果ページにフォームを表示する」に"
+"指定すると、このブロックの配置場所にそのフォームが表示されます。"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:136
+msgid ""
+"Alternatively, select \"Always show search source form\" in this block to "
+"display it regardless of the search source's display settings."
+msgstr ""
+"あるいは、このブロックで「検索元のフォームを常に表示」を選択すると、検索元で"
+"の表示設定にかかわらず表示します。"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:28
+msgid "Search Result Form"
+msgstr "検索結果フォーム"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:31
+msgid ""
+"This block is used to display the original search form on the search results "
+"page."
+msgstr ""
+"このブロックは検索結果ページで検索元のフォームを表示するためのブロックです。"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:35
+msgid ""
+"It is designed for use with the Search Result Template in Block Themes and "
+"in the widget area on search result pages of classic themes."
+msgstr ""
+"ブロックテーマで Search Result テンプレートや、クラシックテーマで検索結果ペー"
+"ジに表示されるウィジェットエリアに使用します。"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:39
+msgid ""
+"Additionally, if you use the Post Type Archive Template of a Block Theme, or "
+"the widget area that displays the post type archive in a Classic theme, the "
+"corresponding search form will automatically appear on the post type archive "
+"page."
+msgstr ""
+"また、ブロックテーマの Post Type Archive テンプレートや、クラシックテーマで投"
+"稿タイプアーカイブで表示されるウィジェットエリアに使用すると、投稿タイプの"
+"アーカイブページでも該当する検索フォームを自動的に表示します。"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:43
+msgid ""
+"The form is not displayed in the theme editor; however, it appears on the "
+"actual search results page and post type archive page."
+msgstr ""
+"テーマエディター上ではフォームは表示されませんが、実際の検索結果画面や投稿タ"
+"イプアーカイブ画面ではフォームが表示されます。"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:56
+msgid "Search Result Form Option"
+msgstr "検索結果フォームオプション"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:65
+msgid "Display the form on the search results page"
+msgstr "検索結果へのフォームの表示"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:71
+msgid "Always display search source form"
+msgstr "検索元のフォームを常に表示"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:78
+msgid "Dependent on the source form"
+msgstr "検索元のフォームの設定に依存"
+
+#: inc/filter-search/package/src/search-result-form/edit.js:97
+msgid "For classic theme"
+msgstr "クラシックテーマの場合"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:100
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/class-vk-filter-search-pro-shortcode.php:74
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/class-vk-filter-search-pro-shortcode.php:82
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/src/keyword-search-pro/index.php:47
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search-title.php:311
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search.php:344
+#: inc/filter-search-pro/package/class-vk-filter-search-pro-shortcode.php:74
+#: inc/filter-search-pro/package/class-vk-filter-search-pro-shortcode.php:82
+#: inc/filter-search-pro/package/src/keyword-search-pro/index.php:47
+#: inc/filter-search/package/class-vk-filter-search-title.php:311
+#: inc/filter-search/package/class-vk-filter-search.php:344
+msgid "Keyword"
+msgstr "キーワード"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:107
+msgid "Event"
+msgstr "イベント"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:115
+msgid "Web"
+msgstr "Web"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:124
+msgid "Product"
+msgstr "製品"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:136
+msgid "Tokyo"
+msgstr "東京"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:141
+msgid "Aichi"
+msgstr "愛知"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:161
+msgid "WordPress"
+msgstr "WordPress"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:197
+msgid "Search Title Option"
+msgstr "検索タイトルオプション"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:205
+msgid "HTML element"
+msgstr "HTML 要素"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:222
+msgid "Queries title format"
+msgstr "検索タイトルの表示形式"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:230
+msgid "eg) Search Result for %s"
+msgstr "例）検索結果 %s"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:238
+msgid "Queries titile display"
+msgstr "クエリタイトルの表示"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:268
+msgid "Hide"
+msgstr "非表示"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:274
+msgid "String of the query title after"
+msgstr "クエリタイトルの後の文字列"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:282
+msgid "eg) : "
+msgstr "例) : "
+
+#: inc/filter-search/package/src/search-result-title/edit.js:291
+msgid "Query element \"or\""
+msgstr "クエリ要素 “or”"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:301
+msgid "eg) or "
+msgstr "例) or "
+
+#: inc/filter-search/package/src/search-result-title/edit.js:311
+msgid "Query element \"and\""
+msgstr "クエリ要素 “and”"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:321
+msgid "eg) and "
+msgstr "例) and "
+
+#: inc/filter-search/package/src/search-result-title/edit.js:331
+msgid "String before the query element"
+msgstr "クエリ要素の前の文字列"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:344
+msgid "String after the query element"
+msgstr "クエリ要素の後の文字列"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:352
+msgid "eg) \""
+msgstr "例) “"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:357
+msgid "The separator string after the query element"
+msgstr "クエリ要素の後のセパレーター文字列"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:365
+msgid "eg) | "
+msgstr "例) | "
+
+#: inc/filter-search/package/src/search-result-title/edit.js:374
+msgid "Minimum format for a date query"
+msgstr "日付クエリの最小形式"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:384
+msgid "eg) From %s"
+msgstr "例) %s から"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:394
+msgid "Maximum format for a date query"
+msgstr "日付クエリの最大形式"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:404
+msgid "eg) To %s"
+msgstr "例) %s まで"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:414
+msgid "Format for a date range query"
+msgstr "日付範囲クエリの形式"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:424
+msgid "eg) From %s to %s"
+msgstr "例) %s から %s まで"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:75
+msgid "Genre"
+msgstr "ジャンル"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:81
+msgid "Area"
+msgstr "エリア"
+
+#: inc/filter-search/package/src/search-result-title/edit.js:93
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/class-vk-filter-search-pro-title.php:74
+#: inc/filter-search-pro/package/class-vk-filter-search-pro-title.php:74
+msgid "Post Modified"
+msgstr "変更日"
+
+#: inc/filter-search/package/src/search-result-title/index.js:17
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search-title.php:22
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/search-result-title/index.php:50
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/search-result-title/index.php:70
+#: inc/filter-search/package/class-vk-filter-search-title.php:22
+#: inc/filter-search/package/src/search-result-title/index.php:50
+#: inc/filter-search/package/src/search-result-title/index.php:70
+msgid "Search Result for %s"
+msgstr "検索結果 %s"
+
+#: inc/filter-search/package/src/search-result-title/index.js:21
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search-title.php:30
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/search-result-title/index.php:58
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/search-result-title/index.php:78
+#: inc/filter-search/package/class-vk-filter-search-title.php:30
+#: inc/filter-search/package/src/search-result-title/index.php:58
+#: inc/filter-search/package/src/search-result-title/index.php:78
+msgid "From %s"
+msgstr "%s 以降"
+
+#: inc/filter-search/package/src/search-result-title/index.js:25
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search-title.php:31
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/search-result-title/index.php:59
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/search-result-title/index.php:79
+#: inc/filter-search/package/class-vk-filter-search-title.php:31
+#: inc/filter-search/package/src/search-result-title/index.php:59
+#: inc/filter-search/package/src/search-result-title/index.php:79
+msgid "To %s"
+msgstr "%s まで"
+
+#: inc/filter-search/package/src/search-result-title/index.js:29
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search-title.php:32
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/search-result-title/index.php:60
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/search-result-title/index.php:80
+#: inc/filter-search/package/class-vk-filter-search-title.php:32
+#: inc/filter-search/package/src/search-result-title/index.php:60
+#: inc/filter-search/package/src/search-result-title/index.php:80
+msgid "From %1$s to %2$s"
+msgstr "%1$s から %2$s まで"
+
+#: inc/filter-search/package/src/taxonomy-search/edit.js:100
+msgid "Taxonomy Option"
+msgstr "タクソノミーの設定"
+
+#: inc/filter-search/package/src/taxonomy-search/edit.js:115
+msgid "VK Taxonomy Search"
+msgstr "VK Taxonomy Search"
+
+#. Plugin Name of the plugin
+#: vk-filter-search-pro.php
+msgid "VK Filter Search Pro"
+msgstr "VK Filter Search Pro"
+
+#. Plugin URI of the plugin
+#: vk-filter-search-pro.php
+msgid "https://github.com/vektor-inc/vk-filter-search/"
+msgstr "https://github.com/vektor-inc/vk-filter-search/"
+
+#. Description of the plugin
+#: vk-filter-search-pro.php
+msgid "This is a plugin that you can add a filter search function with blocks."
+msgstr "ブロックを使ったフィルター検索機能を追加できるプラグインです。"
+
+#. Author of the plugin
+#: vk-filter-search-pro.php
+msgid "Vektor,Inc."
+msgstr "Vektor,Inc."
+
+#. Author URI of the plugin
+#: vk-filter-search-pro.php
+msgid "https://vektor-inc.co.jp"
+msgstr "https://vektor-inc.co.jp"
+
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/class-vk-filter-search-pro-shortcode.php:75
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/class-vk-filter-search-pro-shortcode.php:83
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/src/keyword-search-pro/index.php:48
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search.php:345
+#: inc/filter-search-pro/package/class-vk-filter-search-pro-shortcode.php:75
+#: inc/filter-search-pro/package/class-vk-filter-search-pro-shortcode.php:83
+#: inc/filter-search-pro/package/src/keyword-search-pro/index.php:48
+#: inc/filter-search/package/class-vk-filter-search.php:345
+msgid "Input Keyword"
+msgstr "キーワードを入力"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search.php:595
+#: inc/filter-search/package/class-vk-filter-search.php:595
+msgid "AND Search"
+msgstr "AND検索"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search.php:599
+#: inc/filter-search/package/class-vk-filter-search.php:599
+msgid "OR Search"
+msgstr "OR検索"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search.php:723
+#: inc/filter-search/package/class-vk-filter-search.php:723
+msgid "Search Results:"
+msgstr "検索結果:"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search.php:724
+#: inc/filter-search/package/class-vk-filter-search.php:724
+msgid "articles found."
+msgstr "件見つかりました。"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search.php:1027
+#: inc/filter-search/package/class-vk-filter-search.php:1039
+msgid "This form is obsolete and may eventually be deleted."
+msgstr "この形式は廃止されており、最終的には廃止される可能性があります。"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search.php:1029
+#: inc/filter-search/package/class-vk-filter-search.php:1041
+msgid "We recommend creating a form with the post type \"VK Filteer Search\"."
+msgstr "投稿タイプ「VK Filter Search」でフォームを作成してください。"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/class-vk-filter-search.php:1031
+#: inc/filter-search/package/class-vk-filter-search.php:1043
+msgid ""
+"The post of \"VK Filter Search\" can be called by the \"Call Filter Search\" "
+"block."
+msgstr ""
+"“VK Filter Search” の投稿は「Call Filter Search」ブロックから呼び出すことがで"
+"きます。"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/call-filter-search/index.php:112
+#: inc/filter-search/package/src/call-filter-search/index.php:112
+msgid "Edit Search Form"
+msgstr "検索フォームを編集"
+
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/src/custom-field-search-pro/block.json
+#: inc/filter-search-pro/package/src/custom-field-search-pro/block.json
+msgctxt "block title"
+msgid "VK Custom Field Search Pro (Beta)"
+msgstr "VK Custom Field Search Pro (Beta)"
+
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/src/filter-search-pro/block.json
+#: inc/filter-search-pro/package/src/filter-search-pro/block.json
+msgctxt "block title"
+msgid "VK Filter Search Pro"
+msgstr "VK Filter Search Pro"
+
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/src/keyword-search-pro/block.json
+#: inc/filter-search-pro/package/src/keyword-search-pro/block.json
+msgctxt "block title"
+msgid "VK Keyword Search Pro"
+msgstr "VK Keyword Search Pro"
+
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/src/post-date-search-pro/block.json
+#: inc/filter-search-pro/package/src/post-date-search-pro/block.json
+msgctxt "block title"
+msgid "VK Post Date Search Pro"
+msgstr "VK Post Date Search Pro"
+
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/src/post-type-search-pro/block.json
+#: inc/filter-search-pro/package/src/post-type-search-pro/block.json
+msgctxt "block title"
+msgid "VK Post Type Search Pro"
+msgstr "VK Post Type Search Pro"
+
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/src/search-result-single-order/block.json
+#: inc/filter-search-pro/package/src/search-result-single-order/block.json
+msgctxt "block title"
+msgid "VK Search Result Single Order"
+msgstr "VK Search Result Single Order"
+
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/src/search-result-single-order/block.json
+#: inc/filter-search-pro/package/src/search-result-single-order/block.json
+msgctxt "block description"
+msgid "This block can specify the display order of the search results page."
+msgstr "このブロックは検索結果ページの表示順序を指定できます。"
+
+#: dist/vk-filter-search-pro/inc/filter-search-pro/package/src/taxonomy-search-pro/block.json
+#: inc/filter-search-pro/package/src/taxonomy-search-pro/block.json
+msgctxt "block title"
+msgid "VK Taxonomy Search Pro"
+msgstr "VK Taxonomy Search Pro"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/call-filter-search/block.json
+#: inc/filter-search/package/src/call-filter-search/block.json
+msgctxt "block title"
+msgid "Call Filter Search Form"
+msgstr "Call Filter Search Form"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/filter-search/block.json
+#: inc/filter-search/package/src/filter-search/block.json
+msgctxt "block title"
+msgid "VK Filter Search"
+msgstr "VK Filter Search"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/keyword-search/block.json
+#: inc/filter-search/package/src/keyword-search/block.json
+msgctxt "block title"
+msgid "VK Keyword Search"
+msgstr "VK Keyword Search"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/post-type-search/block.json
+#: inc/filter-search/package/src/post-type-search/block.json
+msgctxt "block title"
+msgid "VK Post Type Search"
+msgstr "VK Post Type Search"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/search-result-count/block.json
+#: inc/filter-search/package/src/search-result-count/block.json
+msgctxt "block title"
+msgid "Search Result Count"
+msgstr "検索結果件数"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/search-result-form/block.json
+#: inc/filter-search/package/src/search-result-form/block.json
+msgctxt "block title"
+msgid "Search Result Form"
+msgstr "Search Result Form"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/search-result-title/block.json
+#: inc/filter-search/package/src/search-result-title/block.json
+msgctxt "block title"
+msgid "Search Result Title"
+msgstr "Search Result Title"
+
+#: dist/vk-filter-search-pro/inc/filter-search/package/src/taxonomy-search/block.json
+#: inc/filter-search/package/src/taxonomy-search/block.json
+msgctxt "block title"
+msgid "VK Taxonomy Search"
+msgstr "VK Taxonomy Search"

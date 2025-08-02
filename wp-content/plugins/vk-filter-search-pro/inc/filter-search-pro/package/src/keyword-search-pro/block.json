@@ -1,0 +1,62 @@
+{
+	"apiVersion": "3",
+	"name": "vk-filter-search-pro/keyword-search-pro",
+	"title": "VK Keyword Search Pro",
+	"category": "vk-filter-search",
+	"parent": [ "vk-filter-search-pro/filter-search-pro" ],
+	"editorScript": "vk-filter-search-pro-block",
+	"editorStyle": "vk-filter-search-pro-editor",
+	"style": "vk-filter-search-pro-style",
+	"attributes": {
+		"BlockLabel": {
+			"type": "string",
+			"default": ""
+		},
+		"Placeholder": {
+			"type": "string",
+			"default": ""
+		},
+		"outerColumnXs": {
+			"type": "string",
+			"default": "12"
+		},
+		"outerColumnSm": {
+			"type": "string",
+			"default": "12"
+		},
+		"outerColumnMd": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnLg": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnXl": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnXxl": {
+			"type": "string",
+			"default": "6"
+		},
+		"className": {
+			"type": "string",
+			"default": ""
+		},
+		"outerColumnWidthMethod": {
+			"type": "string",
+			"default": null
+		},
+		"outerColumnWidthMin": {
+			"type": "string",
+			"default": null
+		},
+		"blockId": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"className": true
+	}
+}

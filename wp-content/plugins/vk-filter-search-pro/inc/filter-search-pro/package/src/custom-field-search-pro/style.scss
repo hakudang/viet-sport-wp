@@ -1,0 +1,13 @@
+.vkfs {
+	&-custom-field-search-pro{//日付検索のformのみ適応
+        .vkfs__input-wrap--range { //指定範囲内の場合は2つフォームが並ぶので調整
+            .vkfs__input-text-wrap, .vkfs__input-numeric-wrap {
+                flex-basis: 46%;
+                @media (min-width: $md-min) {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,100 @@
+.edit-post-sidebar {//サイドバーの設定パネル内
+	.vkfs_single-order-option {
+
+		& > .components-base-control__field > .components-base-control__label {
+			background-color: #e5e5e5;
+			padding: 5px 10px;
+			margin-bottom: 0.7rem;
+		}
+
+		.components-base-control {
+			margin-bottom: 0.5rem;
+		}
+
+		.components-base-control__field {
+			margin-bottom: 0;
+		}
+
+		label {
+			margin-bottom: 0;
+		}
+
+		input[type="text"] {
+			margin-bottom: 5px;
+		}
+
+		p {
+			margin-bottom: 0.5rem;
+			line-height: 1.4;
+		}
+
+		.vkfs_single-order-option__add-order {
+			width: 100%;
+			justify-content: center;
+		}
+
+		.vkfs_single-order-option-list {
+			border: 1px solid #ccc;
+			padding: 3px;
+			margin-bottom: 10px;
+
+			li {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				gap: 3px;
+				padding: 3px;
+				margin: 0;
+				border-bottom: 1px solid #e5e5e5;
+
+				&:last-child {
+					border: none;
+				}
+			}
+
+			&-name {
+				margin-right: auto;//最初の項目だけ左揃え
+				word-break: break-all;
+				line-height: 1.5;
+			}
+
+			button.vkfs_single-order-option-list-arrow {
+				border: 1px solid #ccc;
+
+				&.has-icon:not(.has-text) {
+					padding: 4px;
+				}
+			}
+
+			button.vkfs_single-order-option-list-arrow-up,
+			button.vkfs_single-order-option-list-arrow-down {
+				padding: 2px;
+				min-width: 28px;
+			}
+		}
+
+		.vkfs_option-edit {
+
+			& > .components-base-control__field > .components-base-control__label {
+				margin-bottom: 10px;
+				border-bottom: 1px solid #ccc;
+				font-weight: bold;
+			}
+		}
+
+		.vkfs_edit-button-outer {
+			display: flex;
+			flex-wrap: nowrap;
+			gap: 3px;
+
+			button {
+				padding-left: 10px;
+				padding-right: 13px;
+
+				svg {
+					margin-right: 4px;
+				}
+			}
+		}
+	}
+}

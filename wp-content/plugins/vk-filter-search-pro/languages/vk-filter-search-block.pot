@@ -1,0 +1,572 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:119
+msgid "Register Filter Search Form"
+msgstr ""
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:129
+msgid ""
+"Select this block and specify from the settings sidebar which search form "
+"to display."
+msgstr ""
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:138
+msgid "The selected form is deleted. Please select another form."
+msgstr ""
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:159
+msgid "Call Filter Search Form Setting"
+msgstr ""
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:167
+msgid "Select Filter Search Form"
+msgstr ""
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:84
+msgid "Search Form not registered"
+msgstr ""
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:91
+msgid ""
+"Place the VK Filter Search block in the dedicated post type and register "
+"the search form."
+msgstr ""
+
+#: inc/filter-search/package/src/call-filter-search/edit.js:97
+msgid "Please reload this page."
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/deprecated/0.1.0/save.js:34
+#: inc/filter-search/package/src/filter-search/deprecated/0.1.1/save.js:39
+#: inc/filter-search/package/src/filter-search/deprecated/0.2.3/save.js:51
+msgid "Refine search"
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/deprecated/0.3.1/save.js:51
+#: inc/filter-search/package/src/filter-search/deprecated/0.3.2/save.js:49
+#: inc/filter-search/package/src/filter-search/deprecated/0.4.6/save.js:49
+#: inc/filter-search/package/src/filter-search/deprecated/0.6.5/save.js:49
+#: inc/filter-search/package/src/filter-search/deprecated/1.11.0/save.js:51
+#: inc/filter-search/package/src/filter-search/deprecated/1.6.1/save.js:53
+#: inc/filter-search/package/src/filter-search/deprecated/2.14.1/save.js:42
+#: inc/filter-search/package/src/filter-search/edit.js:368
+#: inc/filter-search/package/src/filter-search/save.js:45
+msgid "Search"
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:132
+msgid ""
+"Please do not place the VK Filter Search Block directly into the normal "
+"post content or the site editor. First, create a form using the Post Type "
+"\"VK Filter Search\"."
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:138
+msgid ""
+"After that, please place the \"Call Filter Search\" Block where you want "
+"the form displayed and select the form you created."
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:153
+msgid ""
+"If you want to display the Search Form on the results screen, you need to "
+"put a \"Search Result Form\" block in the \"Search\" template on theme "
+"editor."
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:168
+msgid ""
+"If you want to display the Search Form on the Post Type Archive screen, you "
+"need to put a \"Search Result Form\" block in the \"Archive\" template on "
+"theme editor."
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:172
+msgid ""
+"Alternatively, uncheck it and place the search form directly in the archive "
+"page template."
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:189
+msgid "Display this form on search result page"
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:204
+msgid "Display on post type archive."
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:251
+msgid "Search Form Setting"
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:260
+msgid "Target of Post Type"
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:275
+msgid "VK Filter Search"
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:282
+#: inc/filter-search/package/src/keyword-search/edit.js:22
+#: inc/filter-search/package/src/post-type-search/edit.js:74
+#: inc/filter-search/package/src/taxonomy-search/edit.js:122
+msgid "Get more features"
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:290
+msgid "Post date search"
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:296
+msgid "Search Result Single Order"
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:302
+msgid "Custom Field Search (beta)"
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:308
+msgid "Editable text for search buttons, labels and placeholder"
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:314
+msgid "and more…"
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:318
+#: inc/filter-search/package/src/keyword-search/edit.js:45
+#: inc/filter-search/package/src/post-type-search/edit.js:103
+#: inc/filter-search/package/src/taxonomy-search/edit.js:163
+msgid "https://vk-filter-search.com/"
+msgstr ""
+
+#: inc/filter-search/package/src/filter-search/edit.js:325
+#: inc/filter-search/package/src/keyword-search/edit.js:52
+#: inc/filter-search/package/src/post-type-search/edit.js:110
+#: inc/filter-search/package/src/taxonomy-search/edit.js:170
+msgid "Check the Pro Features"
+msgstr ""
+
+#: inc/filter-search/package/src/keyword-search/edit.js:15
+msgid "VK Keyword Search"
+msgstr ""
+
+#: inc/filter-search/package/src/keyword-search/edit.js:30
+msgid "Editable text for labels (item names)/ Placeholder"
+msgstr ""
+
+#: inc/filter-search/package/src/keyword-search/edit.js:36
+#: inc/filter-search/package/src/post-type-search/edit.js:94
+#: inc/filter-search/package/src/taxonomy-search/edit.js:154
+msgid "Block width settings for each screen size"
+msgstr ""
+
+#: inc/filter-search/package/src/post-type-search/edit.js:25
+#: inc/filter-search/package/src/search-result-title/edit.js:69
+msgid "Post Type"
+msgstr ""
+
+#: inc/filter-search/package/src/post-type-search/edit.js:28
+msgid "This block will not be displayed because the post type is not selected."
+msgstr ""
+
+#: inc/filter-search/package/src/post-type-search/edit.js:45
+msgid "Post Type Option"
+msgstr ""
+
+#: inc/filter-search/package/src/post-type-search/edit.js:50
+msgid "Post Types"
+msgstr ""
+
+#: inc/filter-search/package/src/post-type-search/edit.js:64
+msgid "VK Post Type Search"
+msgstr ""
+
+#: inc/filter-search/package/src/post-type-search/edit.js:82
+#: inc/filter-search/package/src/taxonomy-search/edit.js:130
+msgid "Checkbox / Radio button"
+msgstr ""
+
+#: inc/filter-search/package/src/post-type-search/edit.js:88
+#: inc/filter-search/package/src/taxonomy-search/edit.js:136
+msgid "Editable text for labels"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:151
+msgid "Search Result Count Setting"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:160
+msgid "Before text of count number"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:172
+msgid "After text of count number"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:184
+msgid "Search Result Count Number Setting"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:193
+msgid "Font Size"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:205
+msgid "Font Style"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:217
+msgid "Font Weight"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:232
+msgid "Text Color"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:41
+msgid "Regular"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:45
+msgid "Italic"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:49
+msgid "Oblique"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:60
+msgid "Thin (100)"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:64
+msgid "Extra Light (200)"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:68
+msgid "Light (300)"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:72
+msgid "Regular (400)"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:76
+msgid "Medium (500)"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:80
+msgid "Semi Bold (600)"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:84
+msgid "Bold (700)"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:88
+msgid "Extra Bold (800)"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:92
+msgid "Black (900)"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-count/edit.js:96
+msgid "Extra Black (1000)"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:104
+msgid ""
+"If you specify \"Display form on search results page\" in the search source "
+"VK Filter Search block, it will be automatically displayed at a specific "
+"hook position (generally above the list of posts in search results). There "
+"is no need to place this block."
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:110
+msgid ""
+"However, place this block if you want to display the search source form in "
+"any widget area, such as the sidebar, instead of where it appears "
+"automatically."
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:116
+msgid ""
+"In that case, disable \"Display form on search results page\" for the "
+"search source form, and enable \"Always display search source form\" in "
+"this block."
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:123
+msgid "For block theme"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:130
+msgid ""
+"If you specify \"Display form on search results page\" in the search source "
+"VK Filter Search block, the form will be displayed where this block is "
+"placed."
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:136
+msgid ""
+"Alternatively, select \"Always show search source form\" in this block to "
+"display it regardless of the search source's display settings."
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:28
+msgid "Search Result Form"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:31
+msgid ""
+"This block is used to display the original search form on the search "
+"results page."
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:35
+msgid ""
+"It is designed for use with the Search Result Template in Block Themes and "
+"in the widget area on search result pages of classic themes."
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:39
+msgid ""
+"Additionally, if you use the Post Type Archive Template of a Block Theme, "
+"or the widget area that displays the post type archive in a Classic theme, "
+"the corresponding search form will automatically appear on the post type "
+"archive page."
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:43
+msgid ""
+"The form is not displayed in the theme editor; however, it appears on the "
+"actual search results page and post type archive page."
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:56
+msgid "Search Result Form Option"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:65
+msgid "Display the form on the search results page"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:71
+msgid "Always display search source form"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:78
+msgid "Dependent on the source form"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-form/edit.js:97
+msgid "For classic theme"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:100
+msgid "Keyword"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:107
+msgid "Event"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:115
+msgid "Web"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:124
+msgid "Product"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:136
+msgid "Tokyo"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:141
+msgid "Aichi"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:161
+msgid "WordPress"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:197
+msgid "Search Title Option"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:205
+msgid "HTML element"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:222
+msgid "Queries title format"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:230
+msgid "eg) Search Result for %s"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:238
+msgid "Queries titile display"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:244
+msgid "Query Title Display"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:256
+msgid "Display"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:263
+msgid "Hide"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:269
+msgid "String of the query title after"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:277
+msgid "eg) :"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:286
+msgid "Query element \"or\""
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:296
+msgid "eg) or"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:306
+msgid "Query element \"and\""
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:316
+msgid "eg) and"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:326
+msgid "String before the query element"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:339
+msgid "String after the query element"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:347
+msgid "eg) \""
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:352
+msgid "The separator string after the query element"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:360
+msgid "eg) |"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:369
+msgid "Minimum format for a date query"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:379
+msgid "eg) From %s"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:389
+msgid "Maximum format for a date query"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:399
+msgid "eg) To %s"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:409
+msgid "Format for a date range query"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:419
+msgid "eg) From %s to %s"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:75
+msgid "Genre"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:81
+msgid "Area"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:87
+msgid "Post Date"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/edit.js:93
+msgid "Post Modified"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/index.js:17
+msgid "Search Result for %s"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/index.js:21
+msgid "From %s"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/index.js:25
+msgid "To %s"
+msgstr ""
+
+#: inc/filter-search/package/src/search-result-title/index.js:29
+msgid "From %1$s to %2$s"
+msgstr ""
+
+#: inc/filter-search/package/src/taxonomy-search/edit.js:100
+msgid "Taxonomy Option"
+msgstr ""
+
+#: inc/filter-search/package/src/taxonomy-search/edit.js:105
+msgid "Taxonomy"
+msgstr ""
+
+#: inc/filter-search/package/src/taxonomy-search/edit.js:115
+msgid "VK Taxonomy Search"
+msgstr ""
+
+#: inc/filter-search/package/src/taxonomy-search/edit.js:142
+msgid "Display Post Counts"
+msgstr ""
+
+#: inc/filter-search/package/src/taxonomy-search/edit.js:148
+msgid "Hide Empty Terms"
+msgstr ""
+
+#: inc/filter-search/package/src/taxonomy-search/edit.js:44
+msgid "This block will not be displayed because no taxonomy is selected."
+msgstr ""
+
+#: inc/filter-search/package/src/taxonomy-search/edit.js:62
+msgid "This block will not be displayed because this taxonomy has no term."
+msgstr ""
+
+#: inc/filter-search/package/src/taxonomy-search/edit.js:73
+msgid "Specified taxonomy does not exist"
+msgstr ""
+
+#: inc/filter-search/package/src/taxonomy-search/edit.js:79
+msgid ""
+"This block will not be displayed because the specified taxonomy does not "
+"exist."
+msgstr ""
+
+#: inc/filter-search/package/src/taxonomy-search/edit.js:83
+msgid "Please reselect the taxonomy or remove this block.."
+msgstr ""

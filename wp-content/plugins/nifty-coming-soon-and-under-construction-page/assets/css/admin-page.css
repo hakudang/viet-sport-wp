@@ -1,0 +1,47 @@
+.ncs-themes-grid {
+  margin-top: 20px;
+}
+
+.ncs-theme {
+  background-color: #fff;
+  box-shadow: -1px 1px 8px 1px rgba(128, 128, 128, 0.46);
+}
+.ncs-theme .ncs-theme-content {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ncs-theme h4 {
+  margin-top: 10px !important;
+}
+.ncs-theme h4 a {
+  text-decoration: none;
+  color: #333;
+}
+.ncs-theme img {
+  width: 100%;
+}
+.ncs-theme .buttons {
+  display: flex;
+  margin-bottom: 5px;
+}
+.ncs-theme .preview {
+  text-decoration: none;
+  display: flex;
+  gap: 5px;
+}
+.ncs-theme .preview:hover .preview-text {
+  text-decoration: underline;
+}
+.ncs-theme.ncs-theme-featured {
+  position: relative;
+}
+.ncs-theme.ncs-theme-featured .featured {
+  background-color: #e23b3b;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px 5px;
+}

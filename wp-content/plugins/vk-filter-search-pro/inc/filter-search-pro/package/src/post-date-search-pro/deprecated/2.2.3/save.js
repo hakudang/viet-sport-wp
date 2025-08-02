@@ -1,0 +1,168 @@
+/**
+ * Custom Field Block Save.
+ */
+
+// wordpress のコンポーネントをインポート
+import { useBlockProps } from '@wordpress/block-editor';
+import parse from 'html-react-parser';
+
+// 独自のコンポーネントをインポート
+import { OuterColumnClasses } from '@vk-filter-search-pro/common/outer-columns';
+
+export default function PostDateSearchProSave( props ) {
+	const { attributes } = props;
+	const {
+		dateName,
+		dateCompare,
+		blockLabel,
+		fieldBefore,
+		fieldAfter,
+		fieldBefore2,
+		fieldAfter2,
+		rangeBetween,
+	} = attributes;
+
+	const blockProps = useBlockProps.save( {
+		className: `vkfs-date-search-pro vkfs__outer-wrap vkfs__date ${ OuterColumnClasses(
+			props
+		) }`,
+	} );
+
+	// 表示内容
+	let blockContent = '';
+	const BlockLabel =
+		blockLabel !== undefined && blockLabel !== ''
+			? parse( blockLabel )
+			: '';
+	const beforeField =
+		fieldBefore !== undefined && fieldBefore !== '' ? (
+			<span className="vkfs__input-text-addition vkfs__input-text-addition--before">
+				{ parse( fieldBefore ) }
+			</span>
+		) : (
+			''
+		);
+	const afterField =
+		fieldAfter !== undefined && fieldAfter !== '' ? (
+			<span className="vkfs__input-text-addition vkfs__input-text-addition--after">
+				{ parse( fieldAfter ) }
+			</span>
+		) : (
+			''
+		);
+	const beforeField2 =
+		fieldBefore2 !== undefined && fieldBefore2 !== '' ? (
+			<span className="vkfs__input-text-addition vkfs__input-text-addition--before">
+				{ parse( fieldBefore2 ) }
+			</span>
+		) : (
+			''
+		);
+	const afterField2 =
+		fieldAfter2 !== undefined && fieldAfter2 !== '' ? (
+			<span className="vkfs__input-text-addition vkfs__input-text-addition--after">
+				{ parse( fieldAfter2 ) }
+			</span>
+		) : (
+			''
+		);
+	const betweenRange =
+		rangeBetween !== undefined && rangeBetween !== '' ? (
+			<span className="vkfs__input-date-between">
+				{ parse( rangeBetween ) }
+			</span>
+		) : (
+			''
+		);
+
+	// 必要事項が揃っている場合
+	if ( dateName !== undefined && dateCompare !== undefined ) {
+		// 比較演算子が only の場合
+		if ( dateCompare === 'only' ) {
+			blockContent = (
+				<>
+					<div className="vkfs__label-name">{ BlockLabel }</div>
+					<div className="vkfs__input-wrap vkfs__input-wrap--only">
+						<div className="vkfs__input-date-wrap">
+							{ beforeField }
+							<input
+								className={ `vkfs__input-date vkfs__input-date--${ dateName }_value` }
+								type="text"
+								name={ `vkfs_date_${ dateName }_value` }
+							/>
+							{ afterField }
+						</div>
+					</div>
+				</>
+			);
+		}
+		// 比較演算子が before の場合
+		if ( dateCompare === 'before' ) {
+			blockContent = (
+				<>
+					<div className="vkfs__label-name">{ BlockLabel }</div>
+					<div className="vkfs__input-wrap vkfs__input-wrap--before">
+						<div className="vkfs__input-date-wrap">
+							{ beforeField }
+							<input
+								className={ `vkfs__input-date vkfs__input-date--${ dateName }_value_before` }
+								type="text"
+								name={ `vkfs_date_${ dateName }_value_before` }
+							/>
+							{ afterField }
+						</div>
+					</div>
+				</>
+			);
+		}
+		// 比較演算子が after の場合
+		if ( dateCompare === 'after' ) {
+			blockContent = (
+				<>
+					<div className="vkfs__label-name">{ BlockLabel }</div>
+					<div className="vkfs__input-wrap vkfs__input-wrap--after">
+						<div className="vkfs__input-date-wrap">
+							{ beforeField }
+							<input
+								className={ `vkfs__input-date vkfs__input-date--${ dateName }_value_after` }
+								type="text"
+								name={ `vkfs_date_${ dateName }_value_after` }
+							/>
+							{ afterField }
+						</div>
+					</div>
+				</>
+			);
+		}
+		// 比較演算子が range の場合
+		if ( dateCompare === 'range' ) {
+			blockContent = (
+				<>
+					<div className="vkfs__label-name">{ BlockLabel }</div>
+					<div className="vkfs__input-wrap vkfs__input-wrap--range">
+						<div className="vkfs__input-date-wrap">
+							{ beforeField }
+							<input
+								className={ `vkfs__input-date vkfs__input-date--${ dateName }_range_after` }
+								type="text"
+								name={ `vkfs_date_${ dateName }_range_after` }
+							/>
+							{ afterField }
+						</div>
+						{ betweenRange }
+						<div className="vkfs__input-date-wrap">
+							{ beforeField2 }
+							<input
+								className={ `vkfs__input-date vkfs__input-date--${ dateName }_range_before` }
+								type="text"
+								name={ `vkfs_date_${ dateName }_range_before` }
+							/>
+							{ afterField2 }
+						</div>
+					</div>
+				</>
+			);
+		}
+	}
+	return <div { ...blockProps }>{ blockContent }</div>;
+}

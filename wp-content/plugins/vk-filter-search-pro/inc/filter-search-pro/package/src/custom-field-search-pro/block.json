@@ -1,0 +1,93 @@
+{
+	"apiVersion": "3",
+	"name": "vk-filter-search-pro/custom-field-search-pro",
+	"title": "VK Custom Field Search Pro (Beta)",
+	"category": "vk-filter-search",
+	"parent": [ "vk-filter-search-pro/filter-search-pro" ],
+	"editorScript": "vk-filter-search-pro-block",
+	"editorStyle": "vk-filter-search-pro-editor",
+	"style": "vk-filter-search-pro-style",
+	"attributes": {
+		"fieldName": {
+			"type": "string"
+		},
+		"fieldType": {
+			"type": "string",
+			"default": "numeric"
+		},
+		"fieldCompare": {
+			"type": "string",
+			"default": "equal"
+		},
+		"fieldMin": {
+			"type": "string"
+		},
+		"fieldMax": {
+			"type": "string"
+		},
+		"fieldStep": {
+			"type": "string"
+		},
+		"blockLabel": {
+			"type": "string"
+		},
+		"fieldBefore": {
+			"type": "string"
+		},
+		"fieldAfter": {
+			"type": "string"
+		},
+		"fieldBefore2": {
+			"type": "string"
+		},
+		"fieldAfter2": {
+			"type": "string"
+		},
+		"rangeBetween": {
+			"type": "string",
+			"default": "～"
+		},
+		"outerColumnXs": {
+			"type": "string",
+			"default": "12"
+		},
+		"outerColumnSm": {
+			"type": "string",
+			"default": "12"
+		},
+		"outerColumnMd": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnLg": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnXl": {
+			"type": "string",
+			"default": "6"
+		},
+		"outerColumnXxl": {
+			"type": "string",
+			"default": "6"
+		},
+		"alertCheck": {
+			"type": "boolean",
+			"default": false
+		},
+		"outerColumnWidthMethod": {
+			"type": "string",
+			"default": null
+		},
+		"outerColumnWidthMin": {
+			"type": "string",
+			"default": null
+		},
+		"blockId": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"className": true
+	}
+}

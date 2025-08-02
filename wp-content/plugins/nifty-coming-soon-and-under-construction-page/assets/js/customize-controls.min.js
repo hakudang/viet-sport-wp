@@ -1,0 +1,1 @@
+"use strict";!function(i){i.panel("nifty_cs_panel",function(e){e.expanded.bind(function(e){let n=i.previewer.previewUrl();e?(n=n.includes(niftyCsCustomizer.page))||i.previewer.send("nifty-cs-url-switcher",{expanded:e}):i.previewer.send("nifty-cs-back-to-home",{home_url:i.settings.url.home})})})}((jQuery,wp.customize));
