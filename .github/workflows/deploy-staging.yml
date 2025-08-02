@@ -1,9 +1,11 @@
 name: 🚀 Deploy Swell Child Theme to Staging
 
 on:
-  push:
-    branches:
-      - dev
+  #   push: # 👈 Chạy tự động mỗi khi push lên github
+  #     branches:
+  #       - dev
+
+  workflow_dispatch: # 👈 Chạy thủ công mỗi khi push lên github
 
 jobs:
   deploy:
