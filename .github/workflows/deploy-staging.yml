@@ -20,7 +20,8 @@ jobs:
           username: ${{ secrets.STAGING_FTP_USERNAME }}
           password: ${{ secrets.STAGING_FTP_PASSWORD }}
           # server-dir: public_html/dev/wp-content/themes/
-          server-dir: wp-content/themes/
+          # server-dir: wp-content/themes/
+          server-dir: wp-content/themes/swell_child/
           local-dir: ./wp-content/themes/swell_child/
           protocol: ftp
           # fail-on-error: true
