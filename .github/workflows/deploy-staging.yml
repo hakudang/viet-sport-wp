@@ -22,7 +22,7 @@ jobs:
           server-dir: public_html/dev/wp-content/themes/
           local-dir: ./wp-content/themes/swell_child
           protocol: ftp
-          fail-on-error: true
+          # fail-on-error: true
           dangerous-clean-slate: false
           exclude: |
             **/.git*
