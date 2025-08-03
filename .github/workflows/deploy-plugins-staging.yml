@@ -1,0 +1,26 @@
+name: 🚀 Deploy Plugins to Staging
+
+on:
+  workflow_dispatch: # 👈 Chạy thủ công mỗi lần cần
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ✅ Checkout code
+        uses: actions/checkout@v3
+
+      - name: 🚀 Deploy plugins to staging
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.STAGING_FTP_HOST }}
+          username: ${{ secrets.STAGING_FTP_USERNAME }}
+          password: ${{ secrets.STAGING_FTP_PASSWORD }}
+          server-dir: wp-content/plugins/
+          local-dir: ./wp-content/plugins/
+          protocol: ftp
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/node_modules/**
