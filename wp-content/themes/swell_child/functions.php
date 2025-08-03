@@ -38,4 +38,5 @@ add_action('wp_enqueue_scripts', 'add_custom_fonts');
  */
 require_once get_stylesheet_directory() . '/includes/load.php';
 
-// Force redeploy August 2, 2025
+
+
