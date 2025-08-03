@@ -3,16 +3,16 @@
 
 ## 🧭 Giới thiệu
 
-**VietSport** là một nền tảng WordPress dùng theme **Swell Child**, được tùy biến phục vụ website thể thao [viet-sport.com](https://viet-sport.com). Repo này quản lý **toàn bộ mã nguồn theme + database export**.
+**VietSport** là một nền tảng WordPress sử dụng theme **Swell Child**, được tùy biến để phục vụ website thể thao [viet-sport.com](https://viet-sport.com). Repo này quản lý **toàn bộ mã nguồn theme + database export**.
 
 ---
 
 ## ⚙️ Tính năng chính
 
-1. **Gửi yêu cầu nội dung đến Ban Quản Trị (BQT)**
-2. **Tìm kiếm & khám phá CLB hoặc sự kiện**
-3. **Tạo sân chơi thể thao**
-4. **Đăng ký tham gia sân chơi**
+1. **Gửi yêu cầu nội dung đến Ban Quản Trị (BQT)**.
+2. **Tìm kiếm & khám phá CLB hoặc sự kiện**.
+3. **Tạo sân chơi thể thao**.
+4. **Đăng ký tham gia sân chơi**.
 
 ---
 
@@ -69,42 +69,56 @@ viet-sport/
 
 ---
 
-## ⚙️ CI/CD – Deploy tự động
+## 🚀 CI/CD – Deploy tự động lên Staging
 
-GitHub Actions tự động deploy theme lên server khi push vào `main`.
+Quá trình triển khai tự động lên môi trường **Staging** thông qua **GitHub Actions** giúp kiểm thử các thay đổi trước khi đưa lên môi trường production.
 
-### Secrets cần thiết:
+### Workflow: `deploy-staging.yml`
 
-| Tên               | Mô tả |
-|-------------------|-------|
-| `FTP_HOST`        | Địa chỉ server |
-| `FTP_USERNAME`    | Tài khoản FTP |
-| `FTP_PASSWORD`    | Mật khẩu |
-| `FTP_TARGET_DIR`  | Thư mục chứa theme `swell-child` |
+Workflow **`deploy-staging.yml`** sẽ triển khai theme **Swell Child** lên máy chủ Staging khi có thay đổi trong nhánh `dev`. Quy trình này được thực hiện thủ công thông qua GitHub UI.
 
-### File workflow: `.github/workflows/deploy.yml`
+#### Các bước triển khai:
+1. **Checkout Code**: Đầu tiên, mã nguồn sẽ được kiểm tra từ GitHub repository.
+2. **Deploy to Staging**: Mã nguồn sẽ được triển khai lên máy chủ Staging qua FTP.
+
+#### Cấu hình trong file `deploy-staging.yml`:
 
 ```yaml
-name: 🚀 Deploy WordPress Theme
+name: 🚀 Deploy Swell Child Theme to Staging
 
 on:
-  push:
-    branches: [main]
+  # Chạy thủ công khi cần thiết
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: ✅ Checkout code
+        uses: actions/checkout@v3
+
+      - name: 🚀 Deploy to staging
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_TARGET_DIR }}/
-          local-dir: ./swell_child/
+          server: ${{ secrets.STAGING_FTP_HOST }}
+          username: ${{ secrets.STAGING_FTP_USERNAME }}
+          password: ${{ secrets.STAGING_FTP_PASSWORD }}
+          server-dir: wp-content/themes/swell_child/
+          local-dir: ./wp-content/themes/swell_child/
           protocol: ftp
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/node_modules/**
 ```
+
+#### Các thông số chính:
+- **`server`**: Địa chỉ máy chủ Staging (lưu trong **GitHub Secrets**).
+- **`username` và `password`**: Tài khoản FTP dùng để kết nối đến máy chủ Staging.
+- **`server-dir`**: Thư mục trên máy chủ Staging để triển khai theme.
+- **`local-dir`**: Thư mục cục bộ chứa theme.
+- **`exclude`**: Loại trừ các thư mục như `.git` và `node_modules`.
 
 ---
 
@@ -112,10 +126,10 @@ jobs:
 
 | Môi trường | Domain                   | Mục đích          |
 |------------|--------------------------|-------------------|
-| Local      | `viet-sport.local`       | Phát triển cá nhân |
-| Staging    | `viet-sport.com/dev`     | Kiểm thử           |
-| Production | `viet-sport.com`         | Website chính      |
-| Booking    | `booking.viet-sport.com` | SPA tách biệt      |
+| Local      | `viet-sport.local`        | Phát triển cá nhân |
+| Staging    | `viet-sport.com/dev`      | Kiểm thử           |
+| Production | `viet-sport.com`          | Website chính      |
+| Booking    | `booking.viet-sport.com`  | SPA tách biệt      |
 
 ---
 

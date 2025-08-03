@@ -1,3 +1,4 @@
+# filename \.github\workflows\deploy-staging.yml
 name: 🚀 Deploy Swell Child Theme to Staging
 
 on:

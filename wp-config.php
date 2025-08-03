@@ -68,8 +68,8 @@ define( 'WP_CACHE_KEY_SALT', 'QsCaq`wWu}$,Nwaf2:.vGNy)X87zCD>pWj|8r5nUE1Ri+mpLl{
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-// $table_prefix = 'wp_';
-$table_prefix = 'wpstg0_';
+$table_prefix = 'wp_';
+// $table_prefix = 'wpstg0_';
 
 
 /* Add any custom values between this line and the "stop editing" line. */
@@ -92,8 +92,8 @@ $table_prefix = 'wpstg0_';
 // 	define( 'WP_DEBUG', false );
 // }
 
-define( 'WP_HOME', 'http://viet-sport.local/' );
-define( 'WP_SITEURL', 'http://viet-sport.local/' );
+define( 'WP_HOME', 'http://viet-sport.local' );
+define( 'WP_SITEURL', 'http://viet-sport.local' );
 
 
 define( 'WP_DEBUG', true );
@@ -101,6 +101,7 @@ define( 'WP_DEBUG_LOG', true );
 define( 'WP_DEBUG_DISPLAY', false ); // để log không in ra frontend
 
 define( 'WP_ENVIRONMENT_TYPE', 'local' );
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
@@ -110,3 +111,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
+
+// define('FORCE_SSL_ADMIN', false);
+

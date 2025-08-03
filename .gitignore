@@ -55,3 +55,9 @@ wp-content/backups/     # Nếu có plugin backup
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+# ==========================================
+# 🚫 LOẠI TRỪ FILE SAO LƯU DATABASE
+# ==========================================
+# Bỏ qua tất cả các file có đuôi .sql (backup CSDL, export từ Adminer, WP Staging...)
+*.sql
