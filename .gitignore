@@ -67,3 +67,5 @@ wp-content/plugins/*
 # 🚫 LOẠI TRỪ FILE SAO LƯU DATABASE
 # ==========================================
 *.sql
+clean-repo/
+clean-token.txt
