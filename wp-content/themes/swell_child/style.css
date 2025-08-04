@@ -12,9 +12,37 @@
     License URI: http://www.gnu.org/licenses/gpl.html
 */
 
-/* Áp dụng font Roboto cho toàn bộ website */
-body, p, span, li, a, td, th, input, textarea, button {
-    font-family: 'Roboto', 'Noto Sans JP', sans-serif !important;
+
+/* ============================
+   [TYPOGRAPHY] - Font mặc định cho toàn bộ website
+   Font sử dụng: 'Be Vietnam Pro' (hỗ trợ tốt tiếng Việt)
+   Áp dụng cho: thẻ <body> và toàn bộ nội dung kế thừa
+   Lưu ý: Không dùng !important để cho phép override cục bộ khi cần.
+   Ngày cập nhật: 2025-08-04
+   Người viết: Dang
+   ============================ */
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
 }
 
-/* Redeploy marker: 2025-08-02 */
+/* ============================ END [TYPOGRAPHY] ============================ */
+
+
+
+/* ============================
+   [TABLE_FIX] - Ngăn ngắt từ giữa từ trong bảng WordPress
+   Áp dụng cho: .wp-block-table (mặc định hoặc có thêm class tuỳ biến)
+   Không thay đổi bố cục, căn lề hay giao diện.
+   Ngày cập nhật: 2025-08-04
+   Người viết: Dang
+   ============================ */
+
+.wp-block-table td,
+.wp-block-table th {
+  word-break: keep-all;     /* Không ngắt từ giữa chừng (ví dụ: "đẹ\np") */
+  white-space: normal;      /* Cho phép xuống dòng tự nhiên nếu cần */
+}
+
+/* ============================ END [TABLE_FIX] ============================ */
+
