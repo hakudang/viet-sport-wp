@@ -1,93 +1,94 @@
+
 # 🇻🇳 VIET-SPORT WordPress Project
 
-## 🧭 Giới thiệu
+## 🧭 Introduction
 
-**VietSport** là một nền tảng WordPress sử dụng theme **Swell Child**, được tùy biến để phục vụ website thể thao [viet-sport.com](https://viet-sport.com). Repo này quản lý **toàn bộ mã nguồn theme** (không còn bao gồm database export).
-
----
-
-## ⚙️ Tính năng chính
-
-1. **Gửi yêu cầu nội dung đến Ban Quản Trị (BQT)**.
-2. **Tìm kiếm & khám phá CLB hoặc sự kiện**.
-3. **Tạo sân chơi thể thao**.
-4. **Đăng ký tham gia sân chơi**.
+**VietSport** is a WordPress platform utilizing the **Swell Child** theme, customized to serve the sports website [viet-sport.com](https://viet-sport.com). This repository manages the **entire theme source code** (database export is no longer included).
 
 ---
 
-## 🧱 Cấu trúc repo
+## ⚙️ Key Features
+
+1. **Submit content requests to the Admin Board**.
+2. **Search & discover clubs or events**.
+3. **Create sports playgrounds**.
+4. **Register to join a playground**.
+
+---
+
+## 🧱 Repository Structure
 
 ```
 viet-sport/
 ├── wp-content/
 │   └── themes/
-│       └── swell_child/         ← Theme chính (child theme Swell)
-├── .gitignore                   ← Đã cấu hình để loại trừ db-dumps/
-├── README.md                    ← (Tập tin này)
+│       └── swell_child/         ← Main theme (Swell child theme)
+├── .gitignore                   ← Configured to exclude db-dumps/
+├── README.md                    ← (This file)
 ```
 
-> 📦 Ghi chú: Từ giờ thư mục `db-dumps/` sẽ được **bỏ theo dõi khỏi Git** (đã thêm vào `.gitignore`). Vui lòng tự export và giữ bản sao database `.sql` trong máy cá nhân khi làm việc. Theo dõi git sẽ gây ra nhiều lỗi như Google OAuth Access Token có trong plugin form liên quan gmail khi push db-dumps
+> 📦 Note: The `db-dumps/` folder is now **excluded from Git tracking** (added to `.gitignore`). Please manually export and keep your own `.sql` database backup when working. Git-tracking the database often leads to issues such as exposing Google OAuth Access Tokens used in form plugins that integrate with Gmail.
 
 ---
 
 ## 🌐 URL Structure
 
-| URL                          | Mục đích                                           |
-|------------------------------|----------------------------------------------------|
-| `viet-sport.com`             | Web chính, landing page, giới thiệu                |
-| `viet-sport.com/sport_team/` | Trang CPT của từng CLB                             |
-| `viet-sport.com/sport_event/`| Trang CPT của từng event                           |
-| `viet-sport.com/booking`     | Tính năng đặt sân (PHP thuần)                      |
-| `viet-sport.com/dev`         | Staging site (plugin WP Staging)                   |
-| `booking.viet-sport.com`     | Web-app booking riêng (tách codebase – tương lai)  |
+| URL                           | Purpose                                            |
+|-------------------------------|----------------------------------------------------|
+| `viet-sport.com`              | Main website, landing page, intro                  |
+| `viet-sport.com/sport_team/`  | Custom Post Type (CPT) page for each club          |
+| `viet-sport.com/sport_event/` | CPT page for each event                            |
+| `viet-sport.com/booking`      | Booking feature (pure PHP)                         |
+| `viet-sport.com/dev`          | Staging site (via WP Staging plugin)               |
+| `booking.viet-sport.com`      | Standalone booking web app (separate codebase – planned) |
 
 ---
 
-## 🖥️ Cài đặt Local
+## 🖥️ Local Setup
 
-1. Clone về thư mục LocalWP:
+1. Clone into your LocalWP directory:
     ```bash
     git clone https://github.com/hakudang/viet-sport-wp.git
     ```
-2. Đặt đúng vào folder: `C:/Users/shaku/Local Sites/viet-sport`
-3. Kích hoạt Swell Child trong WP Admin
-4. Import database thủ công từ file `.sql` riêng (được backup cá nhân, không nằm trong repo)
-5. Cài các plugin:
+2. Place it into: `C:/Users/shaku/Local Sites/viet-sport`
+3. Activate Swell Child theme in WP Admin.
+4. Manually import the database from a private `.sql` file (not included in repo).
+5. Install the required plugins:
     - WP Staging
-    - Custom Post Type UI (hoặc dùng code CPT)
+    - Custom Post Type UI (or register CPT via code)
 
 ---
 
 ## 🔃 Git Workflow
 
-| Branch         | Mục đích                       |
-|----------------|-------------------------------|
-| `main`         | Code đã kiểm duyệt, production |
-| `dev`          | Nhánh phát triển, staging      |
-| `feature/xxx`  | Tính năng mới                  |
-| `hotfix/xxx`   | Sửa lỗi khẩn cấp               |
+| Branch         | Purpose                         |
+|----------------|---------------------------------|
+| `main`         | Reviewed production-ready code  |
+| `dev`          | Development & staging branch    |
+| `feature/xxx`  | New features                    |
+| `hotfix/xxx`   | Emergency bug fixes             |
 
 ---
 
-## 🚀 CI/CD – Deploy tự động lên Staging
+## 🚀 CI/CD – Auto Deploy to Staging
 
-Quá trình triển khai tự động lên môi trường **Staging** thông qua **GitHub Actions** giúp kiểm thử các thay đổi trước khi đưa lên môi trường production.
+Deployment to the **Staging** environment is automated via **GitHub Actions**, allowing for safe testing before pushing to production.
 
 ### Workflow: `deploy-staging.yml`
 
-Workflow **`deploy-staging.yml`** sẽ triển khai theme **Swell Child** lên máy chủ Staging khi có thay đổi trong nhánh `dev`. Quy trình này được thực hiện thủ công thông qua GitHub UI.
+The **`deploy-staging.yml`** workflow deploys the **Swell Child** theme to the Staging server when changes are made to the `dev` branch. This process is triggered manually via the GitHub UI.
 
-#### Các bước triển khai:
-1. **Checkout Code**: Đầu tiên, mã nguồn sẽ được kiểm tra từ GitHub repository.
-2. **Deploy to Staging**: Mã nguồn sẽ được triển khai lên máy chủ Staging qua FTP.
+#### Deployment Steps:
+1. **Checkout Code**: Source code is pulled from the GitHub repository.
+2. **Deploy to Staging**: Code is deployed to the staging server via FTP.
 
-#### Cấu hình trong file `deploy-staging.yml`:
+#### Sample Configuration in `deploy-staging.yml`:
 
 ```yaml
 name: 🚀 Deploy Swell Child Theme to Staging
 
 on:
-  # Chạy thủ công khi cần thiết
+  # Manually triggered
   workflow_dispatch:
 
 jobs:
@@ -115,28 +116,28 @@ jobs:
 
 ---
 
-## 🧪 Môi trường phát triển
+## 🧪 Development Environments
 
-| Môi trường | Domain                   | Mục đích          |
-|------------|--------------------------|-------------------|
-| Local      | `viet-sport.local`        | Phát triển cá nhân |
-| Staging    | `viet-sport.com/dev`      | Kiểm thử           |
-| Production | `viet-sport.com`          | Website chính      |
-| Booking    | `booking.viet-sport.com`  | SPA tách biệt      |
+| Environment | Domain                   | Purpose            |
+|-------------|--------------------------|--------------------|
+| Local       | `viet-sport.local`        | Personal development |
+| Staging     | `viet-sport.com/dev`      | Testing             |
+| Production  | `viet-sport.com`          | Live website        |
+| Booking     | `booking.viet-sport.com`  | Separate SPA booking app |
 
 ---
 
 ## 🚀 Roadmap
 
-- [x] Thiết lập theme SWELL Child cơ bản
-- [x] Thêm custom post type: Sport Event, Sport Team
-- [x] Tích hợp taxonomy: Sport name, Category, Location, Status
-- [x] Hiển thị thông tin từng CLB
-- [ ] Tạo form đặt sân
-- [ ] Gửi email mời bạn chơi
-- [x] Quản lý tài khoản người dùng
-- [ ] Tự động xác nhận & nhắc lịch qua email
-- [ ] Webapp booking tách riêng (SPA + API)
+- [x] Basic setup of SWELL Child theme
+- [x] Add custom post types: Sport Event, Sport Team
+- [x] Integrate taxonomies: Sport name, Category, Location, Status
+- [x] Display detailed club info
+- [ ] Create playground booking form
+- [ ] Email invitation to play
+- [x] User account management
+- [ ] Automated email confirmations & reminders
+- [ ] Standalone booking webapp (SPA + API)
 
 ---
 
