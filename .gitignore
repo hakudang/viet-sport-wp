@@ -69,3 +69,4 @@ wp-content/plugins/*
 *.sql
 clean-repo/
 clean-token.txt
+db-dumps/  # Loại trừ toàn bộ thư mục chứa export database

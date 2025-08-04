@@ -1,9 +1,8 @@
-
 # 🇻🇳 VIET-SPORT WordPress Project
 
 ## 🧭 Giới thiệu
 
-**VietSport** là một nền tảng WordPress sử dụng theme **Swell Child**, được tùy biến để phục vụ website thể thao [viet-sport.com](https://viet-sport.com). Repo này quản lý **toàn bộ mã nguồn theme + database export**.
+**VietSport** là một nền tảng WordPress sử dụng theme **Swell Child**, được tùy biến để phục vụ website thể thao [viet-sport.com](https://viet-sport.com). Repo này quản lý **toàn bộ mã nguồn theme** (không còn bao gồm database export).
 
 ---
 
@@ -23,10 +22,11 @@ viet-sport/
 ├── wp-content/
 │   └── themes/
 │       └── swell_child/         ← Theme chính (child theme Swell)
-├── db-dumps/                    ← Các bản export database (.sql)
-├── .gitignore                   ← Đã cấu hình để chỉ track phần cần thiết
+├── .gitignore                   ← Đã cấu hình để loại trừ db-dumps/
 ├── README.md                    ← (Tập tin này)
 ```
+
+> 📦 Ghi chú: Từ giờ thư mục `db-dumps/` sẽ được **bỏ theo dõi khỏi Git** (đã thêm vào `.gitignore`). Vui lòng tự export và giữ bản sao database `.sql` trong máy cá nhân khi làm việc. Theo dõi git sẽ gây ra nhiều lỗi như Google OAuth Access Token có trong plugin form liên quan gmail khi push db-dumps
 
 ---
 
@@ -51,7 +51,7 @@ viet-sport/
     ```
 2. Đặt đúng vào folder: `C:/Users/shaku/Local Sites/viet-sport`
 3. Kích hoạt Swell Child trong WP Admin
-4. Import database từ `db-dumps/*.sql`
+4. Import database thủ công từ file `.sql` riêng (được backup cá nhân, không nằm trong repo)
 5. Cài các plugin:
     - WP Staging
     - Custom Post Type UI (hoặc dùng code CPT)
@@ -112,13 +112,6 @@ jobs:
             **/.git*
             **/node_modules/**
 ```
-
-#### Các thông số chính:
-- **`server`**: Địa chỉ máy chủ Staging (lưu trong **GitHub Secrets**).
-- **`username` và `password`**: Tài khoản FTP dùng để kết nối đến máy chủ Staging.
-- **`server-dir`**: Thư mục trên máy chủ Staging để triển khai theme.
-- **`local-dir`**: Thư mục cục bộ chứa theme.
-- **`exclude`**: Loại trừ các thư mục như `.git` và `node_modules`.
 
 ---
 
