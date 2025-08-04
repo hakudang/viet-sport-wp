@@ -1,7 +1,7 @@
 // editor and front styles
 // filter search pro scss
 
-@import '../../../../filter-search/package/src/filter-search/variable';
+@use '../../../../filter-search/package/src/filter-search/variable' as variable;
 
 @mixin input-text() {
 	//先頭・末尾テキスト
@@ -17,41 +17,154 @@ html :where(.editor-styles-wrapper) {
 .vkfs ul.vkfs__input-wrap {
 	padding-left: 0;
 }
+
 /******************************
  * [ Outerカラム ] 最小幅指定の場合
  */
- .vkfs__layout--min {
+.vkfs__layout--min {
 	.vkfs__labels {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
+
 	.vkfs__outer-wrap {
 		flex-grow: 1;
 		flex-shrink: 0;
 		box-sizing: border-box;
 		max-width: 100%; // これがないと幅指定未入力の場合にはみ出る
 	}
- }
- /******************************
+}
+
+/******************************
   * [ Innerカラム ] 最小幅指定の場合
   */
 .vkfs__input-wrap--layout-min {
-	> li{
-		flex-grow:999;
+	>li {
+		flex-grow: 999;
 	}
 }
 
-
-/******************************
- * 
- */
 .vkfs {
+	/******************************
+	* アコーディオンのスタイル
+	*/
+	&__label-accordion-form.vk-filter-search{
+		.vkfs {
+			&__label-accordion-outer-wrap.vkfs__outer-wrap{
+				margin-bottom:0;
+				.vkfs__label-name{
+					margin-bottom:0;
+				}
+			}
+			&__labels{
+				gap:0;
+				margin-bottom: 2rem;
+			}
+
+			&__label-name {
+				position: relative;
+				cursor: pointer;
+
+				&:has(.vkfs__label-accordion-trigger) {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					width: 100%;
+					padding-top:0.7rem;
+					padding-bottom:0.7rem;
+					border-bottom: 1px solid #ced4da;
+					transition: all 0.3s ease;
+
+					// ラベルテキスト部分
+					> span:not(.vkfs__label-accordion-trigger) {
+						flex: 1;
+						margin-right: 10px;
+					}
+
+					// トリガー部分を右端に配置
+					.vkfs__label-accordion-trigger {
+						flex-shrink: 0;
+						margin-left: auto;
+					}
+				}
+			}
+
+			&__label-accordion-content {
+				&--open.vkfs__input-wrap {
+					opacity: 1;
+					transform: translateY(0);
+					transition: all .3s;
+					margin-top:calc( 1rem * 1 );
+				}
+
+				&--close.vkfs__input-wrap {
+					padding: 0 !important;
+					height: 0;
+					opacity: 0;
+					transform: translateY(-100%);
+					margin-bottom: 0;
+					:is(input[type=text], input[type=number], select) {
+						padding: 0 !important;
+						height: 0;
+					}
+				}
+			}
+			// アコーディオントリガー矢印のスタイル
+			&__label-accordion-trigger {
+				cursor: pointer;
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				text-align: center;
+				margin-left: 0.5em;
+
+				transition: all 0.3s ease;
+				position: relative;
+				z-index: 1;
+
+				// 矢印の共通スタイル
+				&::after {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					content: "";
+					width: 8px;
+					height: 8px;
+					border-right: 1px solid currentColor;
+					border-top: 1px solid currentColor;
+					transform: translate(-50%, -50%) rotate(45deg);
+					transition: all 0.3s ease;
+				}
+
+				&--open {
+					// 開いている状態：上矢印
+					&::after {
+						transform: translate(-50%, -50%) rotate(-45deg);
+					}
+				}
+
+				&--close {
+					// 閉じている状態：下矢印
+					&::after {
+						transform: translate(-50%, -50%) rotate(135deg);
+					}
+				}
+
+			}
+			&__input-wrap {
+				margin-bottom: 1em;
+			}
+		}
+	}
+
 	&__input-wrap {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		padding-left: 0;
+
 		&--range,
 		&--higher,
 		&--lower {
@@ -63,15 +176,15 @@ html :where(.editor-styles-wrapper) {
 			box-sizing: border-box;
 		}
 
-		
-
 		&--checkbox,
 		&--radio {
 			padding-inline-start: 0;
+
 			li {
 				&,
-				.widget & { // テーマなどで .widget li に対してスタイルが指定されていたりするので上書き
-					margin-top:0;
+				.widget & {
+					// テーマなどで .widget li に対してスタイルが指定されていたりするので上書き
+					margin-top: 0;
 				}
 			}
 		}
@@ -93,7 +206,7 @@ html :where(.editor-styles-wrapper) {
 			display: inline-block;
 			width: auto;
 
-			@media (min-width: $md-min) {
+			@media (min-width: variable.$md-min) {
 				margin-bottom: 0;
 				float: left;
 				width: auto;
@@ -189,24 +302,26 @@ html :where(.editor-styles-wrapper) {
 		text-align: center;
 		border: none;
 		box-sizing: border-box;
-		@media (min-width: $md-min) {
+
+		@media (min-width: variable.$md-min) {
 			--radio-check-size: calc(var(--vk-size-text) * 1);
 		}
 
-		@media (min-width: $md-min) {
+		@media (min-width: variable.$md-min) {
 			margin: 0 0.4rem 0 0;
 			top: 6px;
 		}
 	}
+
 	input[type='checkbox'] {
-		@media (min-width: $md-min) {
+		@media (min-width: variable.$md-min) {
 			top: 8px;
 		}
 	}
 
 	// チェックボックス /  ラジオボタン の線デザイン
 	input[type='checkbox']::before,
-	input[type='radio']::before  {
+	input[type='radio']::before {
 		display: block;
 		position: absolute;
 		content: '';
@@ -240,14 +355,14 @@ html :where(.editor-styles-wrapper) {
 		// マークのサイズを半分の大きさに指定
 		--radio-mark-size: calc(var(--radio-check-size) * 0.5);
 		width: var(--radio-mark-size);
-		height:var(--radio-mark-size);
+		height: var(--radio-mark-size);
 		// 開始点を中央に指定
 		left: 50%;
 		top: 50%;
 		// マークのサイズの半分をマイナスオフセットする事により中央に配置
 		transform: translateX(calc(var(--radio-mark-size)/2 * -1)) translateY(calc(var(--radio-mark-size)/2 * -1));
 		border-radius: 50%;
-		background-color: $mark-color;
+		background-color: variable.$mark-color;
 		// チェックしてないときは隠す
 		opacity: 0;
 	}
@@ -258,8 +373,8 @@ html :where(.editor-styles-wrapper) {
 		top: 9%;
 		width: 7px;
 		height: 12px;
-		border-right: 3px solid $mark-color;
-		border-bottom: 3px solid $mark-color;
+		border-right: 3px solid variable.$mark-color;
+		border-bottom: 3px solid variable.$mark-color;
 		transform: rotate(45deg);
 		// チェックしてないときは隠す
 		opacity: 0;
@@ -298,18 +413,17 @@ html :where(.editor-styles-wrapper) {
 	&_submit-change-color-hover:hover {
 		filter: brightness(1.1) saturate(2);
 	}
+
 	&__child-dropdown {
 		select {
-			margin-bottom:4px;
+			margin-bottom: 4px;
 		}
 	}
 }
 
 //ブロック幅指定
 .vkfs__labels {
-
 	&>.vkfs__outer-wrap {
-
 		&--col-xs-2 {
 			flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
 		}
@@ -338,7 +452,7 @@ html :where(.editor-styles-wrapper) {
 			flex-basis: calc(var(--col-12) - var(--vkfs-outer-margin));
 		}
 
-		@media (min-width: $sm-min) {
+		@media (min-width: variable.$sm-min) {
 			&--col-sm-2 {
 				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
 			}
@@ -368,7 +482,7 @@ html :where(.editor-styles-wrapper) {
 			}
 		}
 
-		@media (min-width: $md-min) {
+		@media (min-width: variable.$md-min) {
 			&--col-md-2 {
 				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
 			}
@@ -398,7 +512,7 @@ html :where(.editor-styles-wrapper) {
 			}
 		}
 
-		@media (min-width: $lg-min) {
+		@media (min-width: variable.$lg-min) {
 			&--col-lg-2 {
 				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
 			}
@@ -428,7 +542,7 @@ html :where(.editor-styles-wrapper) {
 			}
 		}
 
-		@media (min-width: $xl-min) {
+		@media (min-width: variable.$xl-min) {
 			&--col-xl-2 {
 				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
 			}
@@ -458,7 +572,7 @@ html :where(.editor-styles-wrapper) {
 			}
 		}
 
-		@media (min-width: $xxl-min) {
+		@media (min-width: variable.$xxl-min) {
 			&--col-xxl-2 {
 				flex-basis: calc(var(--col-2) - var(--vkfs-outer-margin));
 			}
@@ -491,7 +605,6 @@ html :where(.editor-styles-wrapper) {
 }
 
 ul[class*="vkfs__input-wrap--col"] {
-
 	&>li {
 		padding-right: 15px;
 	}
@@ -518,7 +631,7 @@ ul[class*="vkfs__input-wrap--col"] {
 		flex-basis: var(--col-12);
 	}
 
-	@media (min-width: $sm-min) {
+	@media (min-width: variable.$sm-min) {
 		&--col-sm-2 li {
 			flex-basis: var(--col-2);
 		}
@@ -540,7 +653,7 @@ ul[class*="vkfs__input-wrap--col"] {
 		}
 	}
 
-	@media (min-width: $md-min) {
+	@media (min-width: variable.$md-min) {
 		&--col-md-2 li {
 			flex-basis: var(--col-2);
 		}
@@ -562,7 +675,7 @@ ul[class*="vkfs__input-wrap--col"] {
 		}
 	}
 
-	@media (min-width: $lg-min) {
+	@media (min-width: variable.$lg-min) {
 		&--col-lg-2 li {
 			flex-basis: var(--col-2);
 		}
@@ -584,7 +697,7 @@ ul[class*="vkfs__input-wrap--col"] {
 		}
 	}
 
-	@media (min-width: $xl-min) {
+	@media (min-width: variable.$xl-min) {
 		&--col-xl-2 li {
 			flex-basis: var(--col-2);
 		}
@@ -606,7 +719,7 @@ ul[class*="vkfs__input-wrap--col"] {
 		}
 	}
 
-	@media (min-width: $xxl-min) {
+	@media (min-width: variable.$xxl-min) {
 		&--col-xxl-2 li {
 			flex-basis: var(--col-2);
 		}
@@ -627,5 +740,4 @@ ul[class*="vkfs__input-wrap--col"] {
 			flex-basis: var(--col-12);
 		}
 	}
-
 }

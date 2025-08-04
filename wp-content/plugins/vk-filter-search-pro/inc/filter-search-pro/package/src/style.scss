@@ -1,13 +1,13 @@
-@import "./filter-search-pro/style.scss";
+@use "./filter-search-pro/style.scss" as filter-search-pro;
 
 /* 投稿日付検索ブロックの CSS */
-@import "./post-date-search-pro/style.scss";
+@use "./post-date-search-pro/style.scss" as post-date-search-pro;
 
 /* カスタムフィールド検索ブロックの CSS */
-@import "./custom-field-search-pro/style.scss";
+@use "./custom-field-search-pro/style.scss" as custom-field-search-pro;
 
 /* Search Result Single Order ブロックの CSS */
-@import "./search-result-single-order/style.scss";
+@use "./search-result-single-order/style.scss" as search-result-single-order;
 
 /*  タクソノミーブロックの CSS */
-@import "./taxonomy-search-pro/style.scss";
+@use "./taxonomy-search-pro/style.scss" as taxonomy-search-pro;

@@ -33,6 +33,7 @@ import {
 export default function PostDateSearchProEdit( props ) {
 	const { attributes, setAttributes, clientId } = props;
 	const {
+		labelAccordionType,
 		dateName,
 		dateCompare,
 		dateMin,
@@ -124,8 +125,12 @@ export default function PostDateSearchProEdit( props ) {
 		if ( dateCompare === 'only' ) {
 			blockContent = (
 				<>
-					<div className="vkfs__label-name">{ BlockLabel }</div>
-					<div className="vkfs__input-wrap vkfs__input-wrap--only">
+					<div className="vkfs__label-name">
+						<div className="vkfs__label-name-inner">
+							{ BlockLabel }
+						</div>
+					</div>
+					<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--only">
 						<div className="vkfs__input-date-wrap">
 							{ beforeField }
 							<input
@@ -155,8 +160,12 @@ export default function PostDateSearchProEdit( props ) {
 		if ( dateCompare === 'before' ) {
 			blockContent = (
 				<>
-					<div className="vkfs__label-name">{ BlockLabel }</div>
-					<div className="vkfs__input-wrap vkfs__input-wrap--before">
+					<div className="vkfs__label-name">
+						<div className="vkfs__label-name-inner">
+							{ BlockLabel }
+						</div>
+					</div>
+					<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--before">
 						<div className="vkfs__input-date-wrap">
 							{ beforeField }
 							<input
@@ -186,8 +195,12 @@ export default function PostDateSearchProEdit( props ) {
 		if ( dateCompare === 'after' ) {
 			blockContent = (
 				<>
-					<div className="vkfs__label-name">{ BlockLabel }</div>
-					<div className="vkfs__input-wrap vkfs__input-wrap--after">
+					<div className="vkfs__label-name">
+						<div className="vkfs__label-name-inner">
+							{ BlockLabel }
+						</div>
+					</div>
+					<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--after">
 						<div className="vkfs__input-date-wrap">
 							{ beforeField }
 							<input
@@ -217,8 +230,12 @@ export default function PostDateSearchProEdit( props ) {
 		if ( dateCompare === 'range' ) {
 			blockContent = (
 				<>
-					<div className="vkfs__label-name">{ BlockLabel }</div>
-					<div className="vkfs__input-wrap vkfs__input-wrap--range">
+					<div className="vkfs__label-name">
+						<div className="vkfs__label-name-inner">
+							{ BlockLabel }
+						</div>
+					</div>
+					<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--range">
 						<div className="vkfs__input-date-wrap">
 							{ beforeField }
 							<input
@@ -269,8 +286,10 @@ export default function PostDateSearchProEdit( props ) {
 	} else {
 		blockContent = (
 			<>
-				<div className="vkfs__label-name">{ BlockLabel }</div>
-				<div className="vkfs__input-wrap vkfs__input-wrap--text vkfs__alert vkfs__alert--warning">
+				<div className="vkfs__label-name">
+					<div className="vkfs__label-name-inner">{ BlockLabel }</div>
+				</div>
+				<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--text vkfs__alert vkfs__alert--warning">
 					{ __(
 						'This block will active when Date Type, Compare Operator, Label of This Block is set.',
 						'vk-filter-search-pro'
@@ -295,7 +314,9 @@ export default function PostDateSearchProEdit( props ) {
 	return (
 		<>
 			<InspectorControls>
-				<OuterColumnSetting { ...props } />
+				{ labelAccordionType === 'none' && (
+					<OuterColumnSetting { ...props } />
+				) }
 				<PanelBody
 					title={ __(
 						'Date Block Description',

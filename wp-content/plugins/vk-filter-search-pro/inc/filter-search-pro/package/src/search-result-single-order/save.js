@@ -147,9 +147,13 @@ export default function CustomFieldSearchProSave( props ) {
 	} );
 	blockContent = (
 		<>
-			<div className="vkfs__label-name">{ blockContentLabel }</div>
+			<div className="vkfs__label-name">
+				<div className="vkfs__label-name-inner">
+					{ blockContentLabel }
+				</div>
+			</div>
 			<select
-				className="vkfs__input-wrap vkfs__input-wrap--select vkfs__input-wrap--orderby"
+				className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--select vkfs__input-wrap--orderby"
 				name="vkfs_orderby"
 				id="orderby"
 			>

@@ -3,7 +3,7 @@
  * Plugin Name: VK Filter Search Pro
  * Plugin URI: https://github.com/vektor-inc/vk-filter-search/
  * Description: This is a plugin that you can add a filter search function with blocks.
- * Version: 2.15.1.0
+ * Version: 2.17.0.0
  * Requires at least: 6.4
  * Requires PHP: 7.4
  * Author:  Vektor,Inc.

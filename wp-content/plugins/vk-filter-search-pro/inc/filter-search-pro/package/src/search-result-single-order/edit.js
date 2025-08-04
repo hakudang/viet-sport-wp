@@ -40,6 +40,7 @@ import {
 export default function SearchResultSingleOrderEdit( props ) {
 	const { attributes, setAttributes, clientId } = props;
 	const {
+		labelAccordionType,
 		blockLabel,
 		selectOption,
 		outerColumnXs,
@@ -413,9 +414,13 @@ export default function SearchResultSingleOrderEdit( props ) {
 
 	blockContent = (
 		<>
-			<div className="vkfs__label-name">{ blockContentLabel }</div>
+			<div className="vkfs__label-name">
+				<div className="vkfs__label-name-inner">
+					{ blockContentLabel }
+				</div>
+			</div>
 			<select
-				className="vkfs__input-wrap vkfs__input-wrap--select vkfs__input-wrap--orderby"
+				className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--select vkfs__input-wrap--orderby"
 				name="vkfs_orderby"
 				id="orderby"
 			>
@@ -432,10 +437,12 @@ export default function SearchResultSingleOrderEdit( props ) {
 			<div { ...blockProps }>
 				<div className="vkfs__warning">
 					<div className="vkfs__label-name">
-						{ __(
-							'Search Result Single Order',
-							'vk-filter-search-pro'
-						) }
+						<div className="vkfs__label-name-inner">
+							{ __(
+								'Search Result Single Order',
+								'vk-filter-search-pro'
+							) }
+						</div>
 					</div>
 					<div className="vkfs__warning-text">
 						{ __(
@@ -452,7 +459,9 @@ export default function SearchResultSingleOrderEdit( props ) {
 	return (
 		<>
 			<InspectorControls>
-				<OuterColumnSetting { ...props } />
+				{ labelAccordionType === 'none' && (
+					<OuterColumnSetting { ...props } />
+				) }
 				<PanelBody
 					title={ __(
 						'Display Order Setting',

@@ -104,32 +104,32 @@ export const contorolDropdown = async () => {
 };
 
 const addCloseClass = ( trigger, content ) => {
-	trigger.classList.add( `vkfs__taxonomy-accordion-trigger--close` );
-	content.classList.add( `vkfs__taxonomy-accordion-content--close` );
-	trigger.innerHTML = `+`;
+	trigger.classList.add( `vkfs__label-accordion-trigger--close` );
+	content.classList.add( `vkfs__label-accordion-content--close` );
 };
 
 const addOpenClass = ( trigger, content ) => {
-	trigger.classList.add( `vkfs__taxonomy-accordion-trigger--open` );
-	content.classList.add( `vkfs__taxonomy-accordion-content--open` );
-	trigger.innerHTML = `-`;
+	trigger.classList.add( `vkfs__label-accordion-trigger--open` );
+	content.classList.add( `vkfs__label-accordion-content--open` );
 };
 
 const removeCloseClass = ( trigger, content ) => {
-	trigger.classList.remove( `vkfs__taxonomy-accordion-trigger--close` );
-	content.classList.remove( `vkfs__taxonomy-accordion-content--close` );
+	trigger.classList.remove( `vkfs__label-accordion-trigger--close` );
+	content.classList.remove( `vkfs__label-accordion-content--close` );
 };
 
 const removeOpenClass = ( trigger, content ) => {
-	trigger.classList.remove( `vkfs__taxonomy-accordion-trigger--open` );
-	content.classList.remove( `vkfs__taxonomy-accordion-content--open` );
+	trigger.classList.remove( `vkfs__label-accordion-trigger--open` );
+	content.classList.remove( `vkfs__label-accordion-content--open` );
 };
 
+// eslint-disable-next-line no-unused-vars
 const openToClose = ( trigger, content ) => {
 	removeOpenClass( trigger, content );
 	addCloseClass( trigger, content );
 };
 
+// eslint-disable-next-line no-unused-vars
 const closeToOpen = ( trigger, content ) => {
 	removeCloseClass( trigger, content );
 	addOpenClass( trigger, content );
@@ -146,6 +146,31 @@ const swapLabelPosition = ( parentLi ) => {
 		parentLi.insertBefore( label, parentLi.firstChild );
 		parentLi.insertBefore( trigger, label.nextSibling );
 	}
+};
+
+const addTaxClose = ( trigger, content ) => {
+	trigger.classList.add( 'vkfs__taxonomy-accordion-trigger--close' );
+	content.classList.add( 'vkfs__taxonomy-accordion-content--close' );
+};
+const addTaxOpen = ( trigger, content ) => {
+	trigger.classList.add( 'vkfs__taxonomy-accordion-trigger--open' );
+	content.classList.add( 'vkfs__taxonomy-accordion-content--open' );
+};
+const removeTaxClose = ( trigger, content ) => {
+	trigger.classList.remove( 'vkfs__taxonomy-accordion-trigger--close' );
+	content.classList.remove( 'vkfs__taxonomy-accordion-content--close' );
+};
+const removeTaxOpen = ( trigger, content ) => {
+	trigger.classList.remove( 'vkfs__taxonomy-accordion-trigger--open' );
+	content.classList.remove( 'vkfs__taxonomy-accordion-content--open' );
+};
+const taxOpenToClose = ( trigger, content ) => {
+	removeTaxOpen( trigger, content );
+	addTaxClose( trigger, content );
+};
+const taxCloseToOpen = ( trigger, content ) => {
+	removeTaxClose( trigger, content );
+	addTaxOpen( trigger, content );
 };
 
 export const taxonomyAccordion = () => {
@@ -176,7 +201,6 @@ export const taxonomyAccordion = () => {
 							liHasChildNodeTrigger.classList.add(
 								'vkfs__taxonomy-accordion-trigger'
 							);
-							liHasChildNodeTrigger.innerHTML = `+`;
 							liHasChildNode.insertBefore(
 								liHasChildNodeTrigger,
 								liHasChildNode.firstChild
@@ -189,7 +213,7 @@ export const taxonomyAccordion = () => {
 							liHasChildNodeContent.classList.add(
 								`vkfs__taxonomy-accordion-content`
 							);
-							addCloseClass(
+							addTaxClose(
 								liHasChildNodeTrigger,
 								liHasChildNodeContent
 							);
@@ -201,16 +225,12 @@ export const taxonomyAccordion = () => {
 											`vkfs__taxonomy-accordion-content--close`
 										)
 									) {
-										closeToOpen(
+										taxCloseToOpen(
 											liHasChildNodeTrigger,
 											liHasChildNodeContent
 										);
-									} else if (
-										liHasChildNodeContent.classList.contains(
-											`vkfs__taxonomy-accordion-content--open`
-										)
-									) {
-										openToClose(
+									} else {
+										taxOpenToClose(
 											liHasChildNodeTrigger,
 											liHasChildNodeContent
 										);
@@ -232,7 +252,7 @@ export const taxonomyAccordion = () => {
 												liHasChild !==
 												event.currentTarget.parentNode
 											) {
-												openToClose(
+												taxOpenToClose(
 													liHasChild.querySelector(
 														`.vkfs__taxonomy-accordion-trigger`
 													),

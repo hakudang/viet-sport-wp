@@ -24,6 +24,14 @@
 			"type": "boolean",
 			"default": false
 		},
+		"labelAccordionType": {
+			"type": "string",
+			"default": "none"
+		},
+		"labelAccordionFirst": {
+			"type": "string",
+			"default": "first-open"
+		},
 		"SubmitText": {
 			"type": "string",
 			"default": ""

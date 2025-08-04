@@ -10,6 +10,10 @@
 	"editorStyle": "vk-filter-search-pro-editor",
 	"style": "vk-filter-search-pro-style",
 	"attributes": {
+		"labelAccordionType": {
+			"type": "string",
+			"default": "none"
+		},
 		"blockLabel": {
 			"type": "string",
 			"default": ""

@@ -32,6 +32,8 @@ export default function FilterSearchProEdit( props ) {
 		DisplayOnResult,
 		DisplayOnPosttypeArchive,
 		AutoSubmit,
+		labelAccordionType,
+		labelAccordionFirst,
 		SubmitText,
 		SubmitFontSize,
 		SubmitLetterSpacing,
@@ -67,7 +69,67 @@ export default function FilterSearchProEdit( props ) {
 
 	const { updateBlockAttributes } = dispatch( 'core/block-editor' );
 
-	// 以前のバージョンからの互換処理 /////////////////////////////////////
+	// リンクを無効化
+	useEffect( () => {
+		const iframe = document.querySelector(
+			'.block-editor__container iframe'
+		);
+		const iframeDoc = iframe?.contentWindow?.document;
+		const targetDoc = iframeDoc || document;
+
+		// eslint-disable-next-line no-undef
+		const observer = new MutationObserver( () => {
+			const editorRoot = targetDoc.querySelector(
+				'.block-editor-block-list__layout'
+			);
+			if ( ! editorRoot ) {
+				return;
+			}
+
+			const filterSearchSubmit = editorRoot.querySelectorAll(
+				'.vk-filter-search .vkfs_submit'
+			);
+			if ( filterSearchSubmit.length === 0 ) {
+				return;
+			}
+
+			filterSearchSubmit.forEach( ( link ) => {
+				if ( link.dataset.prevented ) {
+					return;
+				} // 二重適用防止
+
+				link.dataset.prevented = 'true';
+				link.addEventListener( 'click', function ( event ) {
+					event.preventDefault();
+					link.style.cursor = 'default';
+					link.style.boxShadow = 'unset';
+					link.style.pointerEvents = 'none';
+				} );
+				link.addEventListener( 'mouseover', function ( event ) {
+					event.preventDefault();
+					link.style.cursor = 'default';
+					link.style.boxShadow = 'unset';
+					link.style.pointerEvents = 'none';
+				} );
+			} );
+		} );
+		const observeTarget =
+			targetDoc.querySelector( '.block-editor-block-list__layout' ) ||
+			targetDoc.body;
+		if ( observeTarget ) {
+			observer.observe( observeTarget, {
+				childList: true,
+				subtree: true,
+			} );
+		}
+
+		// クリーンアップ
+		return () => {
+			observer.disconnect();
+		};
+	}, [] );
+
+	// 以前のバージョンからの互換処理
 	useEffect( () => {
 		if ( clientId ) {
 			// 1.13.0 以前に attributes を追加をしたときの互換処理
@@ -135,6 +197,16 @@ export default function FilterSearchProEdit( props ) {
 				// その発生率を下げるために layoutMethod の値を保存させたいので block.js では null にしてある。
 				setAttributes( { layoutMethod: 'column' } );
 			}
+
+			// 2.4.2 で新たに labelAccordionType を追加したときの互換処理
+			if ( labelAccordionType === undefined ) {
+				setAttributes( { labelAccordionType: 'none' } );
+			}
+
+			// 2.4.2 で新たに labelAccordionFirst を追加したときの互換処理
+			if ( labelAccordionFirst === undefined ) {
+				setAttributes( { labelAccordionFirst: 'first-open' } );
+			}
 		}
 	}, [ clientId ] );
 
@@ -152,7 +224,16 @@ export default function FilterSearchProEdit( props ) {
 					) === 'vk-filter-search-pro/post-type-search-pro' ||
 					select( 'core/block-editor' ).getBlockName(
 						innerBlock.clientId
-					) === 'vk-filter-search-pro/keyword-search-pro'
+					) === 'vk-filter-search-pro/keyword-search-pro' ||
+					select( 'core/block-editor' ).getBlockName(
+						innerBlock.clientId
+					) === 'vk-filter-search-pro/custom-field-search-pro' ||
+					select( 'core/block-editor' ).getBlockName(
+						innerBlock.clientId
+					) === 'vk-filter-search-pro/post-date-search-pro' ||
+					select( 'core/block-editor' ).getBlockName(
+						innerBlock.clientId
+					) === 'vk-filter-search-pro/search-result-single-order'
 				) {
 					updateBlockAttributes( innerBlock.clientId, {
 						outerColumnWidthMethod: layoutMethod,
@@ -162,64 +243,82 @@ export default function FilterSearchProEdit( props ) {
 		}
 	}, [ layoutMethod ] );
 
+	// 親ブロックのアコーディオン情報をもとに子ブロックのアコーディオン方式の属性を上書き
 	useEffect( () => {
-		const iframe = document.querySelector(
-			'.block-editor__container iframe'
-		);
-		const iframeDoc = iframe?.contentWindow?.document;
-		const targetDoc = iframeDoc || document;
-
-		// eslint-disable-next-line no-undef
-		const observer = new MutationObserver( () => {
-			const editorRoot = targetDoc.querySelector(
-				'.block-editor-block-list__layout'
-			);
-			if ( ! editorRoot ) {
-				return;
-			}
-
-			const filterSearchSubmit = editorRoot.querySelectorAll(
-				'.vk-filter-search .vkfs_submit'
-			);
-			if ( filterSearchSubmit.length === 0 ) {
-				return;
-			}
-
-			filterSearchSubmit.forEach( ( link ) => {
-				if ( link.dataset.prevented ) {
-					return;
-				} // 二重適用防止
-
-				link.dataset.prevented = 'true';
-				link.addEventListener( 'click', function ( event ) {
-					event.preventDefault();
-					link.style.cursor = 'default';
-					link.style.boxShadow = 'unset';
-					link.style.pointerEvents = 'none';
+		if ( labelAccordionType !== 'none' ) {
+			if ( !! thisBlock && !! thisBlock.innerBlocks ) {
+				const innerBlocks = thisBlock.innerBlocks;
+				innerBlocks.forEach( ( innerBlock ) => {
+					if (
+						select( 'core/block-editor' ).getBlockName(
+							innerBlock.clientId
+						) === 'vk-filter-search-pro/taxonomy-search-pro' ||
+						select( 'core/block-editor' ).getBlockName(
+							innerBlock.clientId
+						) === 'vk-filter-search-pro/post-type-search-pro' ||
+						select( 'core/block-editor' ).getBlockName(
+							innerBlock.clientId
+						) === 'vk-filter-search-pro/keyword-search-pro' ||
+						select( 'core/block-editor' ).getBlockName(
+							innerBlock.clientId
+						) === 'vk-filter-search-pro/custom-field-search-pro' ||
+						select( 'core/block-editor' ).getBlockName(
+							innerBlock.clientId
+						) === 'vk-filter-search-pro/post-date-search-pro' ||
+						select( 'core/block-editor' ).getBlockName(
+							innerBlock.clientId
+						) === 'vk-filter-search-pro/search-result-single-order'
+					) {
+						if ( layoutMethod === 'minimum' ) {
+							updateBlockAttributes( innerBlock.clientId, {
+								labelAccordionType,
+								outerColumnWidthMin: '100%',
+							} );
+						} else {
+							updateBlockAttributes( innerBlock.clientId, {
+								labelAccordionType,
+								outerColumnWidthMethod: 'column',
+								outerColumnXs: '12',
+								outerColumnSm: '12',
+								outerColumnMd: '12',
+								outerColumnLg: '12',
+								outerColumnXl: '12',
+								outerColumnXxl: '12',
+							} );
+						}
+					}
 				} );
-				link.addEventListener( 'mouseover', function ( event ) {
-					event.preventDefault();
-					link.style.cursor = 'default';
-					link.style.boxShadow = 'unset';
-					link.style.pointerEvents = 'none';
-				} );
-			} );
-		} );
-		const observeTarget =
-			targetDoc.querySelector( '.block-editor-block-list__layout' ) ||
-			targetDoc.body;
-		if ( observeTarget ) {
-			observer.observe( observeTarget, {
-				childList: true,
-				subtree: true,
+			}
+		} else if ( !! thisBlock && !! thisBlock.innerBlocks ) {
+			const innerBlocks = thisBlock.innerBlocks;
+			innerBlocks.forEach( ( innerBlock ) => {
+				if (
+					select( 'core/block-editor' ).getBlockName(
+						innerBlock.clientId
+					) === 'vk-filter-search-pro/taxonomy-search-pro' ||
+					select( 'core/block-editor' ).getBlockName(
+						innerBlock.clientId
+					) === 'vk-filter-search-pro/post-type-search-pro' ||
+					select( 'core/block-editor' ).getBlockName(
+						innerBlock.clientId
+					) === 'vk-filter-search-pro/keyword-search-pro' ||
+					select( 'core/block-editor' ).getBlockName(
+						innerBlock.clientId
+					) === 'vk-filter-search-pro/custom-field-search-pro' ||
+					select( 'core/block-editor' ).getBlockName(
+						innerBlock.clientId
+					) === 'vk-filter-search-pro/post-date-search-pro' ||
+					select( 'core/block-editor' ).getBlockName(
+						innerBlock.clientId
+					) === 'vk-filter-search-pro/search-result-single-order'
+				) {
+					updateBlockAttributes( innerBlock.clientId, {
+						labelAccordionType,
+					} );
+				}
 			} );
 		}
-
-		// クリーンアップ
-		return () => {
-			observer.disconnect();
-		};
-	}, [] );
+	}, [ labelAccordionType ] );
 
 	let postTypeAlert = '';
 	if (
@@ -561,80 +660,87 @@ export default function FilterSearchProEdit( props ) {
 		submitStyle.borderColor = submitBorderColor;
 	}
 
+	const accordionSetting = {
+		labelAccordionType,
+		labelAccordionFirst,
+	};
+
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody
-					title={ __( 'Layout setting', 'vk-filter-search-pro' ) }
-					initialOpen={ true }
-				>
-					<RadioControl
-						label={ __(
-							'Method of specifying width',
-							'vk-filter-search-pro'
-						) }
-						selected={ layoutMethod }
-						options={ [
-							{
-								label: __(
-									'Set Min Width',
-									'vk-filter-search-pro'
-								),
-								value: 'minimum',
-							},
-							{
-								label: __(
-									'Specify division count for each screen size',
-									'vk-filter-search-pro'
-								),
-								value: 'column',
-							},
-						] }
-						onChange={ ( value ) =>
-							setAttributes( { layoutMethod: value } )
-						}
-					/>
+				{ labelAccordionType === 'none' && (
+					<PanelBody
+						title={ __( 'Layout setting', 'vk-filter-search-pro' ) }
+						initialOpen={ true }
+					>
+						<RadioControl
+							label={ __(
+								'Method of specifying width',
+								'vk-filter-search-pro'
+							) }
+							selected={ layoutMethod }
+							options={ [
+								{
+									label: __(
+										'Set Min Width',
+										'vk-filter-search-pro'
+									),
+									value: 'minimum',
+								},
+								{
+									label: __(
+										'Specify division count for each screen size',
+										'vk-filter-search-pro'
+									),
+									value: 'column',
+								},
+							] }
+							onChange={ ( value ) =>
+								setAttributes( { layoutMethod: value } )
+							}
+						/>
 
-					{ layoutMethod === 'minimum' ? (
-						<>
-							<UnitControl
-								label={ __(
-									'Column min width',
-									'vk-filter-search-pro'
-								) }
-								value={ layoutBaseWidthMin }
-								help={ __(
-									'Please enter the minimum width of the inner block.',
-									'vk-filter-search-pro'
-								) }
-								onChange={ ( value ) =>
-									setAttributes( {
-										layoutBaseWidthMin: value,
-									} )
-								}
-							/>
-							<UnitControl
-								label={ __(
-									'Column Gap',
-									'vk-filter-search-pro'
-								) }
-								value={ layoutGap }
-								onChange={ ( value ) =>
-									setAttributes( { layoutGap: value } )
-								}
-							/>
-						</>
-					) : (
-						<>
-							<div className="vkfs__warning">
-								{ __(
-									'Please specify column width from each inner block.',
-									'vk-filter-search-pro'
-								) }
-							</div>
-						</>
-					) }
-				</PanelBody>
+						{ layoutMethod === 'minimum' ? (
+							<>
+								<UnitControl
+									label={ __(
+										'Column min width',
+										'vk-filter-search-pro'
+									) }
+									value={ layoutBaseWidthMin }
+									help={ __(
+										'Please enter the minimum width of the inner block.',
+										'vk-filter-search-pro'
+									) }
+									onChange={ ( value ) =>
+										setAttributes( {
+											layoutBaseWidthMin: value,
+										} )
+									}
+								/>
+								<UnitControl
+									label={ __(
+										'Column Gap',
+										'vk-filter-search-pro'
+									) }
+									value={ layoutGap }
+									onChange={ ( value ) =>
+										setAttributes( { layoutGap: value } )
+									}
+								/>
+							</>
+						) : (
+							<>
+								<div className="vkfs__warning">
+									{ __(
+										'Please specify column width from each inner block.',
+										'vk-filter-search-pro'
+									) }
+								</div>
+							</>
+						) }
+					</PanelBody>
+				) }
 				<PanelBody
 					title={ __(
 						'Search Form Setting',
@@ -682,6 +788,104 @@ export default function FilterSearchProEdit( props ) {
 						/>
 					</BaseControl>
 				</PanelBody>
+				<PanelBody
+					title={ __( 'Accordion Setting', 'vk-filter-search-pro' ) }
+					initialOpen={ true }
+				>
+					<SelectControl
+						label={ __( 'Accordion Type', 'vk-filter-search-pro' ) }
+						value={ labelAccordionType }
+						options={ [
+							{
+								label: __( 'None', 'vk-filter-search-pro' ),
+								value: 'none',
+							},
+							{
+								label: __(
+									'Accordion',
+									'vk-filter-search-pro'
+								),
+								value: 'accordion',
+							},
+							{
+								label: __( 'Collapse', 'vk-filter-search-pro' ),
+								value: 'collapse',
+							},
+						] }
+						onChange={ ( value ) =>
+							setAttributes( { labelAccordionType: value } )
+						}
+					/>
+					<ul>
+						<li>
+							{ __(
+								'None: Nothing to do',
+								'vk-filter-search-pro'
+							) }
+						</li>
+						<li>
+							{ __(
+								'Accordion: Open or close the clicked element',
+								'vk-filter-search-pro'
+							) }
+						</li>
+						<li>
+							{ __(
+								'Collapse: Open or close the clicked element and close the others',
+								'vk-filter-search-pro'
+							) }
+						</li>
+					</ul>
+					<div
+						className="vkfs__warning"
+						style={ { marginBottom: '1em' } }
+					>
+						{ __(
+							'If you select "Accordion" or "Collapse", the layout will switch to a single column ( the layout settings will be hidden ).',
+							'vk-filter-search-pro'
+						) }
+						<br />
+						{ __(
+							'Please check the actual accordion behavior on the public ( frontend ) screen.',
+							'vk-filter-search-pro'
+						) }
+					</div>
+					{ labelAccordionType !== 'none' && (
+						<SelectControl
+							label={ __(
+								'Initial Open / Close State',
+								'vk-filter-search-pro'
+							) }
+							value={ labelAccordionFirst }
+							options={ [
+								{
+									label: __(
+										'All Close',
+										'vk-filter-search-pro'
+									),
+									value: 'all-close',
+								},
+								{
+									label: __(
+										'First Open',
+										'vk-filter-search-pro'
+									),
+									value: 'first-open',
+								},
+								{
+									label: __(
+										'All Open',
+										'vk-filter-search-pro'
+									),
+									value: 'all-open',
+								},
+							] }
+							onChange={ ( value ) =>
+								setAttributes( { labelAccordionFirst: value } )
+							}
+						/>
+					) }
+				</PanelBody>
 				<SubmitButtonControl { ...props } />
 			</InspectorControls>
 			<form
@@ -689,6 +893,7 @@ export default function FilterSearchProEdit( props ) {
 				method={ `get` }
 				//eslint-disable-next-line camelcase,no-undef
 				action={ vk_filter_search_pro_params.home_url }
+				data-vkfs-label-accordion={ JSON.stringify( accordionSetting ) }
 			>
 				<div className={ `vkfs__labels` }>
 					<InnerBlocks

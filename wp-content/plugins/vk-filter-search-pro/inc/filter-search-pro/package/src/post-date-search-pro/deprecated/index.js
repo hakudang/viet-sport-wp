@@ -1,5 +1,7 @@
 import { __ } from '@wordpress/i18n';
+import save2_15_1 from './2.15.1/save';
 import save2_15_0 from './2.15.0/save';
+import save2_11_2 from './2.11.2/save';
 import save2_3_3 from './2.3.3/save';
 import save2_2_3 from './2.2.3/save';
 import save1_5_2 from './1.5.2/save';
@@ -85,7 +87,15 @@ const blockAttributes2 = {
 const deprecated = [
 	{
 		attributes: blockAttributes2,
+		save: save2_15_1,
+	},
+	{
+		attributes: blockAttributes2,
 		save: save2_15_0,
+	},
+	{
+		attributes: blockAttributes2,
+		save: save2_11_2,
 	},
 	{
 		attributes: blockAttributes2,

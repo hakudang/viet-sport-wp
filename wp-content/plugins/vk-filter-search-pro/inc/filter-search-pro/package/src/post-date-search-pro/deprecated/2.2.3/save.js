@@ -81,7 +81,11 @@ export default function PostDateSearchProSave( props ) {
 		if ( dateCompare === 'only' ) {
 			blockContent = (
 				<>
-					<div className="vkfs__label-name">{ BlockLabel }</div>
+					<div className="vkfs__label-name">
+						<div className="vkfs__label-name-inner">
+							{ BlockLabel }
+						</div>
+					</div>
 					<div className="vkfs__input-wrap vkfs__input-wrap--only">
 						<div className="vkfs__input-date-wrap">
 							{ beforeField }
@@ -100,7 +104,11 @@ export default function PostDateSearchProSave( props ) {
 		if ( dateCompare === 'before' ) {
 			blockContent = (
 				<>
-					<div className="vkfs__label-name">{ BlockLabel }</div>
+					<div className="vkfs__label-name">
+						<div className="vkfs__label-name-inner">
+							{ BlockLabel }
+						</div>
+					</div>
 					<div className="vkfs__input-wrap vkfs__input-wrap--before">
 						<div className="vkfs__input-date-wrap">
 							{ beforeField }
@@ -119,7 +127,11 @@ export default function PostDateSearchProSave( props ) {
 		if ( dateCompare === 'after' ) {
 			blockContent = (
 				<>
-					<div className="vkfs__label-name">{ BlockLabel }</div>
+					<div className="vkfs__label-name">
+						<div className="vkfs__label-name-inner">
+							{ BlockLabel }
+						</div>
+					</div>
 					<div className="vkfs__input-wrap vkfs__input-wrap--after">
 						<div className="vkfs__input-date-wrap">
 							{ beforeField }
@@ -138,7 +150,11 @@ export default function PostDateSearchProSave( props ) {
 		if ( dateCompare === 'range' ) {
 			blockContent = (
 				<>
-					<div className="vkfs__label-name">{ BlockLabel }</div>
+					<div className="vkfs__label-name">
+						<div className="vkfs__label-name-inner">
+							{ BlockLabel }
+						</div>
+					</div>
 					<div className="vkfs__input-wrap vkfs__input-wrap--range">
 						<div className="vkfs__input-date-wrap">
 							{ beforeField }

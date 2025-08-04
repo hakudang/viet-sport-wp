@@ -81,7 +81,11 @@ export default function CustomFieldSearchProSave( props ) {
 		if ( fieldCompare === 'equal' ) {
 			blockContent = (
 				<>
-					<div className="vkfs__label-name">{ BlockLabel }</div>
+					<div className="vkfs__label-name">
+						<div className="vkfs__label-name-inner">
+							{ BlockLabel }
+						</div>
+					</div>
 					<div className="vkfs__input-wrap vkfs__input-wrap--equal">
 						<div className="vkfs__input-text-wrap">
 							{ beforeField }
@@ -100,7 +104,11 @@ export default function CustomFieldSearchProSave( props ) {
 		if ( fieldCompare === 'higher' ) {
 			blockContent = (
 				<>
-					<div className="vkfs__label-name">{ BlockLabel }</div>
+					<div className="vkfs__label-name">
+						<div className="vkfs__label-name-inner">
+							{ BlockLabel }
+						</div>
+					</div>
 					<div className="vkfs__input-wrap vkfs__input-wrap--higher">
 						<div className="vkfs__input-text-wrap">
 							{ beforeField }
@@ -119,7 +127,11 @@ export default function CustomFieldSearchProSave( props ) {
 		if ( fieldCompare === 'lower' ) {
 			blockContent = (
 				<>
-					<div className="vkfs__label-name">{ BlockLabel }</div>
+					<div className="vkfs__label-name">
+						<div className="vkfs__label-name-inner">
+							{ BlockLabel }
+						</div>
+					</div>
 					<div className="vkfs__input-wrap vkfs__input-wrap--lower">
 						<div className="vkfs__input-text-wrap">
 							{ beforeField }
@@ -138,7 +150,11 @@ export default function CustomFieldSearchProSave( props ) {
 		if ( fieldCompare === 'range' ) {
 			blockContent = (
 				<>
-					<div className="vkfs__label-name">{ BlockLabel }</div>
+					<div className="vkfs__label-name">
+						<div className="vkfs__label-name-inner">
+							{ BlockLabel }
+						</div>
+					</div>
 					<div className="vkfs__input-wrap vkfs__input-wrap--range">
 						<div className="vkfs__input-text-wrap">
 							{ beforeField }

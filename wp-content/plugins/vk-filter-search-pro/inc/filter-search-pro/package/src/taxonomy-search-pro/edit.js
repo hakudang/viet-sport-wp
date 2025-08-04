@@ -30,6 +30,7 @@ export default function TaxonomySearchProEdit( props ) {
 	const { attributes, setAttributes, clientId } = props;
 
 	const {
+		labelAccordionType,
 		isSelectedTaxonomy,
 		BlockLabel,
 		isSelectedDesign,
@@ -192,12 +193,6 @@ export default function TaxonomySearchProEdit( props ) {
 						setAttributes( { accordionType: value } )
 					}
 				/>
-				<p>
-					{ __(
-						'Please check the operation after saving and reloading this post, or on the public screen.',
-						'vk-filter-search-pro'
-					) }
-				</p>
 				<ul>
 					<li>
 						{ __( 'None: Nothing to do', 'vk-filter-search-pro' ) }
@@ -215,6 +210,12 @@ export default function TaxonomySearchProEdit( props ) {
 						) }
 					</li>
 				</ul>
+				<div className="vkfs__warning">
+					{ __(
+						'Please check the actual accordion behavior on the public ( frontend ) screen.',
+						'vk-filter-search-pro'
+					) }
+				</div>
 			</BaseControl>
 		);
 	}
@@ -249,7 +250,9 @@ export default function TaxonomySearchProEdit( props ) {
 			<div>
 				<div className="vkfs__warning">
 					<div className="vkfs__label-name">
-						{ __( 'Taxonomy', 'vk-filter-search-pro' ) }
+						<div className="vkfs__label-name-inner">
+							{ __( 'Taxonomy', 'vk-filter-search-pro' ) }
+						</div>
 					</div>
 					<div className="vkfs__warning-text">
 						{ __(
@@ -267,7 +270,9 @@ export default function TaxonomySearchProEdit( props ) {
 		editContent = (
 			<div className="vkfs__warning">
 				<div className="vkfs__label-name">
-					{ selectedTaxonomy.label }
+					<div className="vkfs__label-name-inner">
+						{ selectedTaxonomy.label }
+					</div>
 				</div>
 				<div className="vkfs__warning-text">
 					{ __(
@@ -281,10 +286,12 @@ export default function TaxonomySearchProEdit( props ) {
 		editContent = (
 			<div className="vkfs__warning">
 				<div className="vkfs__label-name">
-					{ __(
-						'Specified taxonomy does not exist',
-						'vk-filter-search-pro'
-					) }
+					<div className="vkfs__label-name-inner">
+						{ __(
+							'Specified taxonomy does not exist',
+							'vk-filter-search-pro'
+						) }
+					</div>
 				</div>
 				<div className="vkfs__warning-text">
 					{ __(
@@ -311,7 +318,9 @@ export default function TaxonomySearchProEdit( props ) {
 	return (
 		<>
 			<InspectorControls>
-				<OuterColumnSetting { ...props } />
+				{ labelAccordionType === 'none' && (
+					<OuterColumnSetting { ...props } />
+				) }
 				<PanelBody
 					title={ __(
 						'Taxonomy Block Option',

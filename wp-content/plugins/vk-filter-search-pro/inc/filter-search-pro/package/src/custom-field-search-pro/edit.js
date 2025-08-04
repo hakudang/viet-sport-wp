@@ -34,6 +34,7 @@ import {
 export default function CustomFieldSearchProEdit( props ) {
 	const { attributes, setAttributes, clientId } = props;
 	const {
+		labelAccordionType,
 		fieldName,
 		fieldType,
 		fieldMin,
@@ -186,8 +187,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'equal' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--equal">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--equal">
 							<div className="vkfs__input-numeric-wrap">
 								{ beforeField }
 								<input
@@ -233,8 +238,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'higher' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--higher">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--higher">
 							<div className="vkfs__input-numeric-wrap">
 								{ beforeField }
 								<input
@@ -280,8 +289,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'lower' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--lower">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--lower">
 							<div className="vkfs__input-numeric-wrap">
 								{ beforeField }
 								<input
@@ -327,8 +340,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'range' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--range">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--range">
 							<div className="vkfs__input-numeric-wrap">
 								{ beforeField }
 								<input
@@ -413,8 +430,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'equal' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--equal">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--equal">
 							<div className="vkfs__input-date-wrap">
 								{ beforeField }
 								<input
@@ -444,8 +465,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'higher' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--higher">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--higher">
 							<div className="vkfs__input-date-wrap">
 								{ beforeField }
 								<input
@@ -475,8 +500,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'lower' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--lower">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--lower">
 							<div className="vkfs__input-date-wrap">
 								{ beforeField }
 								<input
@@ -506,8 +535,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'range' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--range">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--range">
 							<div className="vkfs__input-date-wrap">
 								{ beforeField }
 								<input
@@ -560,8 +593,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'equal' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--equal">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--equal">
 							<div className="vkfs__input-datetime-wrap">
 								{ beforeField }
 								<input
@@ -595,8 +632,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'higher' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--higher">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--higher">
 							<div className="vkfs__input-datetime-wrap">
 								{ beforeField }
 								<input
@@ -630,8 +671,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'lower' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--lower">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--lower">
 							<div className="vkfs__input-datetime-wrap">
 								{ beforeField }
 								<input
@@ -665,8 +710,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'range' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--range">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--range">
 							<div className="vkfs__input-datetime-wrap">
 								{ beforeField }
 								<input
@@ -727,8 +776,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'equal' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--equal">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--equal">
 							<div className="vkfs__input-time-wrap">
 								{ beforeField }
 								<input
@@ -758,8 +811,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'higher' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--higher">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--higher">
 							<div className="vkfs__input-time-wrap">
 								{ beforeField }
 								<input
@@ -789,8 +846,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'lower' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--lower">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--lower">
 							<div className="vkfs__input-time-wrap">
 								{ beforeField }
 								<input
@@ -820,8 +881,12 @@ export default function CustomFieldSearchProEdit( props ) {
 			if ( fieldCompare === 'range' ) {
 				blockContent = (
 					<>
-						<div className="vkfs__label-name">{ BlockLabel }</div>
-						<div className="vkfs__input-wrap vkfs__input-wrap--range">
+						<div className="vkfs__label-name">
+							<div className="vkfs__label-name-inner">
+								{ BlockLabel }
+							</div>
+						</div>
+						<div className="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--range">
 							<div className="vkfs__input-time-wrap">
 								{ beforeField }
 								<input
@@ -873,7 +938,9 @@ export default function CustomFieldSearchProEdit( props ) {
 	} else {
 		blockContent = (
 			<>
-				<div className="vkfs__label-name">{ BlockLabel }</div>
+				<div className="vkfs__label-name">
+					<div className="vkfs__label-name-inner">{ BlockLabel }</div>
+				</div>
 				<div className="vkfs__input-wrap--text vkfs__alert vkfs__alert--warning">
 					{ __(
 						'This block will active when Name of Custom Field, Compare Operator, Label of This Block is set.',
@@ -1024,7 +1091,9 @@ export default function CustomFieldSearchProEdit( props ) {
 	return (
 		<>
 			<InspectorControls>
-				<OuterColumnSetting { ...props } />
+				{ labelAccordionType === 'none' && (
+					<OuterColumnSetting { ...props } />
+				) }
 				<PanelBody
 					title={ __(
 						'Custom Field Block Options',

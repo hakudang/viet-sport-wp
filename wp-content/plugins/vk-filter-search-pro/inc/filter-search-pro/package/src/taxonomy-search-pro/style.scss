@@ -56,19 +56,28 @@
 			width: 20px;
 			height: 20px;
 			line-height: 1;
-			background-color: #f7f7f7;
-			border:1px solid #e5e5e5;
+			border:1px solid #ced4da;
+			background-color:#0000000d;
 			border-radius: 3px;
 			margin-left: .5em;
 			font-size: 17px;
 			transition: all .3s ease;
-
-			&--open {
+			position: relative;
+			&::after {
+			  content: "";
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  width:6px;
+			  height: 6px;
+			  border-right: 1px solid currentColor;
+			  border-top: 1px solid currentColor;
+			  transform: translate(-50%, -50%) rotate(135deg); // ↓
+			  transition: .3s ease;
 			}
-
-			&--close {
-			}
-		}
+			&--open  { &::after { transform: translate(-50%, -50%) rotate(-45deg); } } // ↑
+			&--close { &::after { transform: translate(-50%, -50%) rotate(135deg); } } // ↓
+		  }
 	}
 
 	// 子要素のスタイル

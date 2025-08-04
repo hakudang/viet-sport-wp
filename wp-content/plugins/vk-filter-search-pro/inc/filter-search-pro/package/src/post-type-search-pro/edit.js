@@ -27,6 +27,7 @@ export default function PostTypeSearchProEdit( props ) {
 	const { attributes, setAttributes, clientId } = props;
 
 	const {
+		labelAccordionType,
 		isCheckedPostType,
 		BlockLabel,
 		PostLabel,
@@ -77,7 +78,9 @@ export default function PostTypeSearchProEdit( props ) {
 		editContent = (
 			<div className="vkfs__warning">
 				<div className="vkfs__label-name">
-					{ __( 'Post Type', 'vk-filter-search-pro' ) }
+					<div className="vkfs__label-name-inner">
+						{ __( 'Post Type', 'vk-filter-search-pro' ) }
+					</div>
 				</div>
 				<div className="vkfs__warning-text">
 					{ __(
@@ -101,7 +104,9 @@ export default function PostTypeSearchProEdit( props ) {
 	return (
 		<>
 			<InspectorControls>
-				<OuterColumnSetting { ...props } />
+				{ labelAccordionType === 'none' && (
+					<OuterColumnSetting { ...props } />
+				) }
 				<PanelBody
 					title={ __(
 						'Post Type Block Options',

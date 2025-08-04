@@ -16,7 +16,7 @@ import { isParentReusableBlock } from '@vk-filter-search/common/component';
 
 export default function KeywordSearchProEdit( props ) {
 	const { attributes, setAttributes, clientId } = props;
-	const { BlockLabel, Placeholder } = attributes;
+	const { labelAccordionType, BlockLabel, Placeholder } = attributes;
 
 	useEffect( () => {
 		if ( ! isParentReusableBlock( clientId ) ) {
@@ -42,7 +42,9 @@ export default function KeywordSearchProEdit( props ) {
 	return (
 		<>
 			<InspectorControls>
-				<OuterColumnSetting { ...props } />
+				{ labelAccordionType === 'none' && (
+					<OuterColumnSetting { ...props } />
+				) }
 				<PanelBody
 					title={ __(
 						'Keyword Block Options',

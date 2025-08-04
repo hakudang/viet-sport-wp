@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'vektor-inc/vk-filter-search-pro',
-        'pretty_version' => '2.15.1.0',
-        'version' => '2.15.1.0',
-        'reference' => 'fba5675b6d8955b301b0413cf8bf006c89451fff',
+        'pretty_version' => '2.17.0.0',
+        'version' => '2.17.0.0',
+        'reference' => '2335686ad059e7d9c278a55def492ee671b42af1',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'vektor-inc/vk-filter-search-pro' => array(
-            'pretty_version' => '2.15.1.0',
-            'version' => '2.15.1.0',
-            'reference' => 'fba5675b6d8955b301b0413cf8bf006c89451fff',
+            'pretty_version' => '2.17.0.0',
+            'version' => '2.17.0.0',
+            'reference' => '2335686ad059e7d9c278a55def492ee671b42af1',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

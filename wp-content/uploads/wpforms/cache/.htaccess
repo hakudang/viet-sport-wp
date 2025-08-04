@@ -1,8 +1,8 @@
 
 # BEGIN WPForms
-# "BEGIN WPForms" から "END WPForms" までのディレクティブ (行) は
-# 動的に生成され、WordPress フィルターによってのみ修正が可能です。
-# これらのマーカー間にあるディレクティブへのいかなる変更も上書きされてしまいます。
+# The directives (lines) between "BEGIN WPForms" and "END WPForms" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
 # Disable access for any file in the cache dir.
 # Apache 2.2
 <IfModule !authz_core_module>

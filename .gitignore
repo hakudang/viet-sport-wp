@@ -49,6 +49,13 @@ wp-content/upgrade/     # WP auto-upgrade files
 wp-content/backups/     # Nếu có plugin backup
 
 # ===============================
+# 🔌 WordPress Plugins (KHÔNG deploy plugin bằng Git)
+# ===============================
+# Bỏ qua toàn bộ thư mục plugin — plugin sẽ được cài qua WP Admin hoặc deploy bằng cách khác
+wp-content/plugins/
+wp-content/plugins/*
+
+# ===============================
 # 📁 IDEs / Tools
 # ===============================
 .vscode/
@@ -59,5 +66,4 @@ wp-content/backups/     # Nếu có plugin backup
 # ==========================================
 # 🚫 LOẠI TRỪ FILE SAO LƯU DATABASE
 # ==========================================
-# Bỏ qua tất cả các file có đuôi .sql (backup CSDL, export từ Adminer, WP Staging...)
 *.sql

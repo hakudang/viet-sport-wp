@@ -112,8 +112,8 @@ msgstr ""
 
 #: inc/filter-search/package/src/filter-search/edit.js:282
 #: inc/filter-search/package/src/keyword-search/edit.js:22
-#: inc/filter-search/package/src/post-type-search/edit.js:74
-#: inc/filter-search/package/src/taxonomy-search/edit.js:122
+#: inc/filter-search/package/src/post-type-search/edit.js:76
+#: inc/filter-search/package/src/taxonomy-search/edit.js:128
 msgid "Get more features"
 msgstr ""
 
@@ -139,15 +139,15 @@ msgstr ""
 
 #: inc/filter-search/package/src/filter-search/edit.js:318
 #: inc/filter-search/package/src/keyword-search/edit.js:45
-#: inc/filter-search/package/src/post-type-search/edit.js:103
-#: inc/filter-search/package/src/taxonomy-search/edit.js:163
+#: inc/filter-search/package/src/post-type-search/edit.js:105
+#: inc/filter-search/package/src/taxonomy-search/edit.js:169
 msgid "https://vk-filter-search.com/"
 msgstr ""
 
 #: inc/filter-search/package/src/filter-search/edit.js:325
 #: inc/filter-search/package/src/keyword-search/edit.js:52
-#: inc/filter-search/package/src/post-type-search/edit.js:110
-#: inc/filter-search/package/src/taxonomy-search/edit.js:170
+#: inc/filter-search/package/src/post-type-search/edit.js:112
+#: inc/filter-search/package/src/taxonomy-search/edit.js:176
 msgid "Check the Pro Features"
 msgstr ""
 
@@ -160,39 +160,39 @@ msgid "Editable text for labels (item names)/ Placeholder"
 msgstr ""
 
 #: inc/filter-search/package/src/keyword-search/edit.js:36
-#: inc/filter-search/package/src/post-type-search/edit.js:94
-#: inc/filter-search/package/src/taxonomy-search/edit.js:154
+#: inc/filter-search/package/src/post-type-search/edit.js:96
+#: inc/filter-search/package/src/taxonomy-search/edit.js:160
 msgid "Block width settings for each screen size"
 msgstr ""
 
-#: inc/filter-search/package/src/post-type-search/edit.js:25
+#: inc/filter-search/package/src/post-type-search/edit.js:26
 #: inc/filter-search/package/src/search-result-title/edit.js:69
 msgid "Post Type"
 msgstr ""
 
-#: inc/filter-search/package/src/post-type-search/edit.js:28
+#: inc/filter-search/package/src/post-type-search/edit.js:30
 msgid "This block will not be displayed because the post type is not selected."
 msgstr ""
 
-#: inc/filter-search/package/src/post-type-search/edit.js:45
+#: inc/filter-search/package/src/post-type-search/edit.js:47
 msgid "Post Type Option"
 msgstr ""
 
-#: inc/filter-search/package/src/post-type-search/edit.js:50
+#: inc/filter-search/package/src/post-type-search/edit.js:52
 msgid "Post Types"
 msgstr ""
 
-#: inc/filter-search/package/src/post-type-search/edit.js:64
+#: inc/filter-search/package/src/post-type-search/edit.js:66
 msgid "VK Post Type Search"
 msgstr ""
 
-#: inc/filter-search/package/src/post-type-search/edit.js:82
-#: inc/filter-search/package/src/taxonomy-search/edit.js:130
+#: inc/filter-search/package/src/post-type-search/edit.js:84
+#: inc/filter-search/package/src/taxonomy-search/edit.js:136
 msgid "Checkbox / Radio button"
 msgstr ""
 
-#: inc/filter-search/package/src/post-type-search/edit.js:88
-#: inc/filter-search/package/src/taxonomy-search/edit.js:136
+#: inc/filter-search/package/src/post-type-search/edit.js:90
+#: inc/filter-search/package/src/taxonomy-search/edit.js:142
 msgid "Editable text for labels"
 msgstr ""
 
@@ -409,92 +409,96 @@ msgstr ""
 msgid "Queries title format"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:230
+#: inc/filter-search/package/src/search-result-title/edit.js:232
+#. %s is replaced with the search result
 msgid "eg) Search Result for %s"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:238
+#: inc/filter-search/package/src/search-result-title/edit.js:241
 msgid "Queries titile display"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:244
+#: inc/filter-search/package/src/search-result-title/edit.js:247
 msgid "Query Title Display"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:256
+#: inc/filter-search/package/src/search-result-title/edit.js:259
 msgid "Display"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:263
+#: inc/filter-search/package/src/search-result-title/edit.js:266
 msgid "Hide"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:269
+#: inc/filter-search/package/src/search-result-title/edit.js:272
 msgid "String of the query title after"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:277
+#: inc/filter-search/package/src/search-result-title/edit.js:280
 msgid "eg) :"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:286
+#: inc/filter-search/package/src/search-result-title/edit.js:289
 msgid "Query element \"or\""
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:296
+#: inc/filter-search/package/src/search-result-title/edit.js:299
 msgid "eg) or"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:306
+#: inc/filter-search/package/src/search-result-title/edit.js:309
 msgid "Query element \"and\""
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:316
+#: inc/filter-search/package/src/search-result-title/edit.js:319
 msgid "eg) and"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:326
+#: inc/filter-search/package/src/search-result-title/edit.js:329
 msgid "String before the query element"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:339
+#: inc/filter-search/package/src/search-result-title/edit.js:342
 msgid "String after the query element"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:347
+#: inc/filter-search/package/src/search-result-title/edit.js:350
 msgid "eg) \""
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:352
+#: inc/filter-search/package/src/search-result-title/edit.js:355
 msgid "The separator string after the query element"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:360
+#: inc/filter-search/package/src/search-result-title/edit.js:363
 msgid "eg) |"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:369
+#: inc/filter-search/package/src/search-result-title/edit.js:372
 msgid "Minimum format for a date query"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:379
+#: inc/filter-search/package/src/search-result-title/edit.js:384
+#. %s is replaced with the date
 msgid "eg) From %s"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:389
+#: inc/filter-search/package/src/search-result-title/edit.js:395
 msgid "Maximum format for a date query"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:399
+#: inc/filter-search/package/src/search-result-title/edit.js:407
+#. %s is replaced with the date
 msgid "eg) To %s"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:409
+#: inc/filter-search/package/src/search-result-title/edit.js:418
 msgid "Format for a date range query"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/edit.js:419
-msgid "eg) From %s to %s"
+#: inc/filter-search/package/src/search-result-title/edit.js:430
+#. %1$s is replaced with the date, %2$s is replaced with the date
+msgid "eg) From %1$s to %2$s"
 msgstr ""
 
 #: inc/filter-search/package/src/search-result-title/edit.js:75
@@ -513,60 +517,64 @@ msgstr ""
 msgid "Post Modified"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/index.js:17
+#: inc/filter-search/package/src/search-result-title/index.js:18
+#. %s is replaced with search query
 msgid "Search Result for %s"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/index.js:21
+#: inc/filter-search/package/src/search-result-title/index.js:23
+#. %s is replaced with date
 msgid "From %s"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/index.js:25
+#: inc/filter-search/package/src/search-result-title/index.js:28
+#. %s is replaced with date
 msgid "To %s"
 msgstr ""
 
-#: inc/filter-search/package/src/search-result-title/index.js:29
+#: inc/filter-search/package/src/search-result-title/index.js:33
+#. %1$s is replaced with date1, %2$s is replaced with date2
 msgid "From %1$s to %2$s"
 msgstr ""
 
-#: inc/filter-search/package/src/taxonomy-search/edit.js:100
+#: inc/filter-search/package/src/taxonomy-search/edit.js:106
 msgid "Taxonomy Option"
 msgstr ""
 
-#: inc/filter-search/package/src/taxonomy-search/edit.js:105
+#: inc/filter-search/package/src/taxonomy-search/edit.js:111
 msgid "Taxonomy"
 msgstr ""
 
-#: inc/filter-search/package/src/taxonomy-search/edit.js:115
+#: inc/filter-search/package/src/taxonomy-search/edit.js:121
 msgid "VK Taxonomy Search"
 msgstr ""
 
-#: inc/filter-search/package/src/taxonomy-search/edit.js:142
+#: inc/filter-search/package/src/taxonomy-search/edit.js:148
 msgid "Display Post Counts"
 msgstr ""
 
-#: inc/filter-search/package/src/taxonomy-search/edit.js:148
+#: inc/filter-search/package/src/taxonomy-search/edit.js:154
 msgid "Hide Empty Terms"
 msgstr ""
 
-#: inc/filter-search/package/src/taxonomy-search/edit.js:44
+#: inc/filter-search/package/src/taxonomy-search/edit.js:46
 msgid "This block will not be displayed because no taxonomy is selected."
 msgstr ""
 
-#: inc/filter-search/package/src/taxonomy-search/edit.js:62
+#: inc/filter-search/package/src/taxonomy-search/edit.js:66
 msgid "This block will not be displayed because this taxonomy has no term."
 msgstr ""
 
-#: inc/filter-search/package/src/taxonomy-search/edit.js:73
+#: inc/filter-search/package/src/taxonomy-search/edit.js:78
 msgid "Specified taxonomy does not exist"
 msgstr ""
 
-#: inc/filter-search/package/src/taxonomy-search/edit.js:79
+#: inc/filter-search/package/src/taxonomy-search/edit.js:85
 msgid ""
 "This block will not be displayed because the specified taxonomy does not "
 "exist."
 msgstr ""
 
-#: inc/filter-search/package/src/taxonomy-search/edit.js:83
+#: inc/filter-search/package/src/taxonomy-search/edit.js:89
 msgid "Please reselect the taxonomy or remove this block.."
 msgstr ""

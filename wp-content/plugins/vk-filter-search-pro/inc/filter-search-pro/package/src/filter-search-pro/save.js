@@ -13,6 +13,8 @@ export default function save( props ) {
 	const {
 		TargetPostType,
 		AutoSubmit,
+		labelAccordionType,
+		labelAccordionFirst,
 		SubmitText,
 		SubmitFontSize,
 		SubmitLetterSpacing,
@@ -260,12 +262,18 @@ export default function save( props ) {
 		submitStyle.borderColor = submitBorderColor;
 	}
 
+	const accordionSetting = {
+		labelAccordionType,
+		labelAccordionFirst,
+	};
+
 	return (
 		<form
 			{ ...blockProps }
 			method={ `get` }
 			//eslint-disable-next-line camelcase,no-undef
 			action={ vk_filter_search_pro_params.home_url }
+			data-vkfs-label-accordion={ JSON.stringify( accordionSetting ) }
 		>
 			<div className={ `vkfs__labels` }>
 				<InnerBlocks.Content />

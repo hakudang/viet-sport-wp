@@ -256,6 +256,28 @@ if ( ! class_exists( 'VK_Filter_Search' ) ) {
 			);
 		}
 
+		public static function label_sanitize( $label ) {
+			// ラベルのサニタイズ.
+			$label = wp_kses(
+				$label,
+				array(
+					'span'   => array(
+						'class' => array(),
+						'style' => array(),
+					),
+					'i'      => array(
+						'class' => array(),
+						'style' => array(),
+					),
+					'br'    => array(
+						'class' => array(),
+						'style' => array(),
+					),
+				)
+			);
+			return $label;
+		}
+
 		public static function get_outer_column_width_method( $options = array() ) {
 			if ( empty( $options['outerColumnWidthMethod'] ) ) {
 				return 'column';
@@ -362,8 +384,8 @@ if ( ! class_exists( 'VK_Filter_Search' ) ) {
 			$outer_classes .= ! empty( $options['class_name'] ) ? ' ' . $options['class_name'] : '';
 
 			$keyword_form_html  = '<div class="vkfs__outer-wrap vkfs__keyword' . $outer_classes . '">';
-			$keyword_form_html .= '<div class="vkfs__label-name">' . $options['label'] . '</div>';
-			$keyword_form_html .= '<div class="vkfs__input-wrap vkfs__input-wrap--text vkfs__input-wrap--keyword">';
+			$keyword_form_html .= '<div class="vkfs__label-name"><div class="vkfs__label-name-inner">' . self::label_sanitize( $options['label'] ) . '</div></div>';
+			$keyword_form_html .= '<div class="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--text vkfs__input-wrap--keyword">';
 			$keyword_form_html .= '<input type="text" name="' . $keyword_name . '" id="s" placeholder="' . esc_attr( $options['placeholder'] ) . '" />';
 			$keyword_form_html .= '</div>';
 			$keyword_form_html .= '</div>';
@@ -415,7 +437,7 @@ if ( ! class_exists( 'VK_Filter_Search' ) ) {
 			// 描画開始.
 			if ( ! empty( $post_types ) ) {
 				$post_type_form_html .= '<div class="vkfs__outer-wrap vkfs__post-type' . $outer_classes . '">';
-				$post_type_form_html .= '<div class="vkfs__label-name">' . $options['label'] . '</div>';
+				$post_type_form_html .= '<div class="vkfs__label-name"><div class="vkfs__label-name-inner">' . self::label_sanitize( $options['label'] ) . '</div></div>';
 				$post_type_form_html .= self::get_post_type_design_html( $post_types, $options );
 				$post_type_form_html .= '</div>';
 			}
@@ -492,7 +514,7 @@ if ( ! class_exists( 'VK_Filter_Search' ) ) {
 				$post_type_option_array = array_merge( $default_option_array, $post_type_option_array );
 
 				// 描画開始.
-				$post_type_design_html .= '<select class="vkfs__input-wrap vkfs__input-wrap--select vkfs__input-wrap--post_type" name="' . $post_type_name . '" id="post_type">';
+				$post_type_design_html .= '<select class="vkfs__input-form vkfs__input-wrap vkfs__input-wrap--select vkfs__input-wrap--post_type" name="' . $post_type_name . '" id="post_type">';
 
 				// 項目のループ.
 				foreach ( $post_type_option_array as $post_type_option ) {
@@ -588,11 +610,11 @@ if ( ! class_exists( 'VK_Filter_Search' ) ) {
 
 				$taxonomy_form_html .= '<div class="vkfs__label-name">';
 				if ( 'user' !== $options['operator'] ) {
-					$taxonomy_form_html .= $options['label'];
+					$taxonomy_form_html .= '<div class="vkfs__label-name-inner">' . self::label_sanitize( $options['label'] ) . '</div>';
 				} elseif ( 'user' === $options['operator'] ) {
 					$taxonomy_form_html .= '<div class="vkfs__label-name-wrap">';
 					$taxonomy_form_html .= '<span class="vkfs__label-name-item">';
-					$taxonomy_form_html .= $options['label'];
+					$taxonomy_form_html .= self::label_sanitize( $options['label'] );
 					$taxonomy_form_html .= '</span>';
 					$taxonomy_form_html .= '<ul class="vkfs__label-name-item vkfs__operator-wrap vkfs__input-wrap vkfs__input-wrap--radio">';
 					$taxonomy_form_html .= '<li class="vkfs_prefix__level-0"><label>';
@@ -688,7 +710,7 @@ if ( ! class_exists( 'VK_Filter_Search' ) ) {
 							array(
 								'name'  => 'vkfs_category[]',
 								'id'    => 'vkfs_category',
-								'class' => 'vkfs__input-wrap vkfs__input-wrap--select vkfs__input-wrap--category_name',
+								'class' => 'vkfs__input-form vkfs__input-wrap vkfs__input-wrap--select vkfs__input-wrap--category_name',
 							)
 						)
 					);
@@ -700,7 +722,7 @@ if ( ! class_exists( 'VK_Filter_Search' ) ) {
 							array(
 								'name'  => 'vkfs_post_tag[]',
 								'id'    => 'vkfs_post_tag',
-								'class' => 'vkfs__input-wrap vkfs__input-wrap--select vkfs__input-wrap--tag',
+								'class' => 'vkfs__input-form vkfs__input-wrap vkfs__input-wrap--select vkfs__input-wrap--tag',
 							)
 						)
 					);
@@ -712,7 +734,7 @@ if ( ! class_exists( 'VK_Filter_Search' ) ) {
 							array(
 								'name'  => 'vkfs_' . $taxonomy_object->name . '[]',
 								'id'    => 'vkfs_' . $taxonomy_object->name,
-								'class' => 'vkfs__input-wrap vkfs__input-wrap--select vkfs__input-wrap--' . $taxonomy_object->name,
+								'class' => 'vkfs__input-form vkfs__input-wrap vkfs__input-wrap--select vkfs__input-wrap--' . $taxonomy_object->name,
 							)
 						)
 					);

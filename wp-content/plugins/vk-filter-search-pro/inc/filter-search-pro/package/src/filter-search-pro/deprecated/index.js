@@ -1,4 +1,6 @@
+import save2_15_1 from './2.15.1/save';
 import save2_15_0 from './2.15.0/save';
+import save2_4_2 from './2.4.2/save';
 import save2_4_1 from './2.4.1/save';
 import save2_2_3 from './2.2.3/save';
 import save2_0_6 from './2.0.6/save';
@@ -101,10 +103,31 @@ const blockAttributes4 = {
 	},
 };
 
+// 2.4.2 で追加
+const blockAttributes5 = {
+	...blockAttributes4,
+	AccordionType: {
+		type: 'string',
+		default: 'none',
+	},
+	AccordionFirst: {
+		type: 'string',
+		default: 'first-open',
+	},
+};
+
 const deprecated = [
 	{
-		attributes: blockAttributes4,
+		attributes: blockAttributes5,
+		save: save2_15_1,
+	},
+	{
+		attributes: blockAttributes5,
 		save: save2_15_0,
+	},
+	{
+		attributes: blockAttributes4,
+		save: save2_4_2,
 	},
 	{
 		attributes: blockAttributes3,
