@@ -22,6 +22,14 @@ require_once __DIR__ . '/taxonomies/event_sport_name.php';
 require_once __DIR__ . '/taxonomies/event_category.php';
 require_once __DIR__ . '/taxonomies/event_status.php';
 
+
+// Nạp file enqueue-scripts.php để load CSS và JS cho theme con,
+// bao gồm cả các script/style dùng trong form tìm kiếm sân chơi (match-form) tại trang /match
+require_once get_stylesheet_directory() . '/inc/enqueue-scripts.php';
+
+
+
+
 // Service - Chạy 1 lần rồi
 // 🔹 Khi hook init, gọi Flush rewrite rules 1 lần duy nhất sau khi chỉnh permalink hoặc thêm rewrite cho taxonomy/post type
 // tránh lỗi 404 ✅ Chạy 1 lần rồi comment lại
