@@ -3,7 +3,7 @@
 # ===============================
 .DS_Store               # MacOS finder metadata
 Thumbs.db               # Windows thumbnail cache
-*.log                   # Log files
+*.log                   # Log files (tổng quát)
 *.tmp                   # Temp files
 *.swp                   # Vim swap files
 
@@ -28,9 +28,9 @@ composer.lock
 # ===============================
 # 📦 Build / Output
 # ===============================
-*.zip                   # Các bản build zip của theme
+*.zip                   # Các bản build zip của theme/plugin
 *.tar.gz
-*.sql                   # File dump database
+*.sql                   # File dump database (.sql)
 
 # ===============================
 # 🧹 WordPress core (nếu không quản lý toàn site)
@@ -43,10 +43,11 @@ readme.html
 # ===============================
 # 📁 WordPress Uploads/Cache
 # ===============================
-wp-content/uploads/     # Uploads: hình ảnh, video — không cần commit
-wp-content/cache/       # Cache tạo ra bởi plugin (Autoptimize, WP Rocket)
-wp-content/upgrade/     # WP auto-upgrade files
-wp-content/backups/     # Nếu có plugin backup
+wp-content/uploads/                 # Uploads: hình ảnh, video — không cần commit
+wp-content/cache/                   # Cache tạo ra bởi plugin (Autoptimize, WP Rocket)
+wp-content/upgrade/                 # WP auto-upgrade files
+wp-content/upgrade-temp-backup/    # Backup tạm sau khi update core/plugin/theme
+wp-content/backups/                # Nếu có plugin backup tạo folder này
 
 # ===============================
 # 🔌 WordPress Plugins (KHÔNG deploy plugin bằng Git)
@@ -54,6 +55,27 @@ wp-content/backups/     # Nếu có plugin backup
 # Bỏ qua toàn bộ thư mục plugin — plugin sẽ được cài qua WP Admin hoặc deploy bằng cách khác
 wp-content/plugins/
 wp-content/plugins/*
+
+# ===============================
+# 🧾 Logs & Tệp tạm từ WordPress
+# ===============================
+wp-content/debug.log                # File lỗi khi WP_DEBUG=true
+
+# ===============================
+# 🔐 Plugin bảo mật / backup tự tạo
+# ===============================
+wp-content/siteguard/               # Ảnh CAPTCHA, log IP từ plugin SiteGuard
+wp-content/wpvivid_uploads/         # Backup tạm thời của plugin WPvivid
+
+# ===============================
+# 🈳 Plugin tự sinh file dịch (WPForms, ContactForm 7...)
+# ===============================
+wp-content/languages/plugins/       # File dịch tự động — không cần commit nếu không chỉnh thủ công
+
+# 🔤 Nếu bạn KHÔNG chỉnh sửa file dịch thủ công:
+*.po
+*.mo
+*.pot
 
 # ===============================
 # 📁 IDEs / Tools
@@ -64,9 +86,9 @@ wp-content/plugins/*
 *.sublime-workspace
 
 # ==========================================
-# 🚫 LOẠI TRỪ FILE SAO LƯU DATABASE
+# 🚫 LOẠI TRỪ FILE SAO LƯU DATABASE / TOKEN
 # ==========================================
 *.sql
 clean-repo/
 clean-token.txt
-db-dumps/  # Loại trừ toàn bộ thư mục chứa export database
+db-dumps/         # Loại trừ toàn bộ thư mục chứa export database
