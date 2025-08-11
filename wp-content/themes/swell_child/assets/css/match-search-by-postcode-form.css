@@ -1,0 +1,156 @@
+
+/**
+ * File name: swell_child/css/match-search-by-postcode-form.css
+ * Description: css cho form search match by postcode
+ */
+
+/* Container cho toàn bộ form */
+.searchOnTop-form-container {
+    width: 100%;
+    max-width: 600px;
+    /* Cố định chiều rộng */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    /* Đảm bảo padding không làm thay đổi kích thước */
+}
+
+/* Tiêu đề của form */
+.form-title {
+    color: #ff9900;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.0rem;
+    font-weight: bold;
+}
+
+/* Các trường nhập liệu nằm trên cùng một dòng */
+.form-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* Ngăn các phần tử xuống dòng */
+    margin-bottom: 15px;
+    /* Khoảng cách giữa các nhóm */
+    width: 100%;
+    /* Đảm bảo các phần tử con không tràn ra ngoài */
+}
+
+/* Nhãn của các trường */
+.input-label {
+    font-weight: normal;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+    /* Ngăn không cho chữ trong label xuống dòng */
+}
+
+/* Các trường input và select */
+.input-fields {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Postal code static */
+.postal-code-static {
+    font-weight: bold;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    color: #333;
+    text-align: center;
+    width: fit-content;
+    /* Đảm bảo chiều rộng phù hợp với nội dung */
+    min-width: 6rem;
+    /* Chiều rộng tối thiểu */
+    max-width: 8rem;
+    /* Giới hạn chiều rộng */
+}
+
+.postal-code-input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    /* Đặt font-size là 14px */
+    width: fit-content;
+    /* Kích thước tự động */
+    min-width: 5rem;
+    /* Chiều rộng tối thiểu */
+    max-width: 6rem;
+    /* Giới hạn chiều rộng */
+}
+
+.postal-code-input:focus {
+    border-color: #ff9900;
+    outline: none;
+}
+
+/* Radius select dropdown */
+.radius-select select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    /* Đặt font-size là 14px */
+    width: auto;
+    /* Kích thước tự động */
+    min-width: 8rem;
+    /* Chiều rộng tối thiểu cho select */
+}
+
+/* Submit button styling */
+.submit-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    /* Ngăn không cho chữ trong button xuống dòng */
+    width: auto;
+    /* Nút có chiều rộng tự động */
+    margin-left: auto;
+    /* Đẩy nút về phía bên phải */
+    flex-grow: 0;
+    /* Đảm bảo nút không chiếm thêm không gian */
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Dành cho phần chọn bộ lọc đã lưu */
+.select-container {
+    margin-top: 10px;
+}
+
+.saved-condition-label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.saved-condition-select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: auto;
+    /* Kích thước tự động */
+    min-width: 10rem;
+    /* Chiều rộng tối thiểu cho select */
+}
+
+.match-form-wrapper {
+  margin-bottom: 3rem; /* Hoặc 30px tùy bạn */
+}

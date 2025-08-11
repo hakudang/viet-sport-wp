@@ -1,0 +1,77 @@
+/**
+ * File name: swell_child/css/match-search-by-district-form.css
+ * Description: css cho form search match by district
+ */
+
+/* Container cho danh sách tỉnh */
+.prefecture-list {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* Tiêu đề chính */
+.prefecture-title {
+    color: #ff9900;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0rem;
+    font-weight: bold;
+}
+
+/* Flex chia 2 cột */
+.prefecture-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Cột bên trái/phải */
+.prefecture-column {
+    width: 48%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Tên từng khu vực */
+.region-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: #333;
+}
+
+/* Danh sách các tỉnh (liên kết) */
+.prefecture-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Liên kết từng tỉnh */
+.prefecture-link {
+    display: block;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    padding: 1px;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.prefecture-link:hover {
+    text-decoration: underline;
+}
+
+/* Vùng chứa mỗi khu vực */
+.region {
+    padding: 0px;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    border-radius: 8px;
+}

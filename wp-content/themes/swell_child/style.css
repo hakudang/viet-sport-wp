@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/*
+    Template: swell
+    Theme Name: SWELL CHILD
+    Theme URI: https://swell-theme.com/
+    Description: SWELLの子テーマ
+    Version: 1.0.0
+    Author: LOOS WEB STUDIO
+    Author URI: https://loos-web-studio.com/
+
+    License: GNU General Public License
+    License URI: http://www.gnu.org/licenses/gpl.html
+*/
+
+
+/* ============================
+   [TYPOGRAPHY] - Font mặc định cho toàn bộ website
+   Font sử dụng: 'Be Vietnam Pro' (hỗ trợ tốt tiếng Việt)
+   Áp dụng cho: thẻ <body> và toàn bộ nội dung kế thừa
+   Lưu ý: Không dùng !important để cho phép override cục bộ khi cần.
+   Ngày cập nhật: 2025-08-04
+   Người viết: Dang
+   ============================ */
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/* ============================ END [TYPOGRAPHY] ============================ */
+
+
+
+/* ============================
+   [TABLE_FIX] - Ngăn ngắt từ giữa từ trong bảng WordPress
+   Áp dụng cho: .wp-block-table (mặc định hoặc có thêm class tuỳ biến)
+   Không thay đổi bố cục, căn lề hay giao diện.
+   Ngày cập nhật: 2025-08-04
+   Người viết: Dang
+   ============================ */
+
+.wp-block-table td,
+.wp-block-table th {
+  word-break: keep-all;
+  /* Không ngắt từ giữa chừng (ví dụ: "đẹ\np") */
+  white-space: normal;
+  /* Cho phép xuống dòng tự nhiên nếu cần */
+}
+
+/* ============================ END [TABLE_FIX] ============================ */
+
+
+/* =================================================
+//  Menu : bold, font-size
+// =================================================*/
+
+.c-gnav {
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+/* =================================================
+//  H2見出しの背景色を透明に設定
+// ================================================= */
+
+/* Xóa màu nền 
+.ark-block-heading__main {
+  background-color: transparent !important;
+}*/
+
+/* Ẩn tất cả các đường kẻ từ pseudo-elements nếu có */
+.ark-block-heading__main::before,
+.ark-block-heading__main::after {
+  content: none !important;
+}
+
+
+
+/* =================================================
+//  Định nghĩa hiệu ứng lắc lư // ================================================= */
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* =================================================
+//  Áp dụng hiệu ứng lắc lư // ================================================= */
+
+.footer__contact--free {
+  animation: shake 1s ease-in-out infinite;
+  /* Thời gian 1s thay vì 0.6s */
+}
+
+.main__message--free {
+  animation: shake 1.6s ease-in-out infinite;
+  /* Thời gian 1.6s thay vì 1.0s */
+}
+
+/* =================================================
+//  Áp dụng màu nền cho blockpart với lớp .w-singleBottom -  BlockPart CTA_ボタン_BOTTOM// ================================================= */
+
+.w-singleBottom {
+  background-color: rgba(247, 190, 45, 0.75);
+  /* Màu nền #F7BE2D với độ trong suốt 10% */
+  padding: 32px;
+  /* Khoảng cách bên trong block */
+  border-radius: 0px;
+  /* Bo góc cho block */
+}
