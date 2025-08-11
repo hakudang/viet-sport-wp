@@ -1,6 +1,4 @@
-# file name : public\.gitignore
-
-# ===== System / Tools =====
+# ---- System / Tools
 .DS_Store
 Thumbs.db
 *.log
@@ -9,25 +7,30 @@ Thumbs.db
 .vscode/
 .idea/
 
-# ===== Node / Composer =====
+# ---- Node / Composer
 node_modules/
 vendor/
 composer.lock
 
-# ===== Secrets / Builds / Dumps =====
+# ---- Secrets / Builds / Dumps
 .env
 *.zip
 *.tar.gz
 *.sql
 
-# ===== WordPress core (không quản lý toàn site) =====
-/wp-admin/
-/wp-includes/
+# ---- WordPress core (nếu cần thêm, giữ cũng không hại)
+wp-admin/
+wp-includes/
 license.txt
 readme.html
 
-# ===== Chỉ theo dõi theme swell_child (FINAL) =====
-/wp-content/*                 # ignore toàn bộ dưới wp-content
-!/wp-content/themes/          # mở khóa thư mục themes
-/wp-content/themes/*          # vẫn ignore các theme khác
-!/wp-content/themes/swell_child/**  # chỉ track theme này
+# ---- ALLOWLIST: mặc định ignore tất cả ở ROOT,
+# chỉ mở lại .gitignore và theme swell_child
+/*
+!.gitignore
+!/wp-content/
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/swell_child/**
+!/README.md
