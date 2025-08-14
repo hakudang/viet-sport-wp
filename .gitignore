@@ -32,5 +32,6 @@ readme.html
 /wp-content/*
 !/wp-content/themes/
 /wp-content/themes/*
+!/wp-content/themes/swell_child/
 !/wp-content/themes/swell_child/**
 !/README.md
