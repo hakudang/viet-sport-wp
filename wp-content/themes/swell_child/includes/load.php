@@ -24,18 +24,19 @@ require_once get_theme_file_path( 'functions/register-utility-menu.php' );
 require_once get_theme_file_path( 'functions/render-utility-menu.php' );
 require_once get_theme_file_path( 'functions/urm-menu-hooks.php' ); // ✅ chỉ require 1 lần (xoá dòng trùng phía dưới)
 
+
+// ===============================
+// Menus (header/main) - helpers
+// ===============================
+require_once get_theme_file_path( 'functions/menu-anchor-rewriter.php' );
+
 // ===============================
 // Match module
 // ===============================
 require_once get_theme_file_path( 'functions/match/match-helpers.php' );
 require_once get_theme_file_path( 'functions/match/match-menu-switch.php' );
 require_once get_theme_file_path( 'functions/match/match-hooks.php' );
-
-// ===============================
-// Match menu: tự seed dữ liệu & gán location 'match_menu'
-// (Tạo "Match Menu" với 10 item mặc định nếu chưa tồn tại)
-// ===============================
-require_once get_theme_file_path('functions/match/seed-match-menu.php');
+require_once get_theme_file_path('functions/match/seed-match-menu.php'); // Match menu: tự seed dữ liệu & gán location 'match_menu'
 
 // ===============================
 // Ẩn thanh Admin Bar ở frontend
