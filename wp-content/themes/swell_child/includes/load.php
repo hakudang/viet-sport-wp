@@ -17,6 +17,11 @@ require_once get_theme_file_path( 'includes/custom-post-types.php' );
 
 
 // ===============================
+// ACF (local PHP)
+// ===============================
+require_once get_theme_file_path('includes/acf/match_acf.php');
+
+// ===============================
 // Utility menu (menu nhỏ trên header) + URM
 // Thứ tự: đăng ký location → render → bơm item URM
 // ===============================
