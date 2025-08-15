@@ -17,6 +17,18 @@ require_once get_theme_file_path( 'includes/custom-post-types.php' );
 
 
 // ===============================
+// ACF (local PHP)
+// ===============================
+require_once get_theme_file_path('includes/acf/match_acf.php');
+
+// ===============================
+// GMW sync + Cron
+// ===============================
+// Đồng bộ hoá vị trí từ ACF Google Map với GEO my WP
+require_once get_theme_file_path('functions/match/gmw-sync.php');
+require_once get_theme_file_path('functions/match/match-cron.php');
+
+// ===============================
 // Utility menu (menu nhỏ trên header) + URM
 // Thứ tự: đăng ký location → render → bơm item URM
 // ===============================
@@ -33,6 +45,7 @@ require_once get_theme_file_path( 'functions/menu-anchor-rewriter.php' );
 // ===============================
 // Match module
 // ===============================
+require_once get_theme_file_path( 'functions/match/match-admin-columns.php' );
 require_once get_theme_file_path( 'functions/match/match-helpers.php' );
 require_once get_theme_file_path( 'functions/match/match-menu-switch.php' );
 require_once get_theme_file_path( 'functions/match/match-hooks.php' );
