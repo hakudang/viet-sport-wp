@@ -1,0 +1,109 @@
+/**
+ * File name: swell_child/css/page-search-match.css
+ * Description: css cho template page-search-match
+ */
+
+/* Scope chặt vào trang /match */
+.match-page {
+    /* không đụng SWELL layout, chỉ sửa con bên trong */
+}
+
+/* === Part 1: full width trong container SWELL === */
+.match-page article.c-entry,
+.match-page .c-entry .post_content{
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Tiêu đề & khối: canh trái, spacing chuẩn */
+.match-page .match-form-wrapper,
+.match-page .match-list-wrapper {
+    margin: 0 0 2rem;
+    /* giống SWELL section spacing */
+}
+
+.match-page h2,
+.match-page .form-title,
+.match-page .prefecture-title {
+    text-align: left;
+    margin: 0 0 1rem;
+    line-height: 1.3;
+}
+
+/* BỎ căn giữa của 2 form (trước đó bạn set margin: 0 auto) */
+.match-page .searchOnTop-form-container,
+.match-page .prefecture-list {
+    max-width: 100%;
+    margin: 0;
+    /* ← canh trái */
+    padding-left: 0;
+    /* bám sát lề trái container SWELL */
+}
+
+/* Nhóm trường: bám trái, không tràn */
+.match-page .searchOnTop-form-container .form-group {
+    justify-content: flex-start;
+}
+
+
+/* Bảng: full-width, cột chia đều, không set width cố định */
+.match-page .match-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    /* theo nội dung */
+}
+
+.match-page .match-table th,
+.match-page .match-table td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    /* phá dòng khi nội dung dài */
+    width: auto;
+    /* bảo đảm không bị width nào “đè” */
+}
+
+.match-page .match-table th {
+    font-weight: 600;
+    background: #fafafa;
+}
+
+/* Căn độ rộng vài cột phổ biến */
+
+.match-page .match-table .ma-san {
+    opacity: .9;
+    font-size: .9em;
+}
+
+/* Prefecture list: bám trái, co giãn mềm */
+.match-page .prefecture-columns {
+    gap: 16px;
+}
+
+.match-page .prefecture-column {
+    width: 100%;
+    max-width: 560px;
+}
+
+/* 2 cột? Tùy ý */
+@media (min-width: 960px) {
+    .match-page .prefecture-column {
+        width: 48%;
+    }
+}
+
+/* Giữ form gọn trên mobile */
+@media (max-width: 768px) {
+    .match-page .searchOnTop-form-container .form-group {
+        flex-wrap: wrap;
+        gap: 8px 10px;
+    }
+
+    .match-page .searchOnTop-form-container .submit-button {
+        margin-left: 0;
+    }
+}
+

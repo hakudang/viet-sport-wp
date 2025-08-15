@@ -39,6 +39,12 @@ get_header(); // dùng header mặc định của SWELL
             <?php get_template_part('templates/match/match-search-by-district-form'); ?>
         </section>
 
+        <!-- Phần 4: Danh sách sân chơi -->
+        <section class="match-list-wrapper" aria-labelledby="match-list-title">
+            <h2 id="match-list-title">Danh sách sân chơi</h2>
+            <?php echo do_shortcode('[match-list]'); // render danh sách sân chơi ?>
+        </section>
+
     </div>
 </main>
 
