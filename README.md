@@ -2,7 +2,7 @@
 
 ## 🧭 Introduction
 
-**VietSport** is a WordPress platform utilizing the **Swell Child** theme, customized to serve the sports website [viet-sport.com](https://viet-sport.com). This repository manages the **entire theme source code** (database export is no longer included).
+**VietSport** is a WordPress platform utilizing the **Swell Child** theme, customized to serve the sports website [viet-sport.net](https://viet-sport.net). This repository manages the **entire theme source code** (database export is no longer included).
 
 ---
 
@@ -35,12 +35,12 @@ viet-sport/
 
 | URL                            | Purpose                                                  |
 |--------------------------------|----------------------------------------------------------|
-| viet-sport.com                 | Main website, landing page, intro                        |
-| viet-sport.com/sport_team/     | Custom Post Type (CPT) page for each club                |
-| viet-sport.com/sport_event/    | CPT page for each event                                  |
-| viet-sport.com/match           | **Match** feature (pure PHP) – create a public match     |
-| viet-sport.com/dev             | Staging site (via WP Staging plugin)                     |
-| match.viet-sport.com           | Standalone **match-match** web app (separate – planned) |
+| viet-sport.net                 | Main website, landing page, intro                        |
+| viet-sport.net/sport_team/     | Custom Post Type (CPT) page for each club                |
+| viet-sport.net/sport_event/    | CPT page for each event                                  |
+| viet-sport.net/match           | **Match** feature (pure PHP) – create a public match     |
+| viet-sport.net/dev             | Staging site (via WP Staging plugin)                     |
+| match.viet-sport.net           | Standalone **match-match** web app (separate – planned) |
 
 ---
 
@@ -122,9 +122,9 @@ jobs:
 | Environment | Domain                    | Purpose              |
 |-------------|---------------------------|----------------------|
 | Local       | viet-sport.local          | Personal development |
-| Staging     | viet-sport.com/dev        | Testing              |
-| Production  | viet-sport.com            | Live website         |
-| Match     | match.viet-sport.com    | Separate SPA match-match app |
+| Staging     | viet-sport.net/dev        | Testing              |
+| Production  | viet-sport.net            | Live website         |
+| Match     | match.viet-sport.net    | Separate SPA match-match app |
 
 ---
 
@@ -146,7 +146,7 @@ jobs:
 
 MIT — Free to use, public, credit appreciated.  
 
-> Made with 💪 in Japan – [viet-sport.com](https://viet-sport.com)
+> Made with 💪 in Japan – [viet-sport.net](https://viet-sport.net)
 
 ---
 
