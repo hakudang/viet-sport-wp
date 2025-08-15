@@ -28,11 +28,13 @@ add_action('init', function () {
     register_post_type('match', [
         'labels'             => $labels,
         'public'             => true,
-        'has_archive'        => true,
-        'rewrite'            => ['slug' => 'match', 'with_front' => true],
+        // 'has_archive'        => true,
+        // 'rewrite'            => ['slug' => 'match', 'with_front' => true],
+        'has_archive' => 'matches',                 // archive tại /matches
+        'rewrite'     => ['slug' => 'matches', 'with_front' => false], // single: /matches/%postname%
         'show_in_rest'       => true,
         'menu_icon'          => 'dashicons-location',
-        'supports'           => ['title','editor','author','thumbnail','comments'],
+        'supports'           => ['title', 'editor', 'author', 'thumbnail', 'comments'],
         'publicly_queryable' => true,
         'show_ui'            => true,
         'show_in_menu'       => true,
