@@ -45,6 +45,7 @@ require_once get_theme_file_path( 'functions/menu-anchor-rewriter.php' );
 // ===============================
 // Match module
 // ===============================
+require_once get_theme_file_path( 'functions/match/match-admin-columns.php' );
 require_once get_theme_file_path( 'functions/match/match-helpers.php' );
 require_once get_theme_file_path( 'functions/match/match-menu-switch.php' );
 require_once get_theme_file_path( 'functions/match/match-hooks.php' );
