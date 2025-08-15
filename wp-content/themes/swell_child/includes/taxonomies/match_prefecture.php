@@ -3,7 +3,7 @@
 add_action('init', function () {
     register_taxonomy('match_prefecture', ['match'], [
         'labels' => [
-            'name'          => 'Tỉnh/Prefecture',
+            'name'          => 'Tỉnh',
             'singular_name' => 'Tỉnh',
         ],
         'public'       => true,
