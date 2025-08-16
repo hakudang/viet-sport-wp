@@ -2,7 +2,7 @@
 // functions/match/match-cron.php
 /**
  * File: functions/match/match-cron.php
- * Mục đích: Cron job để tự động cập nhật trạng thái của các trận đấu.
+ * Mục đích: Cron job để tự động cập nhật trạng thái match.
  * Gọi từ includes/load.php
  */
 
