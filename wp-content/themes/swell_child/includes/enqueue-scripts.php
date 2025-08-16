@@ -19,7 +19,7 @@ if ( ! function_exists('swell_child_enqueue_scripts') ) {
 
         // --- Chỉ load cho trang/module MATCH ---
         $is_match = function_exists('vsp_is_match_context') && vsp_is_match_context();
-        // (hoặc thay bằng: $is_match = is_page_template('page-search-match.php');)
+        // (hoặc thay bằng: $is_match = is_page_template('page-search-match_tem.php');)
 
         if ( $is_match ) {
 

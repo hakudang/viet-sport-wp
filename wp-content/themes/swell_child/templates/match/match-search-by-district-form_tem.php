@@ -1,6 +1,6 @@
 <?php
 /**
- * file name: templates/match/match-search-by-district-form.php
+ * file name: templates/match/match-search-by-district-form_tem.php
  * Form: Tìm kiếm sân chơi theo tỉnh thành (Prefecture & Region)
  * Description: Hiển thị danh sách các tỉnh Nhật Bản chia theo khu vực, mỗi tỉnh là 1 link tới /pref/{id}
  */

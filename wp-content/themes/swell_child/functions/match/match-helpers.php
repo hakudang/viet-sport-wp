@@ -4,7 +4,7 @@
  * Vị trí: /wp-content/themes/swell_child/functions/match/match-helpers.php
  * Xác định ngữ cảnh “Match”
  * - URL bắt đầu bằng /match
- * - hoặc dùng template page-search-match.php
+ * - hoặc dùng template page-search-match_tem.php
  * - hoặc CPT match (để mở rộng về sau)
  */
 
@@ -18,7 +18,7 @@ function vsp_is_match_context() {
     }
 
     // Nếu là template trang tìm kiếm match
-    if (function_exists('is_page_template') && is_page_template('page-search-match.php')) {
+    if (function_exists('is_page_template') && is_page_template('page-search-match_tem.php')) {
         return true;
     }
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Search Match Page
- * File: swell_child/page-search-match.php
+ * File: swell_child/page-search-match_tem.php
  * Description: Trang tạo và tìm kiếm sân chơi gần bạn (/match)
  */
 get_header();
@@ -19,13 +19,13 @@ get_header();
     <!-- Phần 2: Form tìm theo postcode -->
     <section class="match-form match-form--postcode" aria-labelledby="match-form-postcode-title">
       <h2 id="match-form-postcode-title" class="screen-reader-text">Tìm sân theo postcode</h2>
-      <?php get_template_part('templates/match/match-search-by-postcode-form'); ?>
+      <?php get_template_part('templates/match/match-search-by-postcode-form_tem'); ?>
     </section>
 
     <!-- Phần 3: Form tìm theo tỉnh thành -->
     <section class="match-form match-form--prefecture" aria-labelledby="match-form-pref-title">
       <h2 id="match-form-pref-title" class="screen-reader-text">Tìm sân theo tỉnh thành</h2>
-      <?php get_template_part('templates/match/match-search-by-district-form'); ?>
+      <?php get_template_part('templates/match/match-search-by-district-form_tem'); ?>
     </section>
 
     <!-- Phần 4: Danh sách sân chơi -->
