@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * SWELL CHILD PATH, URI
+ */
+define( 'SWELL_CHILD_PATH', get_stylesheet_directory() );
+define( 'SWELL_CHILD_URI', get_stylesheet_directory_uri() );
+
 /* ==============================================================
    [ASSETS] - Load Google Fonts (VN/EN/JP) + style.css
    - Font chính: Be Vietnam Pro (cho tiếng Việt và tiếng Anh)
