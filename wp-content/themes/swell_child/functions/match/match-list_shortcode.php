@@ -2,8 +2,7 @@
 /**
  * Shortcode: [match-list]
  * File: functions/match/match-list_shortcode.php
- * Mục đích: Hiển thị danh sách sân chơi (CPT: match)
- * Hiển thị bảng danh sách sân chơi (CPT: match)
+ * Mục đích: Hiển thị danh sách CPT: match
  */
 add_shortcode('match-list', 'vsp_render_match_list');
 
