@@ -1,4 +1,13 @@
 <?php
+
+/**
+ * Template Name: Match Create Step 1
+ * File: swell_child/functions/match/create-steps/match-create-step1.php
+ * Mục đích: Bước đầu tiên trong quá trình tạo sân chơi mới
+ * - Hiển thị form nhập tiêu đề sân chơi
+ * - Chỉ hiển thị nếu không phải bước 13 hoặc 14
+ */
+
 // =============================================
 // BƯỚC 1: NHẬP TIÊU ĐỀ SÂN CHƠI
 // =============================================
@@ -49,8 +58,7 @@ get_header();
             id="title"
             name="title"
             required
-            value="<?php echo esc_attr($data['title'] ?? ''); ?>"
-        >
+            value="<?php echo esc_attr($data['title'] ?? ''); ?>">
 
         <!-- Nút điều hướng -->
         <div class="form-buttons">
@@ -59,8 +67,7 @@ get_header();
                 id="next-btn"
                 type="submit"
                 class="btn btn-primary"
-                disabled
-            >
+                disabled>
                 Tiếp tục
             </button>
         </div>
@@ -68,7 +75,7 @@ get_header();
 </div>
 
 <!-- ======= Lấy nội dung gốc của trang hiện tại (trang sử dụng template này)  ======== -->
-<?php include SWELL_CHILD_PATH . '/functions/match/create-steps/match-create-rules.php'; ?>
+<?php include SWELL_CHILD_PATH . '/functions/match/create-steps/match-create-content.php'; ?>
 
 <?php get_footer(); ?>
 
@@ -86,21 +93,21 @@ get_header();
      JS: Bật nút "Tiếp tục" khi có nội dung
 ============================== -->
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const titleInput = document.getElementById('title');
-    const nextBtn = document.getElementById('next-btn');
+    document.addEventListener('DOMContentLoaded', function() {
+        const titleInput = document.getElementById('title');
+        const nextBtn = document.getElementById('next-btn');
 
-    function toggleButton() {
-        const value = titleInput.value.trim();
-        nextBtn.disabled = value === '';
-    }
+        function toggleButton() {
+            const value = titleInput.value.trim();
+            nextBtn.disabled = value === '';
+        }
 
-    // Gắn các sự kiện cần thiết
-    ['input', 'change', 'blur'].forEach(evt =>
-        titleInput.addEventListener(evt, toggleButton)
-    );
+        // Gắn các sự kiện cần thiết
+        ['input', 'change', 'blur'].forEach(evt =>
+            titleInput.addEventListener(evt, toggleButton)
+        );
 
-    // Kiểm tra lần đầu khi trang load
-    toggleButton();
-});
+        // Kiểm tra lần đầu khi trang load
+        toggleButton();
+    });
 </script>
