@@ -1,109 +1,143 @@
 /**
- * File name: swell_child/css/page-search-match.css
- * Description: css cho template page-search-match
+ * File: assets/css/page-search-match.css
+ * Scope: Trang /match (template page-search-match.php)
+ * Mục tiêu:
+ *  - Part 1: giữ layout SWELL
+ *  - Part 2 & 3: chỉ canh trái (không thay đổi kích thước form riêng)
+ *  - Part 4: bảng danh sách full-width, cuộn ngang mobile
  */
 
-/* Scope chặt vào trang /match */
-.match-page {
-    /* không đụng SWELL layout, chỉ sửa con bên trong */
-}
+/* ===== Global scope cho trang /match ===== */
+.match-page {}
 
-/* === Part 1: full width trong container SWELL === */
+/* Part 1: Giữ full width trong container SWELL */
 .match-page article.c-entry,
-.match-page .c-entry .post_content{
+.match-page .c-entry .post_content {
   max-width: 100%;
   width: 100%;
 }
 
-/* Tiêu đề & khối: canh trái, spacing chuẩn */
-.match-page .match-form-wrapper,
+/* Spacing các section */
+.match-page .match-form,
 .match-page .match-list-wrapper {
-    margin: 0 0 2rem;
-    /* giống SWELL section spacing */
+  margin: 0 0 2rem;
 }
 
+/* Tiêu đề: canh trái */
 .match-page h2,
 .match-page .form-title,
 .match-page .prefecture-title {
-    text-align: left;
-    margin: 0 0 1rem;
-    line-height: 1.3;
+  text-align: left;
+  margin: 0 0 1rem;
+  line-height: 1.3;
 }
 
-/* BỎ căn giữa của 2 form (trước đó bạn set margin: 0 auto) */
-.match-page .searchOnTop-form-container,
-.match-page .prefecture-list {
-    max-width: 100%;
-    margin: 0;
-    /* ← canh trái */
-    padding-left: 0;
-    /* bám sát lề trái container SWELL */
+/* ===== Part 2: Form tìm theo postcode =====
+   Chỉ reset canh giữa -> canh trái, KHÔNG đụng width/max-width của form riêng */
+.match-page .match-form--postcode .searchOnTop-form-container {
+  margin-left: 0 !important;
+  margin-right: auto !important;
 }
 
-/* Nhóm trường: bám trái, không tràn */
-.match-page .searchOnTop-form-container .form-group {
-    justify-content: flex-start;
+/* (Tuỳ cấu trúc form) nếu có <form> wrapper riêng, có thể bật thêm:
+.match-page .match-form--postcode form {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+*/
+
+/* ===== Part 3: Form tìm theo tỉnh thành =====
+   Chỉ reset canh giữa -> canh trái, KHÔNG đụng sizing của form riêng */
+.match-page .match-form--prefecture .prefecture-list,
+.match-page .match-form--prefecture .prefecture-columns {
+  margin-left: 0 !important;
+  margin-right: auto !important;
 }
 
+/* ===== Part 4: Danh sách sân chơi ===== */
 
-/* Bảng: full-width, cột chia đều, không set width cố định */
+/* Khối bọc bảng: thêm viền nhẹ + cho phép cuộn ngang trên mobile */
+.match-page .match-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+/* Bảng: full width; đặt min-width để cột không bị dồn trên màn nhỏ */
 .match-page .match-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: auto;
-    /* theo nội dung */
+  width: 100%;
+  min-width: 720px;              /* điều chỉnh theo số cột thực tế */
+  border-collapse: collapse;
+  table-layout: auto;            /* theo nội dung */
 }
 
+/* Ô và header */
 .match-page .match-table th,
 .match-page .match-table td {
-    text-align: left;
-    padding: 8px 10px;
-    border-bottom: 1px solid #eee;
-    word-wrap: break-word;
-    overflow-wrap: anywhere;
-    /* phá dòng khi nội dung dài */
-    width: auto;
-    /* bảo đảm không bị width nào “đè” */
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;       /* phá dòng khi nội dung dài */
+  width: auto;                   /* không áp width cứng */
 }
 
 .match-page .match-table th {
-    font-weight: 600;
-    background: #fafafa;
+  font-weight: 600;
+  background: #fafafa;
 }
 
-/* Căn độ rộng vài cột phổ biến */
+/* Zebra + hover */
+.match-page .match-table tbody tr:nth-child(even) { background: #fcfcfc; }
+.match-page .match-table tbody tr:hover { background: #f6f9ff; }
 
-.match-page .match-table .ma-san {
-    opacity: .9;
-    font-size: .9em;
+/* Một số cột phổ biến (tuỳ class có thực tế hay không) */
+.match-page .match-table .ma-san {     /* mã sân */
+  opacity: .9;
+  font-size: .9em;
+  white-space: nowrap;
+}
+.match-page .match-table .ten-san {    /* tên sân */
+  font-weight: 600;
+}
+.match-page .match-table .dia-chi {    /* địa chỉ */
+  color: #555;
 }
 
-/* Prefecture list: bám trái, co giãn mềm */
-.match-page .prefecture-columns {
-    gap: 16px;
+/* Pagination (nếu shortcode render) */
+.match-page .match-pagination {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.match-page .match-pagination a,
+.match-page .match-pagination span {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.match-page .match-pagination .current {
+  background: #111;
+  color: #fff;
+  border-color: #111;
 }
 
-.match-page .prefecture-column {
-    width: 100%;
-    max-width: 560px;
+/* Empty state (nếu có) */
+.match-page .match-empty {
+  padding: 16px;
+  border: 1px dashed #ddd;
+  border-radius: 8px;
+  background: #fafafa;
 }
 
-/* 2 cột? Tùy ý */
-@media (min-width: 960px) {
-    .match-page .prefecture-column {
-        width: 48%;
-    }
-}
-
-/* Giữ form gọn trên mobile */
+/* Mobile tinh gọn */
 @media (max-width: 768px) {
-    .match-page .searchOnTop-form-container .form-group {
-        flex-wrap: wrap;
-        gap: 8px 10px;
-    }
-
-    .match-page .searchOnTop-form-container .submit-button {
-        margin-left: 0;
-    }
+  .match-page .match-table { min-width: 600px; }
+  .match-page .match-table th,
+  .match-page .match-table td { padding: 8px 10px; }
 }
-

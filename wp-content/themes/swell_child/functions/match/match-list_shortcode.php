@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Shortcode: [match-list]
  * File: functions/match/match-list_shortcode.php
@@ -6,7 +7,8 @@
  */
 add_shortcode('match-list', 'vsp_render_match_list');
 
-function vsp_render_match_list($atts = []) {
+function vsp_render_match_list($atts = [])
+{
     $a = shortcode_atts([
         'limit'    => 50,      // số dòng
         'upcoming' => 0,       // 1 = chỉ các trận sắp tới (start_date >= hôm nay)
@@ -50,6 +52,7 @@ function vsp_render_match_list($atts = []) {
 
     if ($q->have_posts()) {
         echo '<table class="match-table"><thead><tr>
+                <th>Bộ môn</th>
                 <th>Tỉnh</th>
                 <th>Ngày &amp; giờ</th>
                 <th>Tiêu đề</th>
@@ -57,10 +60,12 @@ function vsp_render_match_list($atts = []) {
                 <th>Trạng thái</th>
               </tr></thead><tbody>';
 
-        while ($q->have_posts()) { $q->the_post();
+        while ($q->have_posts()) {
+            $q->the_post();
             $post_id = get_the_ID();
 
             // Taxonomy names
+            $sport   = vsp_first_term_name($post_id, 'match_sport');
             $pref   = vsp_first_term_name($post_id, 'match_prefecture');
             $status = vsp_first_term_name($post_id, 'match_status');
 
@@ -77,7 +82,13 @@ function vsp_render_match_list($atts = []) {
                 $ts  = strtotime($start_date);
                 if ($ts) {
                     $dow = [
-                        'Mon'=>'Th2','Tue'=>'Th3','Wed'=>'Th4','Thu'=>'Th5','Fri'=>'Th6','Sat'=>'Th7','Sun'=>'CN'
+                        'Mon' => 'Th2',
+                        'Tue' => 'Th3',
+                        'Wed' => 'Th4',
+                        'Thu' => 'Th5',
+                        'Fri' => 'Th6',
+                        'Sat' => 'Th7',
+                        'Sun' => 'CN'
                     ][date('D', $ts)] ?? '';
                     $start_full = date('d/m/Y', $ts) . ($dow ? " ($dow)" : '');
                     if ($start_time) $start_full .= ' - ' . date('H:i', strtotime($start_time));
@@ -89,10 +100,12 @@ function vsp_render_match_list($atts = []) {
                 '<tr>
                     <td>%s</td>
                     <td>%s</td>
+                    <td>%s</td>
                     <td><a href="%s">%s <span class="ma-san">(#%s)</span></a></td>
                     <td>%s</td>
                     <td>%s</td>
                  </tr>',
+                 esc_html($sport ?: '—'),
                 esc_html($pref ?: '—'),
                 esc_html($start_full),
                 esc_url(get_permalink()),
@@ -113,7 +126,8 @@ function vsp_render_match_list($atts = []) {
 }
 
 /** Lấy tên term đầu tiên của taxonomy (hoặc null) */
-function vsp_first_term_name($post_id, $taxonomy) {
+function vsp_first_term_name($post_id, $taxonomy)
+{
     $terms = get_the_terms($post_id, $taxonomy);
     if (!$terms || is_wp_error($terms)) return null;
     $first = array_shift($terms);

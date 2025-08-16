@@ -1,5 +1,8 @@
 <?php
-// includes/cpt/match.php
+/**
+ * File: /includes/cpt/match.php
+ * Mục đích: Đăng ký Custom Post Type (CPT) cho match
+ */
 add_action('init', function () {
     $labels = [
         'name'                  => 'Matches',

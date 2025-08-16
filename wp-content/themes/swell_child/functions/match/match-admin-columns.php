@@ -3,7 +3,7 @@
 /**
  * File: functions/match/match-admin-columns.php
  * Mục đích: Tùy chỉnh cột hiển thị trong danh sách Match ở khu vực quản trị.
- * - Thêm cột Start Date, People, Prefecture, Status, Slug
+ * - Thêm cột Sport, Start Date, People, Prefecture, Status, Slug
  * - Cho phép sort theo Start Date và People
  * - Dropdown filter theo Status và Prefecture
  */
@@ -17,6 +17,7 @@ add_filter('manage_edit-match_columns', function ($cols) {
             $new['title']      = __('Title');
             $new['start_date'] = __('Start Date');
             $new['people']     = __('People');
+            $new['sport']      = __('Sport');
             $new['pref']       = __('Prefecture');
             $new['status']     = __('Status');
             $new['slug']     = __('Slug');
@@ -55,6 +56,13 @@ add_action('manage_match_posts_custom_column', function ($col, $post_id) {
     } elseif ($col === 'people') {
         $n = get_post_meta($post_id, 'people', true);
         echo $n !== '' ? intval($n) : '—';
+    } elseif ($col === 'sport') { // 👈 NEW
+        $terms = get_the_terms($post_id, 'match_sport');
+        if ($terms && !is_wp_error($terms)) {
+            echo esc_html(implode(', ', wp_list_pluck($terms, 'name')));
+        } else {
+            echo '—';
+        }
 
     } elseif ($col === 'pref') {
         $terms = get_the_terms($post_id, 'match_prefecture');
@@ -75,6 +83,7 @@ add_action('manage_match_posts_custom_column', function ($col, $post_id) {
 add_filter('manage_edit-match_sortable_columns', function ($cols) {
     $cols['start_date'] = 'start_date';
     $cols['people']     = 'people';
+    $cols['sport']      = 'match_sport'; // sport là taxonomy
     $cols['pref']       = 'match_prefecture';
     $cols['status']     = 'match_status';
     $cols['slug']       = 'post_name'; // slug là post_name trong WP
@@ -161,7 +170,8 @@ add_action('parse_query', function ($q) {
 add_action('admin_head-edit.php', function () {
     $screen = get_current_screen();
     if ($screen && $screen->post_type === 'match') {
-        echo '<style>.column-title{width:20%;font-family:sans-serif}</style>';
+        echo '<style>.column-title{width:20%;font-family:sans-serif}
+        </style>';
     }
 });
 
