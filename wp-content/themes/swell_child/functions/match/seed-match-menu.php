@@ -1,66 +1,71 @@
 <?php
-
 /**
  * File: functions/match/seed-match-menu.php
- * Mục đích:
- * - Tự tạo menu "Match Menu" (nếu chưa có), gán vào location 'match_menu'
- * - Tự thêm sẵn các item cho module Match
- * - Chạy 1 lần duy nhất, có thể reset bằng cách xóa option 'vsp_match_menu_seeded'
+ * Seed/cập nhật Match Menu kèm description (JP) cho từng item.
+ * - Luôn cập nhật title + description (idempotent).
+ * - Chỉ tạo menu & gán location ở lần đầu (dựa trên option).
  */
 
 add_action('after_setup_theme', function () {
+    // Tên menu & location
+    $menu_name   = 'Match Menu';
+    $location    = 'match_menu';
 
-    // Chỉ chạy 1 lần
-    if (get_option('vsp_match_menu_seeded')) return;
-
-    // Đảm bảo location 'match_menu' đã được đăng ký (trong includes/setup.php)
-    $locations = (array) get_theme_mod('nav_menu_locations', []);
-
-    // Lấy/ tạo menu theo tên
-    $menu      = wp_get_nav_menu_object('Match Menu');
-    if (! $menu) {
-        $menu_id = wp_create_nav_menu('Match Menu');
+    // 1) Lấy/tạo menu
+    $menu_obj = wp_get_nav_menu_object($menu_name);
+    if (!$menu_obj) {
+        $menu_id = wp_create_nav_menu($menu_name);
         if (is_wp_error($menu_id)) return;
-    } else {
-        $menu_id = (int) $menu->term_id;
+        $menu_obj = wp_get_nav_menu_object($menu_id);
+    }
+    $menu_id = (int) $menu_obj->term_id;
+
+    // 2) Gán menu vào location (chỉ cần làm 1 lần)
+    if (!get_option('vsp_match_menu_seeded')) {
+        $locations = (array) get_theme_mod('nav_menu_locations', []);
+        if (empty($locations[$location])) {
+            $locations[$location] = $menu_id;
+            set_theme_mod('nav_menu_locations', $locations);
+        }
+        update_option('vsp_match_menu_seeded', 1, true);
     }
 
-    // Gán menu này cho location 'match_menu' nếu chưa gán
-    if (empty($locations['match_menu'])) {
-        $locations['match_menu'] = $menu_id;
-        set_theme_mod('nav_menu_locations', $locations);
-    }
-
-    // Helper: thêm item nếu chưa có URL đó
+    // 3) Map URL -> item hiện có
     $existing_items = wp_get_nav_menu_items($menu_id) ?: [];
-    $existing_urls  = array_map(function ($it) {
-        return rtrim((string)$it->url, '/');
-    }, $existing_items);
-    $add_item = function ($title, $url) use ($menu_id, &$existing_urls) {
-        $url = rtrim($url, '/');
-        if (in_array($url, $existing_urls, true)) return;
-        wp_update_nav_menu_item($menu_id, 0, [
-            'menu-item-title'  => $title,
-            'menu-item-url'    => $url,
-            'menu-item-status' => 'publish',
-        ]);
-        $existing_urls[] = $url;
+    $by_url = [];
+    foreach ($existing_items as $it) {
+        $by_url[ rtrim((string)$it->url, '/') ] = $it;
+    }
+
+    // 4) Upsert helper (cập nhật title + description nếu đã tồn tại)
+    $upsert = function (string $title, string $url, string $desc = '', array $classes = []) use ($menu_id, &$by_url) {
+        $url  = rtrim($url, '/');
+        $args = [
+            'menu-item-title'       => $title,
+            'menu-item-url'         => $url,
+            'menu-item-description' => $desc,                       // 👈 Description (SWELL tự hiển thị)
+            'menu-item-classes'     => implode(' ', $classes),
+            'menu-item-status'      => 'publish',
+        ];
+        if (isset($by_url[$url])) {
+            wp_update_nav_menu_item($menu_id, (int) $by_url[$url]->ID, $args);
+        } else {
+            $item_id = wp_update_nav_menu_item($menu_id, 0, $args);
+            if (!is_wp_error($item_id)) {
+                $by_url[$url] = get_post($item_id);
+            }
+        }
     };
 
-    // Base cho module match
+    // 5) Danh sách item + mô tả JP
     $base = home_url('/match');
-
-    // Danh sách mục theo yêu cầu
-    $add_item('Tạo sân',           $base . '/create');
-    $add_item('Tin nhắn',          $base . '/messages');
-    $add_item('Tham gia',          $base . '/joined');
-    $add_item('Chủ xị',            $base . '/hosted');
-    $add_item('Đang xem',          $base . '/viewing');
-    $add_item('Theo dõi',          $base . '/following');
-    $add_item('Thông báo',         $base . '/notifications');
-    $add_item('Cảnh báo',          $base . '/alerts');
-    $add_item('Khác',              $base . '/more');
-
-    // Đánh dấu đã seed
-    update_option('vsp_match_menu_seeded', 1, true);
+    $upsert('Tạo sân',   $base . '/create',        'マッチ開催する');
+    $upsert('Tin nhắn',  $base . '/messages',      '伝言ページ');
+    $upsert('Tham gia',  $base . '/joined',        '参加申込みした');
+    $upsert('Chủ xị',    $base . '/hosted',        '主催中');
+    $upsert('Đang xem',  $base . '/viewing',       '最近見た');
+    $upsert('Theo dõi',  $base . '/following',     'ウォッチリスト');
+    $upsert('Thông báo', $base . '/notifications', 'アラート');
+    $upsert('Cảnh báo',  $base . '/alerts',        '欠員お知らせ');
+    $upsert('Khác',      $base . '/more',          'その他の機能');
 });
