@@ -59,13 +59,13 @@ add_action('after_setup_theme', function () {
 
     // 5) Danh sách item + mô tả JP
     $base = home_url('/match');
-    $upsert('Tạo sân',   $base . '/create',        'マッチ開催する');
-    $upsert('Tin nhắn',  $base . '/messages',      '伝言ページ');
-    $upsert('Tham gia',  $base . '/joined',        '参加申込みした');
-    $upsert('Chủ xị',    $base . '/hosted',        '主催中');
-    $upsert('Đang xem',  $base . '/viewing',       '最近見た');
-    $upsert('Theo dõi',  $base . '/following',     'ウォッチリスト');
-    $upsert('Thông báo', $base . '/notifications', 'アラート');
-    $upsert('Cảnh báo',  $base . '/alerts',        '欠員お知らせ');
-    $upsert('Khác',      $base . '/more',          'その他の機能');
+    $upsert('Tạo sân',   $base . '/match_create',        'マッチ開催する');
+    $upsert('Tin nhắn',  $base . '/match_messages',      '伝言ページ');
+    $upsert('Tham gia',  $base . '/match_joined',        '参加申込みした');
+    $upsert('Chủ xị',    $base . '/match_hosted',        '主催中');
+    $upsert('Đang xem',  $base . '/match_viewing',       '最近見た');
+    $upsert('Theo dõi',  $base . '/match_watching',     'ウォッチリスト');
+    $upsert('Thông báo', $base . '/match_alerts',       'アラート');
+    $upsert('Cảnh báo',  $base . '/match_notice',        '欠員お知らせ');
+    $upsert('Khác',      $base . '/match_more',          'その他の機能');
 });
