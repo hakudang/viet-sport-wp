@@ -1,6 +1,17 @@
 <?php
 
 /**
+ * SWELL Child Theme Functions
+ * File: functions.php
+ * Mục đích: Chứa các hàm tùy chỉnh cho theme con SWELL
+ * Ngày cập nhật: 2025-08-04
+ * Người viết: Dang
+ */
+
+// Bảo vệ file nếu bị truy cập trực tiếp
+defined( 'ABSPATH' ) || exit;
+
+/**
  * SWELL CHILD PATH, URI
  */
 define( 'SWELL_CHILD_PATH', get_stylesheet_directory() );
