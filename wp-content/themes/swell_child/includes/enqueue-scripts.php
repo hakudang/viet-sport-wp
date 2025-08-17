@@ -45,6 +45,7 @@ if ( ! function_exists('swell_child_enqueue_scripts') ) {
                 $ver('/assets/css/match-search-by-district-form.css')
             );
 
+            // Shortcode match-list, Danh sách sân chơi 
             // CSS canh trái & chuẩn SWELL cho trang /match
             // Đặt sau cùng để override 2 file trên
             wp_enqueue_style(
@@ -52,6 +53,14 @@ if ( ! function_exists('swell_child_enqueue_scripts') ) {
                 get_stylesheet_directory_uri() . '/assets/css/page-search-match.css',
                 ['form-match-postcode-css','form-match-district-css'], // đảm bảo load sau
                 $ver('/assets/css/page-search-match.css')
+            );
+
+            // Form tạo sân chơi mới
+            wp_enqueue_style(
+                'vsp-match-create',
+                get_stylesheet_directory_uri() . '/assets/css/match-create.css',
+                [],
+                $ver('/assets/css/match-create.css')
             );
         }
     }
