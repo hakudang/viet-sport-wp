@@ -2,7 +2,7 @@
 
 /**
  * File: swell_child/functions/match/create-steps/match-create-content.php
- * Purpose: Hiển thị phần nội dung của trang "Match Create" theo đúng định dạng SWELL.
+ * Purpose: Hiển thị phần nội dung của trang match/match_create theo đúng định dạng SWELL.
  * - SWELL markup: <div class="l-container"><article class="c-entry"><div class="post_content">…</div></article>
  * - Chỉ hiển thị nếu không ở bước 13/14 (confirm & create)
  */

@@ -52,6 +52,8 @@ require_once get_theme_file_path( 'functions/match/match-hooks.php' );
 require_once get_theme_file_path('functions/match/seed-match-menu.php'); // Match menu: tự seed dữ liệu & gán location 'match_menu'
 // Match module: shortcode để hiển thị danh sách sân chơi
 require_once get_theme_file_path('functions/match/match-list_shortcode.php');
+// Match module: tạo slug tự động cho sân chơi mới
+require_once get_theme_file_path('functions/match/auto-slug-match.php');
 
 
 // ===============================

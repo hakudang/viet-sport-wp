@@ -1,28 +1,15 @@
 <?php
-
 /**
- * Template Name: Match Create Step 1
  * File: swell_child/functions/match/create-steps/match-create-step1.php
- * Mục đích: Bước đầu tiên trong quá trình tạo sân chơi mới
- * - Hiển thị form nhập tiêu đề sân chơi
- * - Chỉ hiển thị nếu không phải bước 13 hoặc 14
+ * Step 1: Chọn bộ môn (sport) + nhập tiêu đề
  */
-
-// =============================================
-// BƯỚC 1: NHẬP TIÊU ĐỀ SÂN CHƠI
-// =============================================
-
-// Bắt đầu session nếu chưa có
 if (!session_id()) session_start();
 
-// Lấy dữ liệu từ session (nếu có)
-$data = $_SESSION['san-choi'] ?? [];
+// Lấy dữ liệu đã nhập trước đó (nếu có)
+$data = $_SESSION['match'] ?? [];
 
-// =============================================
-// Xử lý khi người dùng nhấn "Tiếp tục"
-// =============================================
+// Xử lý submit
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Kiểm tra nonce để bảo vệ CSRF
     if (
         !isset($_POST['tao_san_choi_nonce']) ||
         !wp_verify_nonce($_POST['tao_san_choi_nonce'], 'tao_san_choi_action')
@@ -31,83 +18,114 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Gộp dữ liệu vừa nhập với session
-    $_SESSION['san-choi'] = array_merge($data, $_POST);
+    // Gom vào session
+    $_SESSION['match'] = array_merge($data, [
+        'sport' => isset($_POST['sport']) ? sanitize_text_field($_POST['sport']) : '',
+        'title' => isset($_POST['title']) ? sanitize_text_field($_POST['title']) : '',
+    ]);
 
-    // Chuyển đến bước tiếp theo
+    // Sang bước 2
     wp_redirect('?step=' . ($current_step + 1));
     exit;
 }
 
-// Load header từ theme
+// Chuẩn bị danh sách sport từ taxonomy (nếu có)
+$sport_terms   = [];
+$use_select    = taxonomy_exists('match_sport');
+if ($use_select) {
+    $sport_terms = get_terms([
+        'taxonomy'   => 'match_sport',
+        'hide_empty' => false,
+        'orderby'    => 'name',
+        'order'      => 'ASC',
+    ]);
+    if (is_wp_error($sport_terms) || empty($sport_terms)) $use_select = false;
+}
+
+$current_sport = $data['sport'] ?? '';
+$current_title = $data['title'] ?? '';
+
+// Header SWELL
 get_header();
 ?>
 
-<!-- ==============================
-     FORM BƯỚC 1: Nhập tiêu đề
-============================== -->
-<div class="form-tao-san-choi form-step-<?php echo $current_step; ?>">
-    <form method="post">
-        <!-- CSRF nonce -->
+<div class="form-create-match match-create-step<?php echo (int) $current_step; ?>">
+    <form method="post" novalidate>
         <?php wp_nonce_field('tao_san_choi_action', 'tao_san_choi_nonce'); ?>
 
-        <!-- Tiêu đề sân chơi -->
-        <label for="title">Tiêu đề: <span style="color:red">*</span></label>
+        <!-- SPORT: ưu tiên chọn từ taxonomy; fallback ô text -->
+        <label for="sport" style="display:block;margin-top:12px;">Tên bộ môn (Sport): <span style="color:red">*</span></label>
+
+        <?php if ($use_select) : ?>
+            <select id="sport" name="sport" required>
+                <option value="">-- Chọn bộ môn --</option>
+                <?php foreach ($sport_terms as $t): ?>
+                    <option value="<?php echo esc_attr($t->slug); ?>"
+                        <?php selected($current_sport, $t->slug); ?>>
+                        <?php echo esc_html($t->name); ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+            <!-- <small>Không thấy bộ môn? Bạn có thể thêm trong WP-Admin → Matches → Sports.</small> -->
+        <?php else: ?>
+            <input
+                type="text"
+                id="sport_text"
+                name="sport"
+                placeholder="Ví dụ: tennis, pickleball..."
+                required
+                value="<?php echo esc_attr($current_sport); ?>">
+            <small>(Hiện chưa có taxonomy <code>match_sport</code> hoặc chưa seed – nhập tên/slug bộ môn)</small>
+        <?php endif; ?>
+
+        <!-- TITLE -->
+        <label for="title" style="display:block;margin-top:16px;">Tiêu đề: <span style="color:red">*</span></label>
         <input
             type="text"
             id="title"
             name="title"
             required
-            value="<?php echo esc_attr($data['title'] ?? ''); ?>">
+            value="<?php echo esc_attr($current_title); ?>">
 
-        <!-- Nút điều hướng -->
-        <div class="form-buttons">
-            <!-- Không có nút "Về trước" vì đây là bước đầu tiên -->
-            <button
-                id="next-btn"
-                type="submit"
-                class="btn btn-primary"
-                disabled>
-                Tiếp tục
-            </button>
+        <!-- ACTIONS -->
+        <div class="form-buttons" style="margin-top:16px;">
+            <button id="next-btn" type="submit" class="btn btn-primary" disabled>Tiếp tục</button>
         </div>
     </form>
 </div>
 
-<!-- ======= Lấy nội dung gốc của trang hiện tại (trang sử dụng template này)  ======== -->
 <?php include SWELL_CHILD_PATH . '/functions/match/create-steps/match-create-content.php'; ?>
-
 <?php get_footer(); ?>
 
-<!-- ==============================
-     STYLE: Trạng thái khi nút bị disable
-============================== -->
 <style>
-    #next-btn:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-    }
+    #next-btn:disabled { opacity:.5; cursor:not-allowed; }
+    .form-create-match input[type="text"],
+    .form-create-match select { max-width: 520px; width: 100%; }
 </style>
 
-<!-- ==============================
-     JS: Bật nút "Tiếp tục" khi có nội dung
-============================== -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const titleInput = document.getElementById('title');
-        const nextBtn = document.getElementById('next-btn');
+document.addEventListener('DOMContentLoaded', function () {
+    const titleInput = document.getElementById('title');
+    const nextBtn    = document.getElementById('next-btn');
+    const sportSel   = document.getElementById('sport');       // nếu dùng select
+    const sportTxt   = document.getElementById('sport_text');  // nếu dùng text
 
-        function toggleButton() {
-            const value = titleInput.value.trim();
-            nextBtn.disabled = value === '';
-        }
+    function hasSport() {
+        if (sportSel) return sportSel.value.trim() !== '';
+        if (sportTxt) return sportTxt.value.trim() !== '';
+        return false;
+    }
 
-        // Gắn các sự kiện cần thiết
-        ['input', 'change', 'blur'].forEach(evt =>
-            titleInput.addEventListener(evt, toggleButton)
-        );
+    function toggleButton() {
+        const ok = titleInput.value.trim() !== '' && hasSport();
+        nextBtn.disabled = !ok;
+    }
 
-        // Kiểm tra lần đầu khi trang load
-        toggleButton();
-    });
+    ['input','change','blur'].forEach(evt => titleInput.addEventListener(evt, toggleButton));
+    if (sportSel) sportSel.addEventListener('change', toggleButton);
+    if (sportTxt) ['input','change','blur'].forEach(evt => sportTxt.addEventListener(evt, toggleButton));
+
+    // run once
+    toggleButton();
+});
 </script>

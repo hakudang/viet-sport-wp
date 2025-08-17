@@ -17,6 +17,12 @@ defined( 'ABSPATH' ) || exit;
 define( 'SWELL_CHILD_PATH', get_stylesheet_directory() );
 define( 'SWELL_CHILD_URI', get_stylesheet_directory_uri() );
 
+// Load danh sách tỉnh/thành 1 lần duy nhất
+$district_file = SWELL_CHILD_PATH . '/includes/district-labels.php';
+if ( file_exists( $district_file ) ) {
+	define( 'DISTRICT_LABELS', json_encode( require $district_file ) );
+}
+
 /* ==============================================================
    [ASSETS] - Load Google Fonts (VN/EN/JP) + style.css
    - Font chính: Be Vietnam Pro (cho tiếng Việt và tiếng Anh)
@@ -25,9 +31,10 @@ define( 'SWELL_CHILD_URI', get_stylesheet_directory_uri() );
    - Tự động nhúng style.css từ theme
    - Dùng 1 hàm duy nhất để quản lý tài nguyên frontend
    Ngày cập nhật: 2025-08-04
-   Người viết: Dang (cập nhật bởi ChatGPT)
+   Người viết: Dang
    ============================================================== */
 
+// Kiểm tra xem hàm đã được định nghĩa chưa
 if ( ! function_exists('enqueue_theme_assets') ) {
     function enqueue_theme_assets() {
         // Preconnect đến Google Fonts để tối ưu tốc độ tải, tránh rớt font trên iOS
